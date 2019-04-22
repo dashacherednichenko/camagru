@@ -6,6 +6,9 @@
         case '':
             require 'view/templates/main.php';
             break;
+        case 'login':
+            require 'view/templates/welcome.php';
+            break;
         case 'create':
             require 'view/templates/create_usr.php';
             break;

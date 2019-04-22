@@ -1,16 +1,53 @@
 body {
     margin: 0px;
+    color: rgba(68, 79, 87, 0.8);
+    font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
     /*background-image: url(../images/back_var1.jpg);*/
     /*background-repeat: repeat;*/
     /*background-color: #292D39;*/
 }
-
+a {
+    text-decoration:none;
+    color: rgba(68, 79, 87, 0.8);
+}
+button {
+    background-color: #00babc;
+    color:white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 80px;
+}
+button:hover {
+    background-color: #008889;
+}
 
 /*header*/
 header {
     background-color: #292D39;
-    padding: 20px;
+    min-height: 80px;
+    padding: 10px;
+    color: white;
 }
+header a {
+    color: white;
+}
+.logo_main {
+    width: 50px;
+}
+.header_icons {
+    width: 50px;
+}
+#login_href {
+    /*float: right;*/
+}
+#user_login{
+    text-align: center;
+    font-size: 12px;
+    display: inline-block;
+    float: right;
+}
+
 /*container*/
 #main_container {
     text-align: center;
@@ -34,4 +71,19 @@ footer {
 }
 .copyright {
     padding-right: 20px;
+}
+
+/*register*/
+#form_register, #form_login {
+    margin-top: 10%;
+}
+#form_register label, #form_login label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+}
+#form_register input, #form_login input {
+    height: 30px;
+    margin-bottom: 10px;
 }

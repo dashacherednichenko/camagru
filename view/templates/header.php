@@ -12,5 +12,16 @@
 </head>
 <body>
 <header>
-
+    <a href="/camagru/">
+        <img src="images/logo.png" class="logo_main">
+    </a>
+    <div id="user_login">
+        <a href="login" id="login_href">
+            <img src="images/login.png" class="header_icons">
+        </a> <br>
+        <div id="welcome_usr">
+            <span id="hello_user"></span>
+            <p><a href="logout.php">logout</a></p>
+        </div>
+    </div>
 </header>
