@@ -19,9 +19,18 @@
         <a href="login" id="login_href">
             <img src="images/login.png" class="header_icons">
         </a> <br>
+        <?php
+        if ($_SESSION['email'] && $_SESSION['email'] !== NULL) {
+        ?>
         <div id="welcome_usr">
-            <span id="hello_user"></span>
-            <p><a href="logout.php">logout</a></p>
+            <span id="hello_user">Hello, <?php
+                echo $_SESSION['login'];
+                ?>
+             =)</span><br>
+            <a href="logout" id="logout">logout</a>
         </div>
+            <?php
+        }
+        ?>
     </div>
 </header>

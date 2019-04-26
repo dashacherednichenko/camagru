@@ -10,15 +10,14 @@ a {
     text-decoration:none;
     color: rgba(68, 79, 87, 0.8);
 }
-button {
+[type='submit'] {
     background-color: #00babc;
     color:white;
     border: none;
     cursor: pointer;
-    padding: 10px;
     width: 80px;
 }
-button:hover {
+[type='submit']:hover {
     background-color: #008889;
 }
 
@@ -46,6 +45,10 @@ header a {
     font-size: 12px;
     display: inline-block;
     float: right;
+    width: 120px;
+}
+#logout:hover {
+    color: #BEBEC8;
 }
 
 /*container*/
@@ -79,11 +82,25 @@ footer {
 }
 #form_register label, #form_login label{
     display: inline-block;
-    width: 100px;
+    width: 150px;
     text-align: right;
     padding-right: 10px;
 }
 #form_register input, #form_login input {
+    width: 180px;
     height: 30px;
     margin-bottom: 10px;
+}
+
+[type='button'] {
+    text-align: center;
+    background-color: #BEBEC8;
+    color:white;
+    border: none;
+    width: 80px;
+}
+#error_user {
+    margin-top: 20px;
+    text-align: center;
+    color: darkred;
 }
