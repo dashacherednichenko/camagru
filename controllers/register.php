@@ -30,11 +30,12 @@
         }
     }
     if (count($errors) == 0) {
-        if (addUser($_POST['email'], $_POST['username'], $_POST['password']) == 1) {
+        $hash_pass = md5(md5(trim($_POST['password'])));
+        if (addUser($_POST['email'], $_POST['username'], $hash_pass) == 1) {
             $_SESSION['error_user'] = NULL;
-            $_SESSION['login'] =$_POST['username'];
-            $_SESSION['password'] =$_POST['password'];
-            $_SESSION['email'] =$_POST['email'];
+            $_SESSION['error_login'] = NULL;
+            $_SESSION['email'] = $_POST['email'];
+            $_SESSION['login'] = $_POST['username'];
             header("Location: /camagru/");
         }
         else {
@@ -43,13 +44,6 @@
         }
     }
     else {
-
-
         header("Location: /camagru/create");
-//        print "<div><b>При регистрации произошли следующие ошибки:</b><br>";
-//        foreach ($errors AS $error) {
-//            print $error . "<br>";
-//        }
-//        print("</div>");
     }
 ?>
