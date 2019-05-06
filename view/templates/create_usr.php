@@ -23,13 +23,13 @@ if ($_SESSION['error_user'] && $_SESSION['error_user'] !== NULL) {
 
             <label for="password">Password: </label>
             <input type="password" name="password" id="password" required
-                   pattern="^[a-zA-Z0-9]{5,12}$" oninvalid="this.setCustomValidity
-                   ('Пароль має містити лише літери англійської абетки та цифри, довжина від 5 до 12 символів')"
+                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8б}$" oninvalid="this.setCustomValidity
+                   ('Пароль має містити мінімум вісім символов, як мінімум одна велика літера, одна маленька літера і одна цифра')"
                    oninput="setCustomValidity('')" onkeyup='check();'><br>
 
             <label for="confirm_password">Confirm password: </label>
             <input type="password" name="confirm_password" id="confirm_password" required
-                   pattern="^[a-zA-Z0-9]{5,12}$" onkeyup='check();'><br>
+                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8б}$" onkeyup='check();'><br>
             <span id='message_error'></span><br>
 
             <input type="button"  name="submit" value="Register" id="register_button"/>
