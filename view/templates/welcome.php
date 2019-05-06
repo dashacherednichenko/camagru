@@ -23,10 +23,11 @@
     ?>
     <div id="main_container">
         <form action="controllers/login.php" method="post" id="form_login">
-            <label for="email">E-mail: </label><input type="text" name="email" id="email"><br>
-            <label for="password">Password: </label><input type="password" name="password" id="password"><br>
+            <label for="email">E-mail: </label><input type="email" name="email" id="email" required><br>
+            <label for="password">Password: </label><input type="password" name="password" id="password" required><br>
             <input type="submit"  name="submit" value="Login"/>
             <p class="regtext"><a href= "create">Not register yet?</a></p>
+            <p class="regtext"><a href= "sendpassword">Forget your password?</a></p>
         </form>
     </div>
         <?php
@@ -35,6 +36,12 @@
         ?>
         <div id="main_container">
             <h1>My account</h1>
+            <p>Username: <?php echo $_SESSION['login']?></p>
+            <p>E-mail: <?php echo $_SESSION['email']?></p>
+            <p class="regtext"><a href = "change-data">Do you want to change your data?</a></p>
+            <?php
+
+            ?>
         </div>
         <?php
     }

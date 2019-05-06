@@ -7,6 +7,7 @@ if ($_POST['submit'] == 'Login') {
     if (($login = auth($_POST['email'], $password)) != NULL && $login != -1){
         $_SESSION['error_user'] = NULL;
         $_SESSION['error_login'] = NULL;
+        $_SESSION['error_activation'] = NULL;
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['login'] = $login;
         header("Location: /camagru/");
