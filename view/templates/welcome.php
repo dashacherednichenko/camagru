@@ -11,6 +11,14 @@
         </div>
         <?php
     }
+    if ($_SESSION['error_activation'] && $_SESSION['error_activation'] !== NULL) {
+        ?>
+        <div id="error_user">
+            ERROR <br>
+            Користувач з e-mail <b>"<?php echo $_SESSION['error_activation']?>"</b> не активований!
+        </div>
+        <?php
+    }
     if (!$_SESSION['email'] || $_SESSION['email'] == NULL) {
     ?>
     <div id="main_container">

@@ -32,11 +32,12 @@
     if (count($errors) == 0) {
         $hash_pass = md5(md5(trim($_POST['password'])));
         if (addUser($_POST['email'], $_POST['username'], $hash_pass) == 1) {
-            $_SESSION['error_user'] = NULL;
-            $_SESSION['error_login'] = NULL;
-            $_SESSION['email'] = $_POST['email'];
-            $_SESSION['login'] = $_POST['username'];
-            header("Location: /camagru/");
+            echo    "An e-mail with a link has been sent to your e-mail to confirm the registration. <a href='/camagru/'>Main page</a>";
+//            $_SESSION['error_user'] = NULL;
+              $_SESSION['error_login'] = NULL;
+//            $_SESSION['email'] = $_POST['email'];
+//            $_SESSION['login'] = $_POST['username'];
+//            header("Location: /camagru/");
         }
         else {
             $_SESSION['error_user'] = $_POST['email'];

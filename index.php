@@ -9,6 +9,9 @@
         case 'login':
             require 'view/templates/welcome.php';
             break;
+//        case 'activation.php':
+//            require 'model/activation.php';
+//            break;
         case 'create':
             require 'view/templates/create_usr.php';
             break;
