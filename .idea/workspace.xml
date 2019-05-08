@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7789444-2961-4585-abd3-d64933ad0e69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/snapchatController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/beard_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/beard_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/beard_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/beard_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/glasses_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/glasses_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/glasses_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/glasses_funny_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/lips_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/lips_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/lips_3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/superposable_img/palm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/templates/snapchat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/setup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/superposable_img/beard_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/superposable_img/lips_3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/superposable_img/palm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/scripts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/scripts_register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/scripts_register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/snapchat.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/snapchat.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,84 +24,87 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/superposable_img/beard_2.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/changePassword.php">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/superposable_img/beard_1.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/snapchatController.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/templates/welcome.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="22" selection-end-column="6" />
+            <state relative-caret-position="1125">
+              <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/templates/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4">
+              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/exit.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/check_password.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/templates/scripts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/index.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/templates/scripts_register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/superposable_img/lips_2.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/superposable_img/lips_1.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/templates/snapchat.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/templates/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="64" column="10" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="64" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/templates/create_usr.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -130,9 +126,7 @@
         <option value="$PROJECT_DIR$/view/templates/login.php" />
         <option value="$PROJECT_DIR$/js/chek_password.js" />
         <option value="$PROJECT_DIR$/view/templates/footer.php" />
-        <option value="$PROJECT_DIR$/view/templates/scripts.php" />
         <option value="$PROJECT_DIR$/js/check_password.js" />
-        <option value="$PROJECT_DIR$/view/templates/header.php" />
         <option value="$PROJECT_DIR$/controllers/logout.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/controllers/register.php" />
@@ -144,7 +138,6 @@
         <option value="$PROJECT_DIR$/controllers/sendpassword.php" />
         <option value="$PROJECT_DIR$/view/templates/create_usr.php" />
         <option value="$PROJECT_DIR$/model/checkEmail.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/view/templates/welcome.php" />
         <option value="$PROJECT_DIR$/view/templates/recovery.php" />
         <option value="$PROJECT_DIR$/model/addUser.php" />
@@ -156,6 +149,11 @@
         <option value="$PROJECT_DIR$/config/setup.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/view/templates/snapchat.php" />
+        <option value="$PROJECT_DIR$/view/templates/scripts_register.php" />
+        <option value="$PROJECT_DIR$/view/templates/scripts.php" />
+        <option value="$PROJECT_DIR$/js/insex.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/view/templates/header.php" />
       </list>
     </option>
   </component>
@@ -198,6 +196,12 @@
             <path>
               <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
               <item name="camagru" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="superposable_img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camagru" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -234,11 +238,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/images/superposable_img" />
       <recent name="$PROJECT_DIR$/controllers" />
       <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/view/templates" />
-      <recent name="$PROJECT_DIR$/view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -267,12 +271,12 @@
       <workItem from="1556267087381" duration="20405000" />
       <workItem from="1556607014219" duration="12376000" />
       <workItem from="1557134822969" duration="20227000" />
-      <workItem from="1557304666305" duration="6690000" />
+      <workItem from="1557304666305" duration="10783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77889000" />
+    <option name="totallyTimeSpent" value="81982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="778" y="219" width="1236" height="1051" extended-state="0" />
@@ -324,7 +328,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/connection.php" />
     <entry file="file://$PROJECT_DIR$/author">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -357,20 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/check_password.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -399,31 +388,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/templates/scripts_register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/templates/scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/templates/forgetpassword.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="80" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/templates/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -507,15 +475,6 @@
     <entry file="file://$PROJECT_DIR$/images/superposable_img/palm.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/superposable_img/lips_3.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/superposable_img/lips_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/superposable_img/lips_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/superposable_img/glasses_3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -574,15 +533,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/templates/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="64" column="10" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="64" selection-end-column="10" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/superposable_img/lips_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/superposable_img/lips_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/superposable_img/lips_3.jpeg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/view/templates/snapchat.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/camera.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/check_password.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/scripts_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/scripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/exit.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
         </state>
       </provider>
     </entry>
