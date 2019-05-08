@@ -1,17 +1,17 @@
 <?php
-function activation($login, $code)
+function activation($id, $code)
 {
     require_once "../config/setup.php";
     $pdo = createConnection ();
-    $id_usr = $pdo->prepare('SELECT id, email FROM users WHERE username = ?');
-    $id_usr->execute([$login]);
+    $id_usr = $pdo->prepare('SELECT id, email FROM users WHERE id = ?');
+    $id_usr->execute([$id]);
     $result = $id_usr->fetch(PDO::FETCH_LAZY);
 //    echo $result['id'] . "\n";
 //    echo $result['email'] . "\n";
     $activation = md5($result['id']).md5($result['email']);
 //    echo $activation . "\n";
     if ($activation == $code) {
-        $activate_user = "UPDATE users SET activation='1' WHERE username='$login'";
+        $activate_user = "UPDATE users SET activation='1' WHERE id='$id'";
         $pdo->query($activate_user);
         echo "Your e-mail confirmed! Now you can enter the site! <a href='/camagru/'>Main page</a>";
         echo $result['email'];
@@ -30,12 +30,17 @@ if (isset($_GET['code']))
     $code = $_GET['code'];
 else
     exit("Error Link! No confirmation code!");
+if (isset($_GET['id']))
+    $id = $_GET['id'];
+else
+    exit("Error Link! No id!");
 if (isset($_GET['login']))
     $login = $_GET['login'];
 else
     exit("Error Link! No login!");
 
-if (($email = activation($login, $code)) != NULL) {
+
+if (($email = activation($id, $code)) != NULL) {
             session_start();
             $_SESSION['error_activation'] = NULL;
             $_SESSION['error_user'] = NULL;
