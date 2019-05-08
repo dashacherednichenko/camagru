@@ -5,7 +5,7 @@ function createConnection ()
     try {
         $pdo = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->exec($DB . $USERS);
+        $pdo->exec($DB . $USERS . $PHOTOS . $COMMENTS);
     } catch (PDOException $e) {
         echo 'Подключение не удалось: ' . $e->getMessage();
     }

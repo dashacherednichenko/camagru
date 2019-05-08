@@ -15,6 +15,9 @@
         case 'create':
             require 'view/templates/create_usr.php';
             break;
+        case 'snapchat':
+            require 'view/templates/snapchat.php';
+            break;
         case 'logout':
             require 'controllers/logout.php';
             break;
