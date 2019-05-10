@@ -6,7 +6,22 @@ else {
 ?>
 <div id="container">
     <div id="main_container">
-        <div id = "photo_container"></div>
+        <div id = "photo_container">
+            <div class="app">
+                <a href="#" id="start-camera" class="visible">Click here to start.</a><br>
+                <video id="camera-stream"></video>
+                <img id="snap">
+
+                <p id="error-msg"></p>
+
+                <div class="controls">
+                    <a href="#" id="delete-photo" title="Delete Photo" class="disabled">delete</a>
+                    <a href="#" id="take-photo" title="Take Photo">Take Photo</a>
+                    <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Save Photo</a>
+                </div>
+                <canvas></canvas>
+            </div>
+        </div>
         <div id = "superposable_img">
             <?php
             $directory = "images/superposable_img";

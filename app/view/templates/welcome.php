@@ -1,8 +1,8 @@
 <?php
+//echo 'TEST';
 ?>
 <div id="container">
     <?php
-    //session_start();
     if ($_SESSION['error_login'] && $_SESSION['error_login'] !== NULL) {
         ?>
         <div id="error_user">
@@ -22,7 +22,7 @@
     if (!$_SESSION['email'] || $_SESSION['email'] == NULL) {
     ?>
     <div id="main_container">
-        <form action="controllers/login.php" method="post" id="form_login">
+        <form action="controllers/AccountController.php" method="post" id="form_login">
             <label for="email">E-mail: </label><input type="email" name="email" id="email" required><br>
             <label for="password">Password: </label><input type="password" name="password" id="password" required><br>
             <input type="submit"  name="submit" value="Login"/>

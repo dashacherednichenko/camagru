@@ -1,6 +1,5 @@
 <?php
     require_once "../model/addUser.php";
-    session_start();
     if ($_POST['submit'] == 'Register') {
         $errors = array();
         if (isset($_POST['email']) && !empty($_POST['email'])){

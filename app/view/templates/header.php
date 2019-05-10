@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <title>Camagru</title>
     <meta name="description" content="&#10148;&#10148;&#10148;SCHOOL-42 Camagru."/>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="/camagru/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="public/css/style.css">
+    <link href="camagru/public/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
 <div class="wrapper">
     <header>
         <a href="/camagru/" title="go_to_main">
-            <img src="images/logo.png" class="logo_main">
+            <img src="public/images/logo.png" class="logo_main">
         </a>
         <div id="header_links">
             <?php
@@ -22,15 +22,15 @@
             ?>
             <div id="camera">
                 <a href="snapchat" id="" title="make a photo">
-                    <img src="images/camera.png" class="header_icons">
+                    <img src="public/images/camera.png" class="header_icons">
                 </a> <br>
             </div>
                 <?php
             }
             ?>
             <div id="user_login">
-                <a href="login" id="login_href">
-                    <img src="images/login.png" class="header_icons">
+                <a href="account" id="login_href">
+                    <img src="public/images/login.png" class="header_icons">
                 </a>
                 <?php
                 if ($_SESSION['email'] && $_SESSION['email'] !== NULL) {
@@ -49,7 +49,7 @@
             if ($_SESSION['email'] && $_SESSION['email'] !== NULL) {
                 ?>
                 <div id="div_logout">
-                    <a href="logout" id="logout"><img src="images/exit.png" title="logout"></a>
+                    <a href="logout" id="logout"><img src="public/images/exit.png" title="logout"></a>
                 </div>
                 <?php
             }
