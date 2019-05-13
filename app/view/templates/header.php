@@ -8,7 +8,7 @@
     <title>Camagru</title>
     <meta name="description" content="&#10148;&#10148;&#10148;SCHOOL-42 Camagru."/>
     <link rel="stylesheet" href="public/css/style.css">
-    <link href="camagru/public/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="public/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
 <div class="wrapper">
@@ -18,7 +18,7 @@
         </a>
         <div id="header_links">
             <?php
-            if ($_SESSION['email'] && $_SESSION['email'] !== NULL) {
+            if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL) {
             ?>
             <div id="camera">
                 <a href="snapchat" id="" title="make a photo">
@@ -33,7 +33,7 @@
                     <img src="public/images/login.png" class="header_icons">
                 </a>
                 <?php
-                if ($_SESSION['email'] && $_SESSION['email'] !== NULL) {
+                if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL) {
                 ?>
                 <div id="welcome_usr">
                     <span id="hello_user">Hello, <?php
@@ -46,7 +46,7 @@
                 ?>
             </div>
             <?php
-            if ($_SESSION['email'] && $_SESSION['email'] !== NULL) {
+            if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL) {
                 ?>
                 <div id="div_logout">
                     <a href="logout" id="logout"><img src="public/images/exit.png" title="logout"></a>

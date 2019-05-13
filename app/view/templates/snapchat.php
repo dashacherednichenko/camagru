@@ -1,6 +1,6 @@
 <?php
 if (!$_SESSION['email'] || $_SESSION['email'] == NULL) {
-    header("Location: /camagru/login");
+    header("Location: /camagru/account");
 }
 else {
 ?>
@@ -24,7 +24,7 @@ else {
         </div>
         <div id = "superposable_img">
             <?php
-            $directory = "images/superposable_img";
+            $directory = "public/images/superposable_img";
             $allowed_types = array("jpg", "png", "gif");
             $photo = array();
             $ext = "";

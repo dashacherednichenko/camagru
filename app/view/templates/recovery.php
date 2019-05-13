@@ -14,7 +14,7 @@ if (isset($_GET['code']) && isset($_GET['id'])) {
 <div id="container">
     <div id="main_container">
         <p>Enter the new password to your Camagru account.</p>
-        <form action="controllers/changePassword.php" method="post" id="form_register">
+        <form action="account/changepassword" method="post" id="form_register">
             <input type="hidden"  name="id" value="<?php echo $id?>"/>
             <input type="hidden"  name="code" value="<?php echo $code?>"/>
             <label for="password">New password: </label>

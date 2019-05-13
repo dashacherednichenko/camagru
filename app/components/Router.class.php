@@ -29,22 +29,24 @@ class Router
             if (preg_match("~$uriPattern~", $url)) {
                 $segments = explode('/', $path);
                 $controllerName = ucfirst(array_shift($segments).'Controller');
-                $actionName = 'action'.ucfirst(array_shift($segments));
                 $controllerFile = 'app/controllers/'.$controllerName.'.php';
                 if (file_exists($controllerFile)) {
                     include_once ($controllerFile);
+                    $actionName = 'action'.ucfirst(array_shift($segments));
+                    if(method_exists($controllerName, $actionName)) {
+                        $controllerObject = new $controllerName;
+                        $result = $controllerObject->$actionName();
+                        if ($result != null){
+                            break;
+                        }
+                    }
+                    else {
+                        echo "not found ". $actionName;
+                    }
                 }
-
-                $controllerObject = new $controllerName;
-                $result = $controllerObject->$actionName();
-                if ($result != null){
-                    break;
+                else {
+                    echo "not found ". $controllerFile;
                 }
-
-//                echo $controllerFile."\n";
-//                echo $controllerName."\n";
-//                echo $actionName."\n";
-//                echo $path;
             }
 //            else {
 //                require_once 'app/view/templates/header.php';

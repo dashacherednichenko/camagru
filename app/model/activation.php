@@ -1,7 +1,9 @@
 <?php
 function activation($id, $code)
 {
+//    echo "TEST";
     require_once "../config/setup.php";
+    echo "TEST";
     $pdo = createConnection ();
     $id_usr = $pdo->prepare('SELECT id, email FROM users WHERE id = ?');
     $id_usr->execute([$id]);

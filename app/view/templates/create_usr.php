@@ -1,7 +1,7 @@
 <div id="container">
 <?php
 //session_start();
-if ($_SESSION['error_user'] && $_SESSION['error_user'] !== NULL) {
+if (isset($_SESSION['error_user']) && $_SESSION['error_user'] !== NULL) {
     ?>
     <div id="error_user">
         ERROR <br>
@@ -11,7 +11,7 @@ if ($_SESSION['error_user'] && $_SESSION['error_user'] !== NULL) {
 }
 ?>
     <div id="main_container">
-        <form action="controllers/register.php" method="post" id="form_register">
+        <form action="account/register" method="post" id="form_register">
             <label for="email">E-mail: </label>
             <input type="email" name="email" id="email" required><br>
 

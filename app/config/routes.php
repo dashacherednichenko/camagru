@@ -1,10 +1,14 @@
 <?php
 return array(
-    '' => 'main/index',
+
+    'account/auth' => 'account/auth',
+    'account/register' => 'account/adduser',
+    'account/changepassword' => 'account/changepassword',
     'account' => 'account/login',
     'logout' => 'account/logout',
     'create' => 'account/register',
-//    'sendpassword' => 'view/templates/forgetpassword.php',
-//    'snapchat' => 'view/templates/snapchat.php',
+    'sendpassword' => 'account/forgetpassword',
+    'snapchat' => 'snapchat/page',
+    '' => 'main/index',
 );
 ?>

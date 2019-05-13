@@ -1,7 +1,7 @@
 <?php
 function auth($user_mail, $password)
 {
-    require_once "../config/setup.php";
+    require_once "app/config/setup.php";
     $pdo = createConnection ();
     $login_usr = 'SELECT email, password, username, activation FROM users';
     foreach ($pdo->query($login_usr) as $row) {

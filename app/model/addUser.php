@@ -1,6 +1,6 @@
 <?php
 function addUser($email, $username, $password){
-    require_once "../config/setup.php";
+    require_once "app/config/setup.php";
     $pdo = createConnection ();
     $check_usr = 'SELECT email FROM users';
     $count = 0;
@@ -31,7 +31,7 @@ function addUser($email, $username, $password){
 //        echo $activation . "\n";
         $subject = "Confirm your registration";
         $message = "Hello! Thanks for your registration.\nYour login:    ".$username."\n
-        Click next link  http://localhost:8100/camagru/model/activation.php?id=".$result['id'] ."&login=".$username."&code=".$activation ."\n to activate your account.\n";
+        Click next link  http://localhost:8100/camagru/app/model/activation.php?id=".$result['id'] ."&login=".$username."&code=".$activation ."\n to activate your account.\n";
         mail($email, $subject, $message, "Content-type:text/plain;    Charset=windows-1251\r\n");
 
         return (1);
