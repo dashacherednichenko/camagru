@@ -1,5 +1,9 @@
 <?php
-class SnapchatController{
+
+require_once 'app/components/Controller.class.php';
+
+class SnapchatController extends Controller
+{
     public function actionPage()
     {
     require_once 'app/view/templates/header.php';

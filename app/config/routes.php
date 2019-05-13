@@ -1,6 +1,5 @@
 <?php
 return array(
-
     'account/auth' => 'account/auth',
     'account/register' => 'account/adduser',
     'account/changepassword' => 'account/changepassword',

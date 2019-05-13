@@ -1,5 +1,8 @@
 <?php
-class MainController
+
+require_once 'app/components/Controller.class.php';
+
+class MainController extends Controller
 {
     public function actionIndex()
     {

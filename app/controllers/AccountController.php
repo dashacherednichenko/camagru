@@ -1,6 +1,7 @@
 <?php
-//print_r($_POST);
-class AccountController
+require_once 'app/components/Controller.class.php';
+
+class AccountController extends Controller
 {
     public function actionLogin()
     {
