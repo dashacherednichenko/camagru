@@ -8,6 +8,7 @@ return array(
     'create' => 'account/register',
     'sendpassword' => 'account/forgetpassword',
     'snapchat' => 'snapchat/page',
+    'snapchat/photo' => 'snapchat/photo',
     '' => 'main/index',
 );
 ?>

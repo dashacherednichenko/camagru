@@ -23,7 +23,7 @@ else {
             </div>
         </div>
         <div id = "superposable_img">
-            <form action="">
+            <form action="snapchat/photo">
                 <?php
                 $directory = "public/images/superposable_img";
                 $allowed_types = array("jpg", "png", "gif");

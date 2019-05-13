@@ -115,6 +115,23 @@ class AccountController extends Controller
         return true;
     }
 
+    public function actionSendpassword()
+    {
+
+
+
+
+
+
+
+
+
+
+
+
+        return true;
+    }
+
     public function actionChangepassword()
     {
         require_once "app/view/templates/header.php";

@@ -15,7 +15,7 @@ class SnapchatController extends Controller
 
     public function actionPhoto()
     {
-
+        echo "test";
     }
 }
 ?>
