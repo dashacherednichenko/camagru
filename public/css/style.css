@@ -160,7 +160,7 @@ footer {
     width: 150px;
 }
 .mini_img_filter {
-    width: 100%;
+    width: calc(100% - 10px);
     margin-bottom: 20px;
 }
 
@@ -251,6 +251,13 @@ footer {
     display: inline-block;
 }
 
+input[name="superposable"] {
+    display: none;
+}
+
+input:checked ~.mini_img_filter{
+    border: 2px solid #292D39;
+}
 
 
 /*@media(max-width: 1000px){*/

@@ -23,27 +23,30 @@ else {
             </div>
         </div>
         <div id = "superposable_img">
-            <?php
-            $directory = "public/images/superposable_img";
-            $allowed_types = array("jpg", "png", "gif");
-            $photo = array();
-            $ext = "";
-            $title = "";
-            $i = 0;
-            $dir = @opendir($directory) or die("error with opening the directory !!!");
-            while ($file = readdir($dir))
-            {
-                if($file == "." || $file == "..") continue;
-                $photo = explode(".", $file);
-                $ext = strtolower(array_pop($photo));
-                if(in_array($ext,$allowed_types))
+            <form action="">
+                <?php
+                $directory = "public/images/superposable_img";
+                $allowed_types = array("jpg", "png", "gif");
+                $photo = array();
+                $ext = "";
+                $title = "";
+                $i = 0;
+                $dir = @opendir($directory) or die("error with opening the directory !!!");
+                while ($file = readdir($dir))
                 {
-                    echo '<div class = "block_mini_img_filter" ><img src="'.$directory.'/'.$file.'" class="mini_img_filter" title="'.$file.'" /></div>';
-                    $i++;
+                    if($file == "." || $file == "..") continue;
+                    $photo = explode(".", $file);
+                    $ext = strtolower(array_pop($photo));
+                    if(in_array($ext,$allowed_types))
+                    {
+                        echo '<div class = "block_mini_img_filter"><label><input name="superposable" type="radio" value="'.$directory.'/'.$file.'"><img src="'.$directory.'/'.$file.'" class="mini_img_filter" title="'.$file.'" /></label></div>';
+                        $i++;
+                    }
                 }
-            }
-            closedir($dir);
-            ?>
+                closedir($dir);
+                ?>
+                <input type="submit" value="Photo">
+            </form>
         </div>
     </div>
 </div>
