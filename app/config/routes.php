@@ -3,6 +3,7 @@ return array(
     'account/auth' => 'account/auth',
     'account/register' => 'account/adduser',
     'account/changepassword' => 'account/changepassword',
+    'account/sendlink' => 'account/sendpassword',
     'account' => 'account/login',
     'logout' => 'account/logout',
     'create' => 'account/register',

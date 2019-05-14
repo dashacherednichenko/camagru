@@ -66,28 +66,23 @@ class AccountController extends Controller
             if (isset($_POST['email']) && !empty($_POST['email'])){
 
             }
-            else {
+            else
                 $errors[] = "Заполните 'E-mail'!";
-            }
 
             if(isset($_POST['username']) && !empty($_POST['username'])){
-                if (!preg_match("/^[a-zA-Z0-9]+$/", $_POST['username'])) {
+                if (!preg_match("/^[a-zA-Z0-9]+$/", $_POST['username']))
                     $errors[] = "Логін має містити лише літери англійської абетки та цифри";
-                }
-                if (strlen($_POST['username']) < 3 or strlen($_POST['username']) > 20) {
+                if (strlen($_POST['username']) < 3 or strlen($_POST['username']) > 20)
                     $errors[] = "Логин должен быть не меньше 3-х символов и не больше 20";
-                }
             }
-            else {
+            else
                 $errors[] = "Заполните 'Username'!";
-            }
 
             if (isset($_POST['password']) && !empty($_POST['password'])){
 
             }
-            else {
+            else
                 $errors[] = "Заполните 'Password'!";
-            }
         }
         if (count($errors) == 0) {
             $hash_pass = md5(md5(trim($_POST['password'])));
@@ -100,9 +95,8 @@ class AccountController extends Controller
                 header("Location: /camagru/create");
             }
         }
-        else {
+        else
             header("Location: /camagru/create");
-        }
         return true;
     }
 
@@ -117,18 +111,13 @@ class AccountController extends Controller
 
     public function actionSendpassword()
     {
-
-
-
-
-
-
-
-
-
-
-
-
+        require_once "app/model/clearSession.php";
+        require_once "app/model/checkEmail.php";
+        clearSession();
+        if (checkEmail($_POST['email']) == 1)
+            echo    "A link has been sent to your e-mail. <a href='/camagru/'>Main page</a>";
+        else
+            echo    "incorrect e-mail or no active user. <a href='/camagru/'>Main page</a>";
         return true;
     }
 

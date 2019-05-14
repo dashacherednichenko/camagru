@@ -18,7 +18,6 @@ class Router
 
     private function match(){
         $url = $this->getURI();
-
         $urlarray = explode('camagru/', $url);
         if (isset($urlarray[1]))
             $url = $urlarray[1];

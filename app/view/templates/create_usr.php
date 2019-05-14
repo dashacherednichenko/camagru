@@ -33,7 +33,7 @@ if (isset($_SESSION['error_user']) && $_SESSION['error_user'] !== NULL) {
             <span id='message_error'></span><br>
 
             <input type="button"  name="submit" value="Register" id="register_button"/>
-            <p class="regtext"><a href= "login">Already registered? Login!</a></p>
+            <p class="regtext"><a href="account">Already registered? Login!</a></p>
         </form>
     </div>
 </div>
