@@ -9,7 +9,12 @@ else {
         <div id = "photo_container">
             <div class="app">
                 <a href="#" id="start-camera" class="visible">Click here to start.</a><br>
-                <video id="camera-stream"></video>
+                <div id="camera-stream-div">
+                    <video id="camera-stream"></video>
+                    <div id="layout">
+                        <img src="" id="layout_img">
+                    </div>
+                </div>
                 <img id="snap">
 
                 <p id="error-msg"></p>
@@ -39,7 +44,7 @@ else {
                     $ext = strtolower(array_pop($photo));
                     if(in_array($ext,$allowed_types))
                     {
-                        echo '<div class = "block_mini_img_filter"><label><input name="superposable" type="radio" value="'.$directory.'/'.$file.'" onclick="makePhotoButtonActiv()"><img src="'.$directory.'/'.$file.'" class="mini_img_filter" title="'.$file.'" /></label></div>';
+                        echo '<div class = "block_mini_img_filter"><label><input name="superposable" type="radio" value="'.$directory.'/'.$file.'" onclick="makePhotoButtonActiv(this)"><img src="'.$directory.'/'.$file.'" class="mini_img_filter" title="'.$file.'" /></label></div>';
                         $i++;
                     }
                 }

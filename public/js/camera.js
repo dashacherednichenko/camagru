@@ -1,5 +1,6 @@
 let video = document.getElementById('camera-stream');
 let photo = document.getElementById('snap');
+let photo_layout = document.getElementById('layout_img');
 let superposable = document.getElementById('superposable_img');
 let camera_on = document.getElementById('start-camera');
 let controlsButtons = document.querySelector('.controls');
@@ -79,9 +80,9 @@ function takeSnapshot(){
 }
 
 function displayErrorMessage(error_msg, error){
-    error = error || "";
-    if(error)
-        console.log('error: ',error);
+    // error = error || "";
+    // if(error)
+    //     console.log('error: ',error);
     error_message.innerText = error_msg;
     cleanSnapPage();
     error_message.classList.add("visible");
@@ -96,10 +97,11 @@ function cleanSnapPage(){
     error_message.classList.remove("visible");
 }
 
-function makePhotoButtonActiv() {
+function makePhotoButtonActiv(img) {
     if (take_photo_btn.className == 'disabled') {
         take_photo_btn.classList.remove("disabled");
         take_photo_btn.classList.add("visible");
     }
-    // console.log('TEST', take_photo_btn.className);
+    photo_layout.setAttribute('src', img.value);
+    // console.log('TEST', img.value);
 }

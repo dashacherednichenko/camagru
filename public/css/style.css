@@ -179,8 +179,27 @@ footer {
     text-align: center;
 }
 
+#camera-stream-div{
+    display: inline-block;
+    position: relative;
+}
+.app #layout{
+    z-index: 90;
+    display: inline;
+    position: absolute;
+    width: 350px;
+    left: 300px;
+    top: 200px;
+}
+#layout_img{
+    width: 100%;
+}
 .app video#camera-stream{
     display: none;
+}
+.app video#camera-stream.visible{
+    display: inline-block;
+    width: 800px;
 }
 
 .app img#snap{
@@ -243,7 +262,6 @@ footer {
     display: none;
 }
 
-.app video#camera-stream.visible,
 .app img#snap.visible,
 .app #error-message.visible,
 #superposable_img.visible{
