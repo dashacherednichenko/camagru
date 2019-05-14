@@ -151,9 +151,9 @@ footer {
     width: calc(100% - 220px);
 }
 #superposable_img {
-    display: inline-block;
+    display: none;
     margin: 20px;
-    height: calc(100vh - 160px);
+    height: 100vh;
     overflow-y: scroll;
 }
 .block_mini_img_filter {
@@ -200,7 +200,7 @@ footer {
 }
 
 .app .controls{
-    display: inline-block;
+    display: none;
     padding: 30px;
 }
 
@@ -246,6 +246,12 @@ footer {
 .app video#camera-stream.visible,
 .app img#snap.visible,
 .app #error-message.visible,
+#superposable_img.visible{
+    display: inline-block;
+    margin: 20px;
+    height: 100vh;
+    overflow-y: scroll;
+}
 .app .controls.visible
 {
     display: inline-block;

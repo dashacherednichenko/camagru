@@ -16,7 +16,7 @@ else {
 
                 <div class="controls">
                     <a href="#" id="delete-photo" title="Delete Photo" class="disabled">delete</a>
-                    <a href="#" id="take-photo" title="Take Photo">Take Photo</a>
+                    <a href="#" id="take-photo" title="Take Photo" class="disabled">Take Photo</a>
                     <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Save Photo</a>
                 </div>
                 <canvas></canvas>
@@ -39,7 +39,7 @@ else {
                     $ext = strtolower(array_pop($photo));
                     if(in_array($ext,$allowed_types))
                     {
-                        echo '<div class = "block_mini_img_filter"><label><input name="superposable" type="radio" value="'.$directory.'/'.$file.'"><img src="'.$directory.'/'.$file.'" class="mini_img_filter" title="'.$file.'" /></label></div>';
+                        echo '<div class = "block_mini_img_filter"><label><input name="superposable" type="radio" value="'.$directory.'/'.$file.'" onclick="makePhotoButtonActiv()"><img src="'.$directory.'/'.$file.'" class="mini_img_filter" title="'.$file.'" /></label></div>';
                         $i++;
                     }
                 }

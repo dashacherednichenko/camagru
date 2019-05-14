@@ -1,14 +1,14 @@
-var video = document.querySelector('#camera-stream');
-var photo = document.querySelector('#snap');
-var start_camera = document.querySelector('#start-camera');
-var controls = document.querySelector('.controls');
-var take_photo_btn = document.querySelector('#take-photo');
-var delete_photo_btn = document.querySelector('#delete-photo');
-var save_photo_btn = document.querySelector('#save-photo');
-var error_message = document.querySelector('#error-msg');
+let video = document.getElementById('camera-stream');
+let photo = document.getElementById('snap');
+let superposable = document.getElementById('superposable_img');
+let camera_on = document.getElementById('start-camera');
+let controlsButtons = document.querySelector('.controls');
+let take_photo_btn = document.getElementById('take-photo');
+let delete_photo_btn = document.getElementById('delete-photo');
+let save_photo_btn = document.getElementById('save-photo');
+let error_message = document.getElementById('error-msg');
 
 navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-
 
 if(!navigator.getMedia){
     displayErrorMessage("Browser doesn't have support for the navigator.getUserMedia interface.");
@@ -31,18 +31,15 @@ else{
     );
 }
 
-// Mobile browsers cannot play video without user input,
-// so here we're using a button to start it manually.
-start_camera.addEventListener("click", function(e){
+camera_on.addEventListener("click", function(e){
     e.preventDefault();
     video.play();
     showVideo();
-
 });
 
 take_photo_btn.addEventListener("click", function(e){
     e.preventDefault();
-    var my_photo = takeSnapshot();
+    let my_photo = takeSnapshot();
     photo.setAttribute('src', my_photo);
     photo.classList.add("visible");
     delete_photo_btn.classList.remove("disabled");
@@ -51,7 +48,6 @@ take_photo_btn.addEventListener("click", function(e){
 });
 
 delete_photo_btn.addEventListener("click", function(e){
-
     e.preventDefault();
     photo.setAttribute('src', "");
     photo.classList.remove("visible");
@@ -59,20 +55,18 @@ delete_photo_btn.addEventListener("click", function(e){
     save_photo_btn.classList.add("disabled");
 });
 
-
-
 function showVideo(){
-    hideUI();
+    cleanSnapPage();
     video.classList.add("visible");
-    controls.classList.add("visible");
+    superposable.classList.add("visible");
+    controlsButtons.classList.add("visible");
 }
 
-
 function takeSnapshot(){
-    var hidden_canvas = document.querySelector('canvas');
-    var context = hidden_canvas.getContext('2d');
-    var width = video.videoWidth;
-    var height = video.videoHeight;
+    let hidden_canvas = document.querySelector('canvas');
+    let context = hidden_canvas.getContext('2d');
+    let width = video.videoWidth;
+    let height = video.videoHeight;
 
     if (width && height) {
         hidden_canvas.width = width;
@@ -86,18 +80,26 @@ function takeSnapshot(){
 
 function displayErrorMessage(error_msg, error){
     error = error || "";
-    if(error){
-        console.log(error);
-    }
+    if(error)
+        console.log('error: ',error);
     error_message.innerText = error_msg;
-    hideUI();
+    cleanSnapPage();
     error_message.classList.add("visible");
 }
 
-function hideUI(){
-    controls.classList.remove("visible");
-    start_camera.classList.remove("visible");
+function cleanSnapPage(){
+    controlsButtons.classList.remove("visible");
+    superposable.classList.remove("visible");
+    camera_on.classList.remove("visible");
     video.classList.remove("visible");
-    snap.classList.remove("visible");
+    photo.classList.remove("visible");
     error_message.classList.remove("visible");
+}
+
+function makePhotoButtonActiv() {
+    if (take_photo_btn.className == 'disabled') {
+        take_photo_btn.classList.remove("disabled");
+        take_photo_btn.classList.add("visible");
+    }
+    // console.log('TEST', take_photo_btn.className);
 }
