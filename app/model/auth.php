@@ -6,10 +6,10 @@ function auth($user_mail, $password)
     $login_usr = 'SELECT email, password, username, activation FROM users';
     foreach ($pdo->query($login_usr) as $row) {
 //        print_r($row);
-        if ($row['email'] == $user_mail && $row['password'] == $password && $row['activation'] == 1) {
+        if ($row['email'] == $user_mail && password_verify($password, $row['password']) && $row['activation'] == 1) {
             return ($row['username']);
         }
-        if ($row['email'] == $user_mail && $row['password'] == $password && $row['activation'] == 0) {
+        if ($row['email'] == $user_mail && password_verify($password, $row['password']) && $row['activation'] == 0) {
             return (-1);
         }
     }

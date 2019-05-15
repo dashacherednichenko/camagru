@@ -7,7 +7,7 @@ function saveNewPass($id, $postcode, $pass){
     $result = $id_usr->fetch(PDO::FETCH_LAZY);
     $code = md5($result['id']).md5($result['email']);
     if ($code == $postcode) {
-        $newPass = md5(md5(trim($pass)));
+        $newPass = password_hash(trim($pass), PASSWORD_DEFAULT);
         $change_pass = "UPDATE users SET password = '".$newPass."' WHERE id='$id'";
 //    print_r($change_pass);
         $pdo->query($change_pass);

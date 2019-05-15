@@ -25,7 +25,7 @@ class AccountController extends Controller
     {
         require_once 'app/model/auth.php';
         if (isset($_POST['submit']) && $_POST['submit'] == 'Login') {
-            $password = md5(md5(trim($_POST['password'])));
+            $password = $_POST['password'];
             if (($login = auth($_POST['email'], $password)) != NULL && $login != -1){
                 $_SESSION['error_user'] = NULL;
                 $_SESSION['error_login'] = NULL;
@@ -85,7 +85,7 @@ class AccountController extends Controller
                 $errors[] = "Заполните 'Password'!";
         }
         if (count($errors) == 0) {
-            $hash_pass = md5(md5(trim($_POST['password'])));
+            $hash_pass = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
             if (addUser($_POST['email'], $_POST['username'], $hash_pass) == 1) {
                 echo    "An e-mail with a link has been sent to your e-mail to confirm the registration. <a href='/camagru/'>Main page</a>";
                 $_SESSION['error_login'] = NULL;

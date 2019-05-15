@@ -28,7 +28,7 @@ else {
             </div>
         </div>
         <div id = "superposable_img">
-            <form action="snapchat/photo">
+            <form action="snapchat/photo" method="post">
                 <?php
                 $directory = "public/images/superposable_img";
                 $allowed_types = array("jpg", "png", "gif");
@@ -50,7 +50,8 @@ else {
                 }
                 closedir($dir);
                 ?>
-                <input type="submit" value="Photo">
+                <input name="userPhoto" value="" hidden id="userPhoto">
+                <input type="submit" value="Photo" id="formSnapButton">
             </form>
         </div>
     </div>

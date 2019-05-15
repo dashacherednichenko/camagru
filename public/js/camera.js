@@ -2,6 +2,8 @@ let video = document.getElementById('camera-stream');
 let photo = document.getElementById('snap');
 let photo_layout = document.getElementById('layout_img');
 let photo_layout_div = document.getElementById('layout');
+let inputPhoto = document.getElementById('userPhoto');
+let formSnapButton = document.getElementById('formSnapButton');
 let superposable = document.getElementById('superposable_img');
 let camera_on = document.getElementById('start-camera');
 let controlsButtons = document.querySelector('.controls');
@@ -9,6 +11,8 @@ let take_photo_btn = document.getElementById('take-photo');
 let delete_photo_btn = document.getElementById('delete-photo');
 let save_photo_btn = document.getElementById('save-photo');
 let error_message = document.getElementById('error-msg');
+let width_layout;
+let height_layout;
 
 navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
@@ -39,14 +43,16 @@ camera_on.addEventListener("click", function(e){
     showVideo();
 });
 
-take_photo_btn.addEventListener("click", function(e){
+take_photo_btn.addEventListener("click", async function(e){
     e.preventDefault();
-    let my_photo = takeSnapshot();
+    let my_photo = await takeSnapshot();
     photo.setAttribute('src', my_photo);
     photo.classList.add("visible");
     delete_photo_btn.classList.remove("disabled");
     save_photo_btn.classList.remove("disabled");
     save_photo_btn.href = my_photo;
+    let img = await inputPhoto.setAttribute('value', my_photo);
+    return formSnapButton.click();
 });
 
 delete_photo_btn.addEventListener("click", function(e){
@@ -104,43 +110,33 @@ function makePhotoButtonActiv(img) {
         take_photo_btn.classList.add("visible");
     }
     photo_layout.setAttribute('src', img.value);
-    let width_layout = photo_layout_div.offsetWidth;
-    let height_layout = photo_layout_div.offsetHeight;
-    // console.log('TEST', img.value);
+    width_layout = photo_layout_div.offsetWidth;
+    height_layout = photo_layout_div.offsetHeight;
+    console.log('TEST', width_layout);
+    console.log('TEST2', height_layout);
 }
 
-var ball = document.getElementById('layout');
-
-ball.onmousedown = function(e) { // 1. отследить нажатие
-
-    // подготовить к перемещению
-    // 2. разместить на том же месте, но в абсолютных координатах
-    ball.style.position = 'absolute';
-    moveAt(e);
-    // переместим в body, чтобы мяч был точно не внутри position:relative
-    document.body.appendChild(ball);
-
-    ball.style.zIndex = 1000; // показывать мяч над другими элементами
-
-    // передвинуть мяч под координаты курсора
-    // и сдвинуть на половину ширины/высоты для центрирования
-    function moveAt(e) {
-        ball.style.left = e.pageX - ball.offsetWidth / 2 + 'px';
-        ball.style.top = e.pageY - ball.offsetHeight / 2 + 'px';
-    }
-
-    // 3, перемещать по экрану
-    document.onmousemove = function(e) {
-        moveAt(e);
-    }
-
-    // 4. отследить окончание переноса
-    ball.onmouseup = function() {
-        document.onmousemove = null;
-        ball.onmouseup = null;
-    }
-}
-
-ball.ondragstart = function() {
+photo_layout_div.ondragstart = function() {
     return false;
 };
+
+photo_layout_div.onmousedown = function(e) {
+    photo_layout_div.style.position = 'absolute';
+    moveAt(e);
+    document.body.appendChild(photo_layout_div);
+    photo_layout_div.style.zIndex = '90';
+    function moveAt(e) {
+        photo_layout_div.style.left = e.pageX - width_layout/2 + 'px';
+        photo_layout_div.style.top = e.pageY - height_layout/2 + 'px';
+    };
+
+    document.onmousemove = function(e) {
+        moveAt(e);
+    };
+
+    photo_layout_div.onmouseup = function() {
+        document.onmousemove = null;
+        photo_layout_div.onmouseup = null;
+    };
+};
+

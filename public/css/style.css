@@ -87,7 +87,7 @@ header a {
     /*min-height: 100%;*/
 }
 #main_container {
-    min-height: calc(100vh - 160px);
+    min-height: calc(100vh - 180px);
     text-align: center;
 }
 
@@ -147,13 +147,14 @@ footer {
 /*snapchat*/
 #photo_container {
     display: inline-block;
-    height: calc(100vh - 160px);
+    float: left;
+    height: calc(100vh - 180px);
     width: calc(100% - 220px);
 }
 #superposable_img {
     display: none;
     margin: 20px;
-    height: 100vh;
+    height: calc(100vh - 180px);;
     overflow-y: scroll;
 }
 .block_mini_img_filter {
@@ -187,19 +188,22 @@ footer {
     z-index: 90;
     display: inline;
     position: absolute;
-    width: 350px;
+    width: 200px;
     left: 300px;
     top: 200px;
 }
 #layout_img{
-    width: 100%;
+    width: 200px;
+}
+#layout_img:hover{
+    cursor: move;
 }
 .app video#camera-stream{
     display: none;
 }
 .app video#camera-stream.visible{
     display: inline-block;
-    width: 800px;
+    /*width: 800px;*/
 }
 
 .app img#snap{
@@ -262,12 +266,18 @@ footer {
     display: none;
 }
 
-.app img#snap.visible,
-.app #error-message.visible,
-#superposable_img.visible{
+.app img#snap.visible{
     display: inline-block;
     margin: 20px;
-    height: 100vh;
+}
+.app #error-message.visible{
+    display: inline-block;
+    margin: 20px;
+}
+#superposable_img.visible{
+    display: inline-block;
+    margin-right: 20px;
+    height: calc(100vh - 180px);
     overflow-y: scroll;
 }
 .app .controls.visible
@@ -282,7 +292,9 @@ input[name="superposable"] {
 input:checked ~.mini_img_filter{
     border: 2px solid #292D39;
 }
-
+#formSnapButton {
+    display: none;
+}
 
 /*@media(max-width: 1000px){*/
 /*    .container{*/
