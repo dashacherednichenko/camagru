@@ -1,4 +1,5 @@
 let video = document.getElementById('camera-stream');
+let video_div = document.getElementById('camera-stream-div');
 let photo = document.getElementById('snap');
 let photo_layout = document.getElementById('layout_img');
 let photo_layout_div = document.getElementById('layout');
@@ -13,6 +14,9 @@ let save_photo_btn = document.getElementById('save-photo');
 let error_message = document.getElementById('error-msg');
 let width_layout;
 let height_layout;
+
+photo_layout_div.style.left = '300px';
+photo_layout_div.style.top = '200px';
 
 navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
@@ -52,6 +56,14 @@ take_photo_btn.addEventListener("click", async function(e){
     save_photo_btn.classList.remove("disabled");
     save_photo_btn.href = my_photo;
     let img = await inputPhoto.setAttribute('value', my_photo);
+    await document.getElementById('maskWidth').setAttribute('value',  width_layout);
+    await document.getElementById('maskHeight').setAttribute('value',  height_layout);
+    let video_crd = getCoords(photo_layout_div);
+    let mask_crd = getCoords(video);
+    let left = video_crd['left'] - mask_crd['left'];
+    let top = video_crd['top'] - mask_crd['top'];
+    await document.getElementById('maskLeft').setAttribute('value',  left);
+    await document.getElementById('maskTop').setAttribute('value',  top);
     return formSnapButton.click();
 });
 
@@ -112,13 +124,23 @@ function makePhotoButtonActiv(img) {
     photo_layout.setAttribute('src', img.value);
     width_layout = photo_layout_div.offsetWidth;
     height_layout = photo_layout_div.offsetHeight;
-    console.log('TEST', width_layout);
-    console.log('TEST2', height_layout);
+    // console.log('TEST', width_layout);
+    // console.log('TEST2', height_layout);
 }
 
 photo_layout_div.ondragstart = function() {
     return false;
 };
+
+function getCoords(elem) { // кроме IE8-
+    var box = elem.getBoundingClientRect();
+
+    return {
+        top: box.top + pageYOffset,
+        left: box.left + pageXOffset
+    };
+
+}
 
 photo_layout_div.onmousedown = function(e) {
     photo_layout_div.style.position = 'absolute';
@@ -127,7 +149,10 @@ photo_layout_div.onmousedown = function(e) {
     photo_layout_div.style.zIndex = '90';
     function moveAt(e) {
         photo_layout_div.style.left = e.pageX - width_layout/2 + 'px';
+        // console.log(e.pageX);
         photo_layout_div.style.top = e.pageY - height_layout/2 + 'px';
+        // console.log(e.pageY);
+        // console.log(getCoords(photo_layout_div));
     };
 
     document.onmousemove = function(e) {

@@ -50,6 +50,10 @@ else {
                 }
                 closedir($dir);
                 ?>
+                <input name="maskLeft" value="" hidden id="maskLeft">
+                <input name="maskTop" value="" hidden id="maskTop">
+                <input name="maskWidth" value="" hidden id="maskWidth">
+                <input name="maskHeight" value="" hidden id="maskHeight">
                 <input name="userPhoto" value="" hidden id="userPhoto">
                 <input type="submit" value="Photo" id="formSnapButton">
             </form>
