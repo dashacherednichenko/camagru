@@ -13,8 +13,7 @@ $USERS = "CREATE TABLE IF NOT EXISTS `db_camagru`.`users`(
                       PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 $PHOTOS = "CREATE TABLE IF NOT EXISTS `db_camagru`.`photos`(
                       `id` INT NOT NULL AUTO_INCREMENT ,
-                      `bin_data` LONGBLOB NOT NULL,
-                      `filename` CHAR(50) NOT NULL,
+                      `filename` CHAR(150) NOT NULL,
                       `filesize` CHAR(50) NOT NULL,
                       `filetype` CHAR(50) NOT NULL,
                       `date` CHAR(50) NOT NULL,

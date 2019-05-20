@@ -20,6 +20,15 @@ photo_layout_div.style.top = '200px';
 
 navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
+// console.log(photo.src);
+if (photo.src && photo.src != 'http://localhost:8100/camagru/')
+{
+    // console.log("test");
+    photo.style.zIndex = '1000';
+    delete_photo_btn.classList.remove("disabled");
+    save_photo_btn.classList.remove("disabled");
+}
+
 if(!navigator.getMedia){
     displayErrorMessage("Browser doesn't have support for the navigator.getUserMedia interface.");
 }
@@ -50,11 +59,6 @@ camera_on.addEventListener("click", function(e){
 take_photo_btn.addEventListener("click", async function(e){
     e.preventDefault();
     let my_photo = await takeSnapshot();
-    photo.setAttribute('src', my_photo);
-    photo.classList.add("visible");
-    delete_photo_btn.classList.remove("disabled");
-    save_photo_btn.classList.remove("disabled");
-    save_photo_btn.href = my_photo;
     let img = await inputPhoto.setAttribute('value', my_photo);
     await document.getElementById('maskWidth').setAttribute('value',  width_layout);
     await document.getElementById('maskHeight').setAttribute('value',  height_layout);
@@ -62,18 +66,35 @@ take_photo_btn.addEventListener("click", async function(e){
     let mask_crd = getCoords(video);
     let left = video_crd['left'] - mask_crd['left'];
     let top = video_crd['top'] - mask_crd['top'];
+    // await document.getElementById('videoLeft').setAttribute('value',  video_crd['left']);
+    // await document.getElementById('videoTop').setAttribute('value',  video_crd['top']);
     await document.getElementById('maskLeft').setAttribute('value',  left);
     await document.getElementById('maskTop').setAttribute('value',  top);
     return formSnapButton.click();
 });
 
-delete_photo_btn.addEventListener("click", function(e){
+function submitHandlerDelete(e) {
     e.preventDefault();
-    photo.setAttribute('src', "");
-    photo.classList.remove("visible");
-    delete_photo_btn.classList.add("disabled");
-    save_photo_btn.classList.add("disabled");
-});
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+        console.log("readyState=", this.readyState, "statis=", this.status);
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            photo.setAttribute('src', "");
+            photo.classList.remove("visible");
+            delete_photo_btn.classList.add("disabled");
+            save_photo_btn.classList.add("disabled");
+            console.log("SUCCESS", this);
+            // console.log("SUCCESS", request.responseText);
+        }
+    }
+    request.open(this.method, this.action, true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    let data = new FormData(this);
+    // for (let key of data.keys())
+    //     console.log('test', key, data.get(key));
+    request.send(data);
+}
+document.getElementById('delete-photo-form').addEventListener("submit", submitHandlerDelete);
 
 function showVideo(){
     cleanSnapPage();
@@ -87,21 +108,15 @@ function takeSnapshot(){
     let context = hidden_canvas.getContext('2d');
     let width = video.videoWidth;
     let height = video.videoHeight;
-
     if (width && height) {
         hidden_canvas.width = width;
         hidden_canvas.height = height;
-
-        // Make a copy of the current frame in the video on the canvas.
         context.drawImage(video, 0, 0, width, height);
         return hidden_canvas.toDataURL('image/png');
     }
 }
 
 function displayErrorMessage(error_msg, error){
-    // error = error || "";
-    // if(error)
-    //     console.log('error: ',error);
     error_message.innerText = error_msg;
     cleanSnapPage();
     error_message.classList.add("visible");
@@ -124,22 +139,18 @@ function makePhotoButtonActiv(img) {
     photo_layout.setAttribute('src', img.value);
     width_layout = photo_layout_div.offsetWidth;
     height_layout = photo_layout_div.offsetHeight;
-    // console.log('TEST', width_layout);
-    // console.log('TEST2', height_layout);
 }
 
 photo_layout_div.ondragstart = function() {
     return false;
 };
 
-function getCoords(elem) { // кроме IE8-
+function getCoords(elem) {
     var box = elem.getBoundingClientRect();
-
     return {
         top: box.top + pageYOffset,
         left: box.left + pageXOffset
     };
-
 }
 
 photo_layout_div.onmousedown = function(e) {

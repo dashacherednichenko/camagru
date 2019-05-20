@@ -115,6 +115,31 @@ footer {
     padding-right: 20px;
 }
 
+
+/*gallery*/
+.gallery_photos {
+    max-width: calc(100% - 20px);
+    margin: 10px;
+}
+#gallery_list {
+    text-align: left;
+}
+.gallery_photo {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    display: inline-block;
+    width: calc(33.3% - 22px);
+    border: 1px solid #e6e6e6;
+    margin: 10px;
+}
+.likes_block {
+    margin: 10px;
+}
+.likes_block img{
+    padding: 10px;
+    opacity: 0.6;
+}
+
+
 /*register*/
 #form_register, #form_login {
     margin-top: 10%;
@@ -142,6 +167,12 @@ footer {
     margin-top: 20px;
     text-align: center;
     color: darkred;
+}
+
+/*Account*/
+.user_photos {
+    max-width: 30%;
+    margin: 10px;
 }
 
 /*snapchat*/
@@ -208,10 +239,14 @@ footer {
 
 .app img#snap{
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    width: 300px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /*top: 0;*/
+    /*left: 0;*/
+    /*z-index: 10;*/
     display: none;
+    /*margin: 20px;*/
 }
 
 .app #error-message{
@@ -226,8 +261,12 @@ footer {
     display: none;
     padding: 30px;
 }
+.app .controls form {
+    display: inline-block;
+}
 
-.app .controls a{
+.app .controls a, #delete-photo, #save-photo
+{
     border-radius: 50%;
     color: #fff;
     background-color: #292D39;
@@ -239,18 +278,18 @@ footer {
     -webkit-tap-highlight-color: transparent;
 }
 
-.app .controls a:hover{
+.app .controls a:hover, .app .controls #delete-photo:hover, .app .controls #save-photo:hover{
     opacity: 1;
 }
 
-.app .controls a.disabled{
+.app .controls a.disabled, .app .controls #delete-photo.disabled, .app .controls #save-photo.disabled{
     background-color: #555;
     opacity: 0.5;
     cursor: default;
     pointer-events: none;
 }
 
-.app .controls a.disabled:hover{
+.app .controls a.disabled:hover, .app .controls input.disabled:hover{
     opacity: 0.5;
 }
 

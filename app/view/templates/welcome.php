@@ -40,7 +40,8 @@
             <p>E-mail: <?php echo $_SESSION['email']?></p>
             <p class="regtext"><a href = "change-data">Do you want to change your data?</a></p>
             <?php
-
+                require_once 'app/model/showUserPhoto.php';
+                showUserPhotos($_SESSION['email']);
             ?>
         </div>
         <?php

@@ -15,8 +15,8 @@ class AccountController extends Controller
     public function actionLogout()
     {
         if ($_SESSION['email'] &&  $_SESSION['email'] !== NULL){
-            $_SESSION['email'] = NULL;
-            $_SESSION['login'] = NULL;
+            require_once 'app/model/clearSession.php';
+            clearSession();
         }
         header("Location: /camagru/");
     }

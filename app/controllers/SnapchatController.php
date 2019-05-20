@@ -19,6 +19,7 @@ class SnapchatController extends Controller
         $img = $_POST['userPhoto'];
         $imagemy = explode('data:image/png;base64,', $img)[1];
         $funMask = imagecreatefrompng($_POST['superposable']);
+        $name = md5($_POST['userEmail']).time();
         $maskwidth = imagesx($funMask);
         $maskusrwidth = $_POST['maskWidth'];
         $maskheight = imagesy($funMask);
@@ -29,26 +30,29 @@ class SnapchatController extends Controller
         $top = explode('px', $_POST['maskTop'])[0];
         imagecopyresampled ($im, $funMask, $left, $top, 0, 0, $maskusrwidth, $maskusrheight, $maskwidth, $maskheight);
 
-//        imagecopymerge($im, $funMask, 0, 0, 0, 0, $maskusrwidth, $maskusrheight, 0);
-        header('Content-Type: image/gif');
-        imagepng($im);
-
+//        header('Content-Type: image/png');
+//        imagepng($im);
+        $save = "public/images/tmp/". strtolower($name) .".png";
+//        echo $save;
+        chmod($save,0755);
+        imagepng($im, $save, 0, NULL);
         imagedestroy($im);
         imagedestroy($funMask);
+        $_SESSION['photo'] = $save;
+        header("Location: /camagru/snapchat");
+    }
+    public function actionDeletetmpphoto(){
+        unlink($_SESSION['photo']);
+        $_SESSION['photo'] = '';
+        return true;
+    }
 
-//        echo "<img src=\"imagecopymerge\" alt=\"\" />";
-// imagedestroy - освобождает память
-//        imagedestroy($image);
-//
-//        imagedestroy($funMask);
-//        echo $image;
-
-//        $data = base64_encode($image);
-//        $tag = '<img src="data:image/png;base64,'. $data.'" />';
-//        echo $tag;
-//        $src = 'data: image/png;base64,'.$image;
-//        echo "<img src=\"$src\" alt=\"\" />";
-
+    public function actionPublishphoto(){
+        require_once "app/model/savePhoto.php";
+        savePhoto($_SESSION['email']);
+        $_SESSION['photo'] = '';
+        header("Location: /camagru/");
+        return true;
     }
 }
 ?>

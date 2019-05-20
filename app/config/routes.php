@@ -10,6 +10,8 @@ return array(
     'sendpassword' => 'account/forgetpassword',
     'snapchat' => 'snapchat/page',
     'snapchat/photo' => 'snapchat/photo',
+    'snapchat/deletetmpphoto' => 'snapchat/deletetmpphoto',
+    'snapchat/publishphoto' => 'snapchat/publishphoto',
     '' => 'main/index',
 );
 ?>
