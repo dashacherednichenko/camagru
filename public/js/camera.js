@@ -21,12 +21,16 @@ photo_layout_div.style.top = '200px';
 navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
 // console.log(photo.src);
-if (photo.src && photo.src != 'http://localhost:8100/camagru/')
+if (photo.src )
 {
-    console.log("test", photo.src);
-    photo.style.zIndex = '1000';
-    delete_photo_btn.classList.remove("disabled");
-    save_photo_btn.classList.remove("disabled");
+    var host = photo.src.split('/camagru/')
+    // console.log("test", host);
+    if (host[1] != '')
+    {
+        photo.style.zIndex = '1000';
+        delete_photo_btn.classList.remove("disabled");
+        save_photo_btn.classList.remove("disabled");
+    }
 }
 
 if(!navigator.getMedia){
