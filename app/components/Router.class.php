@@ -25,7 +25,8 @@ class Router
             $url = '';
 
         foreach ($this->routes as $uriPattern => $path){
-            if (preg_match("~^$uriPattern$~", $url)) {
+            if (preg_match("~^$uriPattern$~", $url)
+                || preg_match("~^$uriPattern\?(.*)+$~", $url)) {
                 $this->params = $path;
                 return true;
             }

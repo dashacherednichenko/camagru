@@ -128,6 +128,15 @@ class AccountController extends Controller
         echo saveNewPass($_POST['id'], $_POST['code'], $_POST['password']);
         require_once "app/view/templates/footer.php";
     }
+
+    public function actionDeletephoto()
+    {
+        require_once "app/model/deletephoto.php";
+        $idphoto = $_GET['id'];
+        $emailusr = $_GET['email'];
+        deletephoto($idphoto, $emailusr);
+        header("Location: /camagru/account");
+    }
 }
 
 //require_once "../model/auth.php";

@@ -4,6 +4,7 @@ return array(
     'account/register' => 'account/adduser',
     'account/changepassword' => 'account/changepassword',
     'account/sendlink' => 'account/sendpassword',
+    'account/deletephoto' => 'account/deletephoto',
     'account' => 'account/login',
     'logout' => 'account/logout',
     'create' => 'account/register',
