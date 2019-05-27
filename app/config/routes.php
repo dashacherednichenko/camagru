@@ -12,6 +12,9 @@ return array(
     'snapchat/photo' => 'snapchat/photo',
     'snapchat/deletetmpphoto' => 'snapchat/deletetmpphoto',
     'snapchat/publishphoto' => 'snapchat/publishphoto',
+    'admin/deletedb' => 'admin/deletedb',
+    'admin/auth' => 'admin/auth',
+    'admin' => 'admin/page',
     '' => 'main/index',
 );
 ?>

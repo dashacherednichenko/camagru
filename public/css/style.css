@@ -175,6 +175,29 @@ footer {
     margin: 10px;
 }
 
+/*admin*/
+#form_adminlogin {
+    margin-top: 10%;
+}
+#form_adminlogin label{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    padding-right: 10px;
+}
+#form_adminlogin input {
+    width: 180px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.admin_todo {
+    margin-left: 60px;
+    text-align: left;
+}
+.likes_block a:hover img{
+    opacity: 1.0;
+}
+
 /*snapchat*/
 #photo_container {
     display: inline-block;

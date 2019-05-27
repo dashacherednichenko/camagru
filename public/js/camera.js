@@ -23,7 +23,7 @@ navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia ||
 // console.log(photo.src);
 if (photo.src && photo.src != 'http://localhost:8100/camagru/')
 {
-    // console.log("test");
+    console.log("test", photo.src);
     photo.style.zIndex = '1000';
     delete_photo_btn.classList.remove("disabled");
     save_photo_btn.classList.remove("disabled");
