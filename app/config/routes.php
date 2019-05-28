@@ -6,6 +6,7 @@ return array(
     'account/sendlink' => 'account/sendpassword',
     'account/deletephoto' => 'account/deletephoto',
     'account' => 'account/login',
+    'save' => 'account/savenewdata',
     'change-data' => 'account/changedata',
     'logout' => 'account/logout',
     'create' => 'account/register',
