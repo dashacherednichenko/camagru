@@ -15,7 +15,12 @@ else {
     ?>
     <h3>Hello, ADMIN!!!</h3>
     <ul class="admin_todo">
-        <li> <a href='admin/deletedb' title='delete DB' onclick='return confirm("do you  REALLY want to DELETE all DATA BASE?! REALLY??? DELETE????")'>Delete data-base?</li>
+        <li>
+            <a href='admin/deletedb' title='delete DB' onclick='return confirm("do you  REALLY want to DELETE all DATA BASE?! REALLY??? DELETE????")'>&#10008; Delete data-base?
+        </li>
+        <li>
+            <a href='admin/rewritedb' title='rewrite DB' onclick='return confirm("do you want to rewrite DATA BASE?")'>&#9999; Rewrite data-base?
+        </li>
     </ul>
     <?php
 }

@@ -6,14 +6,6 @@ console.log('2', hidden_div.hidden);
 function editInput(id)
 {
     let input = document.getElementById(id);
-    // console.log(id, input);
-    // if (input.createTextRange) {
-    //     var part = input.createTextRange();
-    //     part.move("character", 0);
-    //     part.select();
-    // } else if (input.setSelectionRange) {
-    //     input.setSelectionRange(0, 0);
-    // }
     input.focus();
 }
 

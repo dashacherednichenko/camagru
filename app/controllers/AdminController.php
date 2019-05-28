@@ -4,6 +4,10 @@ require_once 'app/components/Controller.class.php';
 
 class AdminController extends Controller
 {
+    function __construct()
+    {
+    }
+
     public function actionPage()
     {
         require_once 'app/view/templates/header.php';
@@ -25,7 +29,7 @@ class AdminController extends Controller
         }
     }
 
-    public function actiondeletedb()
+    public function actionDeletedb()
     {
         if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
             require_once "app/model/deletedb.php";
@@ -35,6 +39,15 @@ class AdminController extends Controller
             session_start();
             $_SESSION['admin'] = 1;
             header("Location: /camagru/admin");
+        }
+    }
+
+    public function actionRewritedb()
+    {
+        require_once "app/model/rewritedb.php";
+        if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
+            firstfillingDB();
+            header("Location: /camagru");
         }
     }
 }

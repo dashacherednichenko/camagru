@@ -122,6 +122,10 @@ footer {
     max-width: calc(100% - 20px);
     margin: 10px;
 }
+.gallery_photo_frame{
+    /*height: 250px;*/
+    /*margin: auto;*/
+}
 #gallery_list {
     text-align: left;
 }
