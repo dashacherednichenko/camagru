@@ -182,6 +182,12 @@ footer {
 .edit:hover{
     opacity: 1;
 }
+.hidden_div {
+    /*display: none;*/
+}
+.hidden_div label, .hidden_div p{
+    color: darkred;
+}
 
 /*admin*/
 #form_adminlogin {
