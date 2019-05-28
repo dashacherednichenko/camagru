@@ -84,7 +84,7 @@ class AccountController extends Controller
             else
                 $errors[] = "Заполните 'Password'!";
         }
-        if (count($errors) == 0) {
+        if (isset($errors) && count($errors) == 0) {
             $hash_pass = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
             if (addUser($_POST['email'], $_POST['username'], $hash_pass) == 1) {
                 echo    "An e-mail with a link has been sent to your e-mail to confirm the registration. <a href='/camagru/'>Main page</a>";
@@ -136,6 +136,15 @@ class AccountController extends Controller
         $emailusr = $_GET['email'];
         deletephoto($idphoto, $emailusr);
         header("Location: /camagru/account");
+    }
+
+    public function actionChangedata()
+    {
+        require_once 'app/view/templates/header.php';
+        require_once "app/view/templates/changedata.php";
+        require_once 'app/view/templates/footer.php';
+        require_once 'app/view/templates/scripts_register.php';
+        return true;
     }
 }
 

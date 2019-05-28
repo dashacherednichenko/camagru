@@ -175,6 +175,14 @@ footer {
     margin: 10px;
 }
 
+.edit{
+    width: 20px;
+    opacity: 0.6;
+}
+.edit:hover{
+    opacity: 1;
+}
+
 /*admin*/
 #form_adminlogin {
     margin-top: 10%;

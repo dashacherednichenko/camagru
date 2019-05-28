@@ -9,6 +9,7 @@ if (isset($_SESSION['error_user']) && $_SESSION['error_user'] !== NULL) {
     </div>
 <?php
 }
+if (!isset($_SESSION['email']) || $_SESSION['email'] == NULL) {
 ?>
     <div id="main_container">
         <form action="account/register" method="post" id="form_register">
@@ -37,3 +38,9 @@ if (isset($_SESSION['error_user']) && $_SESSION['error_user'] !== NULL) {
         </form>
     </div>
 </div>
+<?php
+}
+else {
+    header("Location: /camagru/account");
+}
+?>
