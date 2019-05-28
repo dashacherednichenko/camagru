@@ -3,9 +3,24 @@ let hidden_div = document.getElementsByClassName('hidden_div')[0];
 let edit_img = document.getElementById('edit');
 console.log('2', hidden_div.hidden);
 
+function editInput(id)
+{
+    let input = document.getElementById(id);
+    // console.log(id, input);
+    // if (input.createTextRange) {
+    //     var part = input.createTextRange();
+    //     part.move("character", 0);
+    //     part.select();
+    // } else if (input.setSelectionRange) {
+    //     input.setSelectionRange(0, 0);
+    // }
+    input.focus();
+}
+
 function showPasswordDiv(){
     if (hidden_div.hidden == true) {
         hidden_div.hidden = false;
+        document.getElementById('password').focus();
         register_button.type="button";
         edit_img.src = '/camagru/public/images/cancel.png';
     }

@@ -15,14 +15,14 @@
             <form action="save" method="post" id="form_register">
                 <label for="email">E-mail: </label>
                 <input type="email" name="email" id="email" required value="<?php echo $_SESSION['email']?>">
-                <img src="/camagru/public/images/edit.png" class="edit">
+                <img src="/camagru/public/images/edit.png" class="edit" onclick="editInput('email')">
                 <br>
                 <label for="username">Username: </label>
                 <input type="text" name="username" id="username" required
                        pattern="^[a-zA-Z0-9]{3,20}$" oninvalid="this.setCustomValidity
                    ('Логін має містити лише літери англійської абетки та цифри, довжина від 3 до 20 символів')"
                        oninput="setCustomValidity('')" value="<?php echo $_SESSION['login']?>">
-                <img src="/camagru/public/images/edit.png" class="edit">
+                <img src="/camagru/public/images/edit.png" class="edit" onclick="editInput('username')">
                 <br>
                 <p class="regtext">**to change your data you must enter your current password!</p>
                 <label for="password">Password: </label>
