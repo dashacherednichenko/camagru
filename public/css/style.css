@@ -145,7 +145,7 @@ footer {
 }
 
 .date {
-    font-size: 1vw;
+    font-size: 0.5vw;
     color: #e6e6e6;
 }
 
@@ -342,7 +342,7 @@ footer {
 }
 
 .app img#snap{
-    position: absolute;
+    position: inherit;
     width: 300px;
     margin: auto;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);

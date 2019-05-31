@@ -114,6 +114,7 @@ function showVideo(){
     video.classList.add("visible");
     superposable.classList.add("visible");
     controlsButtons.classList.add("visible");
+    take_photo_btn.hidden = false;
 }
 
 function takeSnapshot(){
