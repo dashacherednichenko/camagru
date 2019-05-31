@@ -106,7 +106,8 @@ function submitHandlerDelete(e) {
     //     console.log('test', key, data.get(key));
     request.send(data);
 }
-document.getElementById('delete-photo-form').addEventListener("submit", submitHandlerDelete);
+if (document.getElementById('delete-photo-form') != null)
+    document.getElementById('delete-photo-form').addEventListener("submit", submitHandlerDelete);
 
 function showVideo(){
     cleanSnapPage();
