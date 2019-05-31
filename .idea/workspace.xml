@@ -20,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/app/model/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/gallery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/templates/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/templates/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/templates/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/templates/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/changedata.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/changedata.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,6 +40,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="125" selection-start-line="125" selection-end-line="126" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/rewritedb.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -132,7 +142,6 @@
         <option value="$PROJECT_DIR$/app/view/templates/scripts_changedata.php" />
         <option value="$PROJECT_DIR$/public/js/index.js" />
         <option value="$PROJECT_DIR$/app/model/newpassword.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/model/savedata.php" />
         <option value="$PROJECT_DIR$/app/controllers/AccountController.php" />
         <option value="$PROJECT_DIR$/app/view/templates/changedata.php" />
@@ -143,6 +152,7 @@
         <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/app/model/rewritedb.php" />
         <option value="$PROJECT_DIR$/app/model/gallery.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -237,13 +247,6 @@
               <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
               <item name="camagru" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="camagru" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -304,18 +307,17 @@
       <workItem from="1557738249428" duration="18030000" />
       <workItem from="1558339543042" duration="5703000" />
       <workItem from="1558349173925" duration="18738000" />
-      <workItem from="1559032552794" duration="20241000" />
+      <workItem from="1559032552794" duration="20596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173942000" />
+    <option name="totallyTimeSpent" value="174297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1236" y="194" width="1236" height="1165" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28726968" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28726968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -328,7 +330,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32898417" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49916247" visible="true" weight="0.3252563" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49916247" visible="true" weight="0.3252563" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5008375" side_tool="true" weight="0.3295099" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -444,13 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="166" column="13" lean-forward="true" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -633,13 +628,6 @@
     <entry file="file://$PROJECT_DIR$/public/images/tmp/test12.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/savePhoto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="34" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="52" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/rewritedb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -651,6 +639,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/savePhoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="34" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="52" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="125" selection-start-line="125" selection-end-line="126" selection-end-column="19" />
         </state>
       </provider>
     </entry>

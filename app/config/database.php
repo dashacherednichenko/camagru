@@ -16,7 +16,7 @@ $PHOTOS = "CREATE TABLE IF NOT EXISTS `db_camagru`.`photos`(
                       `filename` CHAR(150) NOT NULL,
                       `filesize` CHAR(50) NOT NULL,
                       `filetype` CHAR(50) NOT NULL,
-                      `date` CHAR(50) NOT NULL,
+                      `date` DATETIME NOT NULL,
                       `author` VARCHAR(15) NOT NULL ,
                       PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 $COMMENTS = "CREATE TABLE IF NOT EXISTS `db_camagru`.`comments`(
@@ -24,6 +24,6 @@ $COMMENTS = "CREATE TABLE IF NOT EXISTS `db_camagru`.`comments`(
                       `comment` VARCHAR(300) NOT NULL,
                       `photo` CHAR(50) NOT NULL,
                       `author` VARCHAR(15) NOT NULL ,
-                      `date` CHAR(50) NOT NULL,
+                      `date` DATETIME NOT NULL,
                       PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 ?>

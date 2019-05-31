@@ -9,9 +9,8 @@ function showUserPhotos($email)
         if ($row['email'] == $email && $row['activation'] == 1) {
             $id = $row['id'];
 //            echo $id;
-            $photos = $pdo->prepare('SELECT filename, author, id FROM photos WHERE author = ?');
+            $photos = $pdo->prepare('SELECT filename, author, id, date FROM photos WHERE author = ? ORDER BY date DESC');
             $photos->execute([$id]);
-            echo "<h2>My photos</h2>";
             $count = 0;
             foreach ($photos as $rowphoto) {
                 $count++;
@@ -21,6 +20,7 @@ function showUserPhotos($email)
                     <a href='account/deletephoto?id=$rowphoto[id]&email=$_SESSION[email]' title='delete photo' onclick='return confirm(\"Are you sure you want to delete this photo?\")'>
                         <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB4AAAAeABBeqfSQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFZSURBVEiJ7ZaxTsJQGIXPuQXdfA5rsIOLwigxjiQOuPkAGjcXB2PkAdx4AB/AxFkTxyKLg0VkVx5AN5H2OJSEWorUpovKmdr/P+d+NzfN7Q/8NTGtcbm0cWrIvWgtAC56XquRCbTilKsSGgAXx1UtAFidsoYHcBDxvhvy5PHBvY2aCvGUpF2AFUBpNopwA1+9vlQHMAP0ERyzYLVFWmlJURlpaISrLNlclPgx2KX1LdBay7Si/PunTvsmXp44uhBvaoAOMoFomgAmQCZVFugBeEtovY56M5UG5Ha9li2Derwhsd71WjaguzxA/dBoXibCFvvhE5/zAOWiOWgO+uegIgBwqGK8wSELUc93SrxUBQYc/8w2baey7wvb8as+MP6Z7VSuIVWj2dQgg6At8HD0ugSpOWW4qEGqRQsk3CTjtOGEtlM+grQDmJnHEkoDiZe9jnuOH8wBv1eficRpaKXz8HAAAAAASUVORK5CYII=\">
                     </a>
+                    <span class='date'>".$rowphoto['date']."</span>
                     </div>
                     </div>";
             }

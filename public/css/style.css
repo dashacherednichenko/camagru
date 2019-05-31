@@ -144,6 +144,11 @@ footer {
     opacity: 0.6;
 }
 
+.date {
+    font-size: 1vw;
+    color: #e6e6e6;
+}
+
 
 /*register*/
 #form_register, #form_login {
@@ -208,6 +213,37 @@ footer {
     background-color: gray;
 }
 
+#photos_published {
+    width: calc(100% - 80px);
+    height: 200px;
+    overflow-x: scroll;
+}
+
+#photos_published_carusel{
+    width: 9999px;
+    height: 150px;
+
+}
+
+#photos_published #photos_published_carusel .gallery_photo {
+    height: 100%;
+    width: auto;
+    float: left;
+
+}
+#photos_published #photos_published_carusel .gallery_photo .gallery_photos {
+    height: calc(100% - 45px);
+    margin-bottom: 0px;
+}
+#photos_published #photos_published_carusel .gallery_photo .likes_block {
+    margin: 5px;
+    margin-top: 0px;
+}
+
+#photos_published #photos_published_carusel .gallery_photo .likes_block  img {
+    width: 12px;
+}
+
 /*admin*/
 #form_adminlogin {
     padding-top: 10%;
@@ -234,8 +270,8 @@ footer {
 /*snapchat*/
 #photo_container {
     display: inline-block;
-    float: left;
-    height: calc(100vh - 180px);
+    /*float: left;*/
+    /*height: calc(100vh - 180px);*/
     width: calc(100% - 220px);
 }
 #superposable_img {
@@ -250,6 +286,17 @@ footer {
 .mini_img_filter {
     width: calc(100% - 10px);
     margin-bottom: 20px;
+}
+#camera-stream-div-photo {
+    /*opacity: 0.2;*/
+    background-color: #e6e6e6;
+    background-image: url('../images/white-camera.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index:999;
+    width:640px;
+    height: 480px;
+    cursor: pointer;
 }
 
 
@@ -290,6 +337,7 @@ footer {
 }
 .app video#camera-stream.visible{
     display: inline-block;
+    opacity: 1;
     /*width: 800px;*/
 }
 
@@ -314,7 +362,7 @@ footer {
 }
 
 .app .controls{
-    display: none;
+    /*display: none;*/
     padding: 30px;
 }
 .app .controls form {
@@ -389,6 +437,9 @@ input:checked ~.mini_img_filter{
 }
 #formSnapButton {
     display: none;
+}
+#h_notsaved {
+    /*display: none;*/
 }
 
 /*@media(max-width: 1000px){*/

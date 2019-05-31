@@ -7,12 +7,44 @@ else {
 <div id="container">
     <div id="main_container">
         <div id = "photo_container">
+            <div id="photos_published">
+                <div id="photos_published_carusel">
+                    <?php
+                    require_once 'app/model/showUserPhoto.php';
+                    showUserPhotos($_SESSION['email']);
+                    ?>
+                </div>
+            </div>
             <div class="app">
                 <a href="#" id="start-camera" class="visible">Click here to start.</a><br>
+                <div id="camera-stream-div" title="click to start">
+                    <div id='camera-stream-div-photo' onclick="startVideo()">
+                        <video id="camera-stream"></video>
+                    </div>
+                    <div id="layout">
+                        <img src="" id="layout_img">
+                    </div>
+                </div>
+                <p id="error-msg"></p>
+                <div class="controls" id="take-photo-div">
+                    <a href="#" id="take-photo" title="Take Photo" class="disabled">Take Photo</a>
+                    <!--                    <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Publish</a>-->
+                </div>
+                <div id="notSavedPhotosDiv">
                 <?php
                 if (isset($_SESSION['photo']) && $_SESSION['photo'] != NULL && file_exists($_SESSION['photo'])) {
                     ?>
+                    <h2 id="h_notsaved" hidden>Not saved and published photo!</h2>
                     <img id="snap" src="<?php echo $_SESSION['photo']?>" class="visible" style="display:inline-block; float: left">
+                    <div class="controls" id="saveDelete" hidden>
+                        <form method="post" action="snapchat/deletetmpphoto" id="delete-photo-form">
+                            <input type="submit"  id="delete-photo" title="Delete Photo" class="disabled" value="Delete">
+                        </form>
+                        <form method="post" action="snapchat/publishphoto" id="publish-photo-form">
+                            <input type="submit"  id="save-photo" title="Save Photo" class="disabled" value="Publish">
+                        </form>
+                        <!--                    <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Publish</a>-->
+                    </div>
                     <?php
                 }
                 else {
@@ -21,23 +53,6 @@ else {
                     <?php
                 }
                 ?>
-                <div id="camera-stream-div">
-                    <video id="camera-stream"></video>
-                    <div id="layout">
-                        <img src="" id="layout_img">
-                    </div>
-                </div>
-                <p id="error-msg"></p>
-
-                <div class="controls">
-                    <form method="post" action="snapchat/deletetmpphoto" id="delete-photo-form">
-                        <input type="submit"  id="delete-photo" title="Delete Photo" class="disabled" value="Delete">
-                    </form>
-                    <a href="#" id="take-photo" title="Take Photo" class="disabled">Take Photo</a>
-                    <form method="post" action="snapchat/publishphoto" id="publish-photo-form">
-                        <input type="submit"  id="save-photo" title="Save Photo" class="disabled" value="Publish">
-                    </form>
-<!--                    <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Publish</a>-->
                 </div>
                 <canvas></canvas>
             </div>

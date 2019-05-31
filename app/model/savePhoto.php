@@ -47,7 +47,7 @@ function savePhoto($email)
             $user_data->bindParam(":filename", $_SESSION['photo']);
             $filesize = calcBytes(filesize($_SESSION['photo']));
             $user_data->bindParam(":filesize", $filesize);
-            $date = date("F j, Y, g:i a");
+            $date = date("Y-m-d g:i:s");
             $user_data->bindParam(":date", $date);
             $user_data->bindParam(":author", $id);
             $user_data->execute();

@@ -7,7 +7,8 @@ let inputPhoto = document.getElementById('userPhoto');
 let formSnapButton = document.getElementById('formSnapButton');
 let superposable = document.getElementById('superposable_img');
 let camera_on = document.getElementById('start-camera');
-let controlsButtons = document.querySelector('.controls');
+let controlsButtons = document.getElementById('take-photo-div');
+let saveDel = document.getElementById('saveDelete');
 let take_photo_btn = document.getElementById('take-photo');
 let delete_photo_btn = document.getElementById('delete-photo');
 let save_photo_btn = document.getElementById('save-photo');
@@ -27,31 +28,36 @@ if (photo.src )
     // console.log("test", host);
     if (host[1] != '')
     {
+        document.getElementById('h_notsaved').hidden = false;
+        document.getElementById('saveDelete').hidden = false;
         photo.style.zIndex = '1000';
         delete_photo_btn.classList.remove("disabled");
         save_photo_btn.classList.remove("disabled");
+        saveDel.classList.remove("disabled");
     }
 }
 
-if(!navigator.getMedia){
-    displayErrorMessage("Browser doesn't have support for the navigator.getUserMedia interface.");
-}
-else{
-    navigator.getMedia(
-        {
-            video: true
-        },
-        function(stream){
-            video.srcObject=stream;
-            video.play();
-            video.onplay = function() {
-                showVideo();
-            };
-        },
-        function(err){
-            displayErrorMessage("An error with accessing the camera stream: " + err.name, err);
-        }
-    );
+function startVideo() {
+    if(!navigator.getMedia){
+        displayErrorMessage("Browser doesn't have support for the navigator.getUserMedia interface.");
+    }
+    else{
+        navigator.getMedia(
+            {
+                video: true
+            },
+            function(stream){
+                video.srcObject=stream;
+                video.play();
+                video.onplay = function() {
+                    showVideo();
+                };
+            },
+            function(err){
+                displayErrorMessage("An error with accessing the camera stream: " + err.name, err);
+            }
+        );
+    }
 }
 
 camera_on.addEventListener("click", function(e){
@@ -87,6 +93,8 @@ function submitHandlerDelete(e) {
             photo.classList.remove("visible");
             delete_photo_btn.classList.add("disabled");
             save_photo_btn.classList.add("disabled");
+            document.getElementById('h_notsaved').hidden = true;
+            document.getElementById('saveDelete').hidden = true;
             console.log("SUCCESS", this);
             // console.log("SUCCESS", request.responseText);
         }

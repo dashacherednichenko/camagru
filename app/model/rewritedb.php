@@ -28,17 +28,17 @@ function firstfillingDB()
         ;";
     $pdo->query($users);
     $photos = "INSERT INTO photos (filename,filesize,filetype,date,author) VALUES 
-        ('public/images/tmp/test1.jpg','902 Кб','jpg','May 28, 2018, 7:54 pm', '1'),
-        ('public/images/tmp/test2.jpg','902 Кб','jpg','May 18, 2018, 7:54 pm', '2'),
-        ('public/images/tmp/test3.jpg','902 Кб','jpg','May 15, 2019, 7:54 pm', '1'),
-        ('public/images/tmp/test4.jpg','902 Кб','jpg','May 12, 2017, 7:54 pm', '3'),
-        ('public/images/tmp/test5.jpg','902 Кб','jpg','May 31, 2018, 7:54 pm', '1'),
-        ('public/images/tmp/test6.jpg','902 Кб','jpg','May 28, 2018, 7:54 pm', '4'),
-        ('public/images/tmp/test7.jpg','902 Кб','jpg','May 28, 2016, 7:54 pm', '2'),
-        ('public/images/tmp/test8.jpg','902 Кб','jpg','May 03, 2018, 7:54 pm', '1'),
-        ('public/images/tmp/test9.jpg','902 Кб','jpg','May 28, 2018, 7:54 pm', '4'),
-        ('public/images/tmp/test10.png','902 Кб','png','May 01, 2018, 7:54 pm', '3'),
-        ('public/images/tmp/test12.jpg','902 Кб','jpg','May 08, 2019, 7:54 pm', '1')
+        ('public/images/tmp/test1.jpg','902 Кб','jpg','2018-10-23 10:37:22', '1'),
+        ('public/images/tmp/test2.jpg','902 Кб','jpg','2019-05-23 10:37:22', '2'),
+        ('public/images/tmp/test3.jpg','902 Кб','jpg','2018-01-23 10:37:22', '1'),
+        ('public/images/tmp/test4.jpg','902 Кб','jpg','2012-10-21 10:37:22', '3'),
+        ('public/images/tmp/test5.jpg','902 Кб','jpg','2008-10-30 10:37:22', '1'),
+        ('public/images/tmp/test6.jpg','902 Кб','jpg','2004-10-01 10:37:22', '4'),
+        ('public/images/tmp/test7.jpg','902 Кб','jpg','2008-10-23 10:37:22', '2'),
+        ('public/images/tmp/test8.jpg','902 Кб','jpg','2005-10-22 10:37:22', '1'),
+        ('public/images/tmp/test9.jpg','902 Кб','jpg','2008-10-23 10:37:22', '4'),
+        ('public/images/tmp/test10.png','902 Кб','png','2006-10-23 10:37:22', '3'),
+        ('public/images/tmp/test12.jpg','902 Кб','jpg','2007-10-23 10:37:22', '1')
         ;";
     $pdo->query($photos);
 
