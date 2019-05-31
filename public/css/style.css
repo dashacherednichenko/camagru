@@ -214,9 +214,11 @@ footer {
 }
 
 #photos_published {
-    width: calc(100% - 80px);
+    width: calc(100% - 20px);
     height: 200px;
     overflow-x: scroll;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #photos_published_carusel{
@@ -277,7 +279,13 @@ footer {
 #superposable_img {
     display: none;
     margin: 20px;
-    height: calc(100vh - 180px);;
+    height: calc(100vh - 300px);
+    overflow-y: scroll;
+}
+#superposable_img.visible{
+    display: inline-block;
+    margin-right: 20px;
+    height: calc(100vh - 300px);
     overflow-y: scroll;
 }
 .block_mini_img_filter {
@@ -288,7 +296,8 @@ footer {
     margin-bottom: 20px;
 }
 #camera-stream-div-photo {
-    /*opacity: 0.2;*/
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+/*opacity: 0.2;*/
     background-color: #e6e6e6;
     background-image: url('../images/white-camera.png');
     background-repeat: no-repeat;
@@ -298,7 +307,10 @@ footer {
     height: 480px;
     cursor: pointer;
 }
-
+#camera-stream-div-photo:hover {
+    box-shadow: 0 0 5px #292D39;
+    /*background-color: #292D39;*/
+}
 
 
 .app #start-camera{
@@ -417,12 +429,7 @@ footer {
     display: inline-block;
     margin: 20px;
 }
-#superposable_img.visible{
-    display: inline-block;
-    margin-right: 20px;
-    height: calc(100vh - 180px);
-    overflow-y: scroll;
-}
+
 .app .controls.visible
 {
     display: inline-block;

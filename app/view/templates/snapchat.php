@@ -6,15 +6,15 @@ else {
 ?>
 <div id="container">
     <div id="main_container">
-        <div id = "photo_container">
-            <div id="photos_published">
-                <div id="photos_published_carusel">
-                    <?php
-                    require_once 'app/model/showUserPhoto.php';
-                    showUserPhotos($_SESSION['email']);
-                    ?>
-                </div>
+        <div id="photos_published">
+            <div id="photos_published_carusel">
+                <?php
+                require_once 'app/model/showUserPhoto.php';
+                showUserPhotos($_SESSION['email']);
+                ?>
             </div>
+        </div>
+        <div id = "photo_container">
             <div class="app">
                 <a href="#" id="start-camera" class="visible">Click here to start.</a><br>
                 <div id="camera-stream-div" title="click to start">
