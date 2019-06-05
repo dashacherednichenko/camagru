@@ -13,6 +13,7 @@ return array(
     'sendpassword' => 'account/forgetpassword',
     'snapchat' => 'snapchat/page',
     'snapchat/photo' => 'snapchat/photo',
+    'snapchat/downloadphoto' => 'snapchat/downloadphoto',
     'snapchat/deletetmpphoto' => 'snapchat/deletetmpphoto',
     'snapchat/publishphoto' => 'snapchat/publishphoto',
     'admin/deletedb' => 'admin/deletedb',

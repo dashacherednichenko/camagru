@@ -87,7 +87,7 @@ function submitHandlerDelete(e) {
     e.preventDefault();
     let request = new XMLHttpRequest();
     request.onreadystatechange = function() {
-        console.log("readyState=", this.readyState, "statis=", this.status);
+        // console.log("readyState=", this.readyState, "statis=", this.status);
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
             photo.setAttribute('src', "");
             photo.classList.remove("visible");
@@ -95,7 +95,7 @@ function submitHandlerDelete(e) {
             save_photo_btn.classList.add("disabled");
             document.getElementById('h_notsaved').hidden = true;
             document.getElementById('saveDelete').hidden = true;
-            console.log("SUCCESS", this);
+            // console.log("SUCCESS", this);
             // console.log("SUCCESS", request.responseText);
         }
     }
@@ -122,6 +122,8 @@ function takeSnapshot(){
     let context = hidden_canvas.getContext('2d');
     let width = video.videoWidth;
     let height = video.videoHeight;
+    width_layout = photo_layout_div.offsetWidth;
+    height_layout = photo_layout_div.offsetHeight;
     if (width && height) {
         hidden_canvas.width = width;
         hidden_canvas.height = height;
@@ -153,6 +155,7 @@ function makePhotoButtonActiv(img) {
     photo_layout.setAttribute('src', img.value);
     width_layout = photo_layout_div.offsetWidth;
     height_layout = photo_layout_div.offsetHeight;
+    console.log('height_layout',height_layout);
 }
 
 photo_layout_div.ondragstart = function() {
@@ -176,6 +179,8 @@ photo_layout_div.onmousedown = function(e) {
         photo_layout_div.style.left = e.pageX - width_layout/2 + 'px';
         // console.log(e.pageX);
         photo_layout_div.style.top = e.pageY - height_layout/2 + 'px';
+        width_layout = photo_layout_div.offsetWidth;
+        height_layout = photo_layout_div.offsetHeight;
         // console.log(e.pageY);
         // console.log(getCoords(photo_layout_div));
     };

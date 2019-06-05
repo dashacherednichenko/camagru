@@ -44,6 +44,7 @@ header a {
 }
 .logo_main {
     width: 50px;
+    margin-left:20px;
 }
 .header_icons {
     width: 50px;
@@ -114,6 +115,7 @@ footer {
 }
 .copyright {
     padding-right: 20px;
+    padding-top: 10px;
 }
 
 
@@ -274,13 +276,14 @@ footer {
     display: inline-block;
     /*float: left;*/
     /*height: calc(100vh - 180px);*/
-    width: calc(100% - 220px);
+    width: calc(100% - 520px);
 }
 #superposable_img {
     display: none;
     margin: 20px;
     height: calc(100vh - 300px);
     overflow-y: scroll;
+    vertical-align: top;
 }
 #superposable_img.visible{
     display: inline-block;
@@ -309,7 +312,7 @@ footer {
 }
 #camera-stream-div-photo:hover {
     box-shadow: 0 0 5px #292D39;
-    /*background-color: #292D39;*/
+    background-color: rgb(41, 45, 57, 0.3);
 }
 
 
@@ -445,8 +448,19 @@ input:checked ~.mini_img_filter{
 #formSnapButton {
     display: none;
 }
+#notSavedPhotosDiv {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 300px;
+}
+#notSavedPhotosDiv img {
+    width: 100%;
+}
 #h_notsaved {
     /*display: none;*/
+}
+#saveDelete form {
+    display: inline-block;
 }
 
 /*@media(max-width: 1000px){*/
