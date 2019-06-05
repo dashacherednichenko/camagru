@@ -15,6 +15,8 @@ let save_photo_btn = document.getElementById('save-photo');
 let error_message = document.getElementById('error-msg');
 let width_layout;
 let height_layout;
+var gumStream;
+
 
 photo_layout_div.style.left = '300px';
 photo_layout_div.style.top = '200px';
@@ -48,6 +50,7 @@ function startVideo() {
             },
             function(stream){
                 video.srcObject=stream;
+                gumStream = stream;
                 video.play();
                 video.onplay = function() {
                     showVideo();
@@ -59,6 +62,8 @@ function startVideo() {
         );
     }
 }
+
+
 
 camera_on.addEventListener("click", function(e){
     e.preventDefault();
@@ -195,3 +200,32 @@ photo_layout_div.onmousedown = function(e) {
     };
 };
 
+function downloadphoto() {
+
+    var file = document.getElementById("downloadphoto").files[0];
+    var formData = new FormData();
+    formData.append("downloadphoto", file);
+
+    var XHR = "onload" in new XMLHttpRequest() ? XMLHttpRequest : XDomainRequest;
+    var xhr = new XHR();
+
+    xhr.open('POST', 'snapchat/downloadphoto', true);
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState !== 4) {
+            return;
+        }
+        if (xhr.status === 200) {
+            console.log(xhr.responseText);
+            document.getElementById('downloadphoto_img').src = xhr.responseText;
+            document.getElementById('camera-stream-div-photo').onclick=null;
+            document.getElementById('camera-stream-div-photo').classList.remove("camera-stream-div-photo");
+            video.classList.remove("visible");
+            video.classList.add("disabled");
+            superposable.classList.add("visible");
+            take_photo_btn.hidden = false;
+            if (gumStream != undefined)
+                gumStream.getTracks().forEach(track => track.stop())
+        }
+    };
+    xhr.send(formData);
+}

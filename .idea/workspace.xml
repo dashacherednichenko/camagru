@@ -2,17 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7789444-2961-4585-abd3-d64933ad0e69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/view/templates/scripts_gallery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/pagination.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/SnapchatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/SnapchatController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/templates/snapchat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/templates/snapchat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/white-camera.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/white-camera.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/download/ebee3ccdf3d45f0b2c2fc103552fd05d1559730239.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/download/ebee3ccdf3d45f0b2c2fc103552fd05d1559730452.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1558978639.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1558982128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1558982149.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1558984731.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559033117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559040371.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559040390.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559040490.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559057097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559062449.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559064058.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559297768.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559301724.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559302042.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559302853.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559303359.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559303391.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559308956.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559315376.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559316430.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559317148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559317181.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559317512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559317582.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559317688.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559459628.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559461699.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559461731.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559461866.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559461909.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559462339.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559637332.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559637345.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559637359.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559637467.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/camera.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +56,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="54" column="50" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="50" />
+            <state relative-caret-position="266">
+              <caret line="57" column="103" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/camera.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1551">
+              <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -40,10 +79,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2513">
-              <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
+            <state relative-caret-position="193">
+              <caret line="320" selection-start-line="320" selection-end-line="320" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/images/tmp/test3.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -67,30 +111,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+            <state relative-caret-position="292">
+              <caret line="104" column="87" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="87" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/images/download/ebee3ccdf3d45f0b2c2fc103552fd05d1559730239.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1558978639.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1558984731.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559637467.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -108,7 +132,6 @@
       <find>block</find>
       <find>disabled</find>
       <find>mail</find>
-      <find>take_photo_btn</find>
       <find>super</find>
       <find>height_layout</find>
       <find>notSa</find>
@@ -119,6 +142,15 @@
       <find>XMLHttpRequest</find>
       <find>logo_main</find>
       <find>cop</find>
+      <find>camer</find>
+      <find>makePhotoButtonActiv</find>
+      <find>take_photo_btn</find>
+      <find>superposable</find>
+      <find>startVideo</find>
+      <find>sream</find>
+      <find>camera-stream-div</find>
+      <find>nav</find>
+      <find>down</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,14 +202,14 @@
         <option value="$PROJECT_DIR$/app/model/deletephoto.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/app/config/database.php" />
-        <option value="$PROJECT_DIR$/public/js/camera.js" />
         <option value="$PROJECT_DIR$/public/js/pagination.js" />
         <option value="$PROJECT_DIR$/app/view/templates/scripts_gallery.php" />
         <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/app/view/templates/snapchat.php" />
         <option value="$PROJECT_DIR$/app/config/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/SnapchatController.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/snapchat.php" />
+        <option value="$PROJECT_DIR$/public/js/camera.js" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -261,13 +293,6 @@
               <item name="camagru" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="download" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
-              <item name="camagru" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
               <item name="tmp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -334,12 +359,12 @@
       <workItem from="1558521270086" duration="7000" />
       <workItem from="1514765297256" duration="10711000" />
       <workItem from="1559459180275" duration="7306000" />
-      <workItem from="1559652667737" duration="3689000" />
+      <workItem from="1559652667737" duration="8676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153251000" />
+    <option name="totallyTimeSpent" value="158238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="807" extended-state="0" />
@@ -391,13 +416,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/view/templates/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -546,13 +564,6 @@
     <entry file="file://$PROJECT_DIR$/public/images/tmp/d41d8cd98f00b204e9800998ecf8427e1559459628.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/camera.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="82" selection-start-line="102" selection-start-column="82" selection-end-line="102" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/pagination.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -573,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_gallery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -591,30 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/demo/load.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2513">
-          <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="54" column="50" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -630,14 +610,55 @@
     <entry file="file://$PROJECT_DIR$/public/images/tmp/ebee3ccdf3d45f0b2c2fc103552fd05d1559729285.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/download/ebee3ccdf3d45f0b2c2fc103552fd05d1559730239.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="292">
+          <caret line="104" column="87" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/download/ebee3ccdf3d45f0b2c2fc103552fd05d1559730239.jpg">
+    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/demo/load.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="57" column="103" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/camera.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1551">
+          <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="320" selection-start-line="320" selection-end-line="320" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/tmp/test3.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
   </component>

@@ -41,25 +41,25 @@ else {
         <div id = "photo_container">
             <div class="app">
                 <a href="#" id="start-camera" class="visible">Click here to start.</a><br>
-                <div id="camera-stream-div" title="click to start">
-                    <div id='camera-stream-div-photo' onclick="startVideo()">
+                <div id="camera-stream-div">
+                    <div id='camera-stream-div-photo' onclick="startVideo()" class="camera-stream-div-photo">
                         <video id="camera-stream"></video>
+                        <div id='downloadphoto_img_div'>
+                            <img src="" id="downloadphoto_img">
+                        </div>
                     </div>
                     <div id="layout">
                         <img src="" id="layout_img">
                     </div>
                 </div>
-                <div id="downloadphoto_div">
-                    <h2>or download your own photo</h2>
-                    <form action="snapchat/downloadphoto" enctype="multipart/form-data" method="post">
-                        <input name="downloadphoto" id="downloadphoto" type="file">
-                        <button id="downloadphoto_button">Download photo</button>
-                    </form>
-                </div>
                 <p id="error-msg"></p>
                 <div class="controls" id="take-photo-div">
                     <a href="#" id="take-photo" title="Take Photo" class="disabled" hidden>Take Photo</a>
                     <!--                    <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Publish</a>-->
+                </div>
+                <div id="downloadphoto_div">
+                    <h2>or download your own photo</h2>
+                    <input name="downloadphoto" id="downloadphoto" type="file" onchange='downloadphoto()'>
                 </div>
                 <canvas></canvas>
             </div>

@@ -56,8 +56,9 @@ class SnapchatController extends Controller
     }
 
     public function actionDownloadphoto(){
-        print_r($_FILES['downloadphoto']);
+//        print_r($_FILES['downloadphoto']);
         $filePath  = $_FILES['downloadphoto']['tmp_name'];
+//        print_r($filePath);
         $errorCode = $_FILES['downloadphoto']['error'];
         if ($errorCode !== UPLOAD_ERR_OK || !is_uploaded_file($filePath)) {
 
@@ -100,8 +101,9 @@ class SnapchatController extends Controller
             die('При записи изображения на диск произошла ошибка.');
         }
         else {
-            $_SESSION['downloadphoto'] = 'public/images/download/' . $name . $format;
-            header("Location: /camagru/snapchat");
+            echo 'public/images/download/' . $name . $format;
+//            $_SESSION['downloadphoto'] = 'public/images/download/' . $name . $format;
+//            header("Location: /camagru/snapchat");
         }
 
     }

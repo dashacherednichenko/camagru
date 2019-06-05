@@ -298,23 +298,30 @@ footer {
     width: calc(100% - 10px);
     margin-bottom: 20px;
 }
-#camera-stream-div-photo {
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-/*opacity: 0.2;*/
+.camera-stream-div-photo {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /*opacity: 0.2;*/
     background-color: #e6e6e6;
     background-image: url('../images/white-camera.png');
     background-repeat: no-repeat;
     background-position: center;
-    z-index:999;
-    width:640px;
+    z-index: 999;
+    width: 640px;
     height: 480px;
     cursor: pointer;
 }
-#camera-stream-div-photo:hover {
+
+.camera-stream-div-photo:hover {
     box-shadow: 0 0 5px #292D39;
     background-color: rgb(41, 45, 57, 0.3);
 }
+#downloadphoto_div {
+    margin-bottom: 20px;
+}
 
+#downloadphoto_img {
+    width: 640px;
+}
 
 .app #start-camera{
     display: none;
