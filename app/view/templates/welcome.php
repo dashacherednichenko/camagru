@@ -1,5 +1,5 @@
 <?php
-//echo 'TEST';
+defined('SECRET_KEY') or die('No direct access allowed.');
 ?>
 <div id="container">
     <?php

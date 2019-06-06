@@ -1,3 +1,6 @@
+<?php
+defined('SECRET_KEY') or die('No direct access allowed.');
+?>
 <div id="main_container">
     <h1>Admin panel</h1>
 <?php

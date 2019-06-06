@@ -1,4 +1,5 @@
 <?php
+defined('SECRET_KEY') or die('No direct access allowed.');
 return array(
     'account/auth' => 'account/auth',
     'account/register' => 'account/adduser',

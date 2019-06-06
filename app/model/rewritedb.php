@@ -1,4 +1,5 @@
 <?php
+defined('SECRET_KEY') or die('No direct access allowed.');
 function firstfillingDB()
 {
     require_once 'app/config/database.php';

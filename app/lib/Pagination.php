@@ -1,47 +1,50 @@
 <?php
-
+defined('SECRET_KEY') or die('No direct access allowed.');
 class Pagination
 {
-	function btn_primary($_str_query, $_page, $_max_item, $_js_function_name, $pdo) {
+	function btn_primary($_all_photos, $_page, $_max_item, $_js_func, $pdo) {
 		$_count_row = 0;
-		foreach ($pdo->query($_str_query) as $row) {
+		foreach ($pdo->query($_all_photos) as $row) {
 			$_count_row++;
 		}
 		if ($_count_row > 0) {
 			if ($_page + 1 == 1) {
-				echo '<button class="btn btn-sm btn-primary active">1</button>';
+				echo '<button class="active">1</button>';
 			} else {
-				echo '<button class="btn btn-sm btn-primary" onclick="' . $_js_function_name . '(\'1\');">1</button>';
+				echo '<button onclick="' . $_js_func . '(\'1\');">1</button>';
 			}
 			echo ' ';
 			if ($_page + 1 > 2) {
 				echo ' ... ';
 			}
-			$_btn = (int) (($_count_row / $_max_item) + 1);
+			$countpages = ($_count_row / $_max_item);
+			if (is_int($countpages) == true)
+				$_btn = (int) ($countpages);
+			else
+				$_btn = (int) ($countpages + 1);
 			for ($i = 1; $i <= $_btn; $i++) {
 				if (!($i >= ($_page + 4) or $i <= ($_page - 2))) {
 					if ($i != 1 and $i != $_btn) {
 						?>
 						<button <?php
 						if ($i == $_page + 1) {
-							echo 'class="btn btn-sm btn-primary active"';
+							echo 'class="active"';
 						} else {
-							echo 'class="btn btn-sm btn-primary" onclick="' . $_js_function_name . '(\'' . $i . '\');"';
+							echo ' onclick="' . $_js_func . '(\'' . $i . '\');"';
 						}
 						?>><?php echo $i; ?></button>
-
 						<?php
 					}
 				}
 			}
-			if (($_page + 1 < $_btn - 2) and ( $_right_dot == 0)) {
+			if ($_page + 1 < $_btn - 2) {
 				echo ' ... ';
 			}
 			if ($_btn != 1) {
 				if (($_page + 1) == $_btn) {
-					echo '<button class="btn btn-sm btn-primary active">' . $_btn . '</button>';
+					echo '<button class="active">' . $_btn . '</button>';
 				} else {
-					echo '<button class="btn btn-sm btn-primary" onclick="' . $_js_function_name . '(\'' . $_btn . '\');">' . $_btn . '</button>';
+					echo '<button onclick="' . $_js_func . '(\'' . $_btn . '\');">' . $_btn . '</button>';
 				}
 			}
 			echo ' ';

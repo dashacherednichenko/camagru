@@ -1,5 +1,5 @@
 <?php
-
+defined('SECRET_KEY') or die('No direct access allowed.');
 require_once 'app/components/View.class.php';
 
 abstract class Controller {

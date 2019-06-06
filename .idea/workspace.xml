@@ -2,11 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7789444-2961-4585-abd3-d64933ad0e69" name="Default Changelist" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/Pagination.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Controller.class.php" afterPath="$PROJECT_DIR$/app/components/Controller.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Model.class.php" afterPath="$PROJECT_DIR$/app/components/Model.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Router.class.php" afterPath="$PROJECT_DIR$/app/components/Router.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/View.class.php" afterPath="$PROJECT_DIR$/app/components/View.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routes.php" afterPath="$PROJECT_DIR$/app/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/setup.php" afterPath="$PROJECT_DIR$/app/config/setup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AccountController.php" afterPath="$PROJECT_DIR$/app/controllers/AccountController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/controllers/AdminController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/MainController.php" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SnapchatController.php" afterPath="$PROJECT_DIR$/app/controllers/SnapchatController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Dev.php" afterPath="$PROJECT_DIR$/app/lib/Dev.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pagination.php" afterPath="$PROJECT_DIR$/app/lib/Pagination.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/activation.php" afterPath="$PROJECT_DIR$/app/model/activation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/addUser.php" afterPath="$PROJECT_DIR$/app/model/addUser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/auth.php" afterPath="$PROJECT_DIR$/app/model/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/checkEmail.php" afterPath="$PROJECT_DIR$/app/model/checkEmail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/clearSession.php" afterPath="$PROJECT_DIR$/app/model/clearSession.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/deletedb.php" afterPath="$PROJECT_DIR$/app/model/deletedb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/deletephoto.php" afterPath="$PROJECT_DIR$/app/model/deletephoto.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/gallery.php" afterPath="$PROJECT_DIR$/app/model/gallery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/newpassword.php" afterPath="$PROJECT_DIR$/app/model/newpassword.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/rewritedb.php" afterPath="$PROJECT_DIR$/app/model/rewritedb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/savePhoto.php" afterPath="$PROJECT_DIR$/app/model/savePhoto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/savedata.php" afterPath="$PROJECT_DIR$/app/model/savedata.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/showUserPhoto.php" afterPath="$PROJECT_DIR$/app/model/showUserPhoto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/admin.php" afterPath="$PROJECT_DIR$/app/view/templates/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/changedata.php" afterPath="$PROJECT_DIR$/app/view/templates/changedata.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/create_usr.php" afterPath="$PROJECT_DIR$/app/view/templates/create_usr.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/footer.php" afterPath="$PROJECT_DIR$/app/view/templates/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/forgetpassword.php" afterPath="$PROJECT_DIR$/app/view/templates/forgetpassword.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/header.php" afterPath="$PROJECT_DIR$/app/view/templates/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/main.php" afterPath="$PROJECT_DIR$/app/view/templates/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts_changedata.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts_changedata.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts_gallery.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts_gallery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts_register.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts_register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts_snapchat.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts_snapchat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/welcome.php" afterPath="$PROJECT_DIR$/app/view/templates/welcome.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pagination.js" afterPath="$PROJECT_DIR$/public/js/pagination.js" />
     </list>
@@ -19,39 +56,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/templates/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="2" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gallery.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gallery.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
+            <state relative-caret-position="508">
+              <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
-                <marker date="1559833119000" expanded="true" signature="376:425" ph="SELECT email... users" />
-                <marker date="1559833119000" expanded="true" signature="439:499" ph="SELECT filen... " />
-                <marker date="1559833119000" expanded="true" signature="439:505" ph="SELECT filen... " />
-                <marker date="1559833119000" expanded="true" signature="439:519" ph="SELECT filen... " />
-                <marker date="1559833119000" expanded="true" signature="439:531" ph="SELECT filen... " />
-                <marker date="1559833119000" expanded="true" signature="560:599" ph="SELECT * FRO... photos" />
-                <marker date="1559833119000" expanded="true" signature="676:3193" ph="..." />
-                <marker date="1559833119000" expanded="true" signature="802:3182" ph="..." />
-                <marker date="1559833119000" expanded="false" signature="819:2221" ph="data:" />
-                <marker date="1559833119000" expanded="false" signature="2240:3118" ph="data:" />
+                <marker date="1559845409000" expanded="true" signature="470:519" ph="SELECT email... users" />
+                <marker date="1559845409000" expanded="true" signature="533:593" ph="SELECT filen... " />
+                <marker date="1559845409000" expanded="true" signature="533:599" ph="SELECT filen... " />
+                <marker date="1559845409000" expanded="true" signature="533:613" ph="SELECT filen... " />
+                <marker date="1559845409000" expanded="true" signature="533:625" ph="SELECT filen... " />
+                <marker date="1559845409000" expanded="true" signature="654:693" ph="SELECT * FRO... photos" />
+                <marker date="1559845409000" expanded="true" signature="770:3287" ph="..." />
+                <marker date="1559845409000" expanded="true" signature="896:3276" ph="..." />
+                <marker date="1559845409000" expanded="false" signature="913:2315" ph="data:" />
+                <marker date="1559845409000" expanded="false" signature="2334:3212" ph="data:" />
+                <marker date="1559845409000" expanded="true" signature="3360:3457" ph="..." />
+                <marker date="1559845409000" expanded="true" signature="3500:3507" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/View.class.php">
+      <file leaf-file-name="Pagination.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/lib/Pagination.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="snapchat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -60,71 +99,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Router.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/Router.class.php">
+      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/templates/welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="45">
+              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
+      <file leaf-file-name="scripts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/templates/scripts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+            <state relative-caret-position="30">
+              <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
+      <file leaf-file-name="scripts_changedata.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_changedata.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+            <state relative-caret-position="30">
+              <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1905">
-              <caret line="127" column="54" lean-forward="false" selection-start-line="127" selection-start-column="54" selection-end-line="127" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pagination.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pagination.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/pagination.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="75">
+              <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dev.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/Dev.php">
+      <file leaf-file-name="scripts_register.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="30">
+              <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SnapchatController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
+      <file leaf-file-name="scripts_snapchat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_snapchat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="106" column="28" lean-forward="true" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+            <state relative-caret-position="30">
+              <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -167,6 +196,8 @@
       <find>error</find>
       <find>width_layout</find>
       <find>gallery_</find>
+      <find>pagi</find>
+      <find>pagin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,57 +206,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/view/templates/404error.php" />
-        <option value="$PROJECT_DIR$/view/templates/header.php" />
-        <option value="$PROJECT_DIR$/components/Router.class.php" />
-        <option value="$PROJECT_DIR$/controllers/LoginController.php" />
-        <option value="$PROJECT_DIR$/controllers/AccountController.php" />
-        <option value="$PROJECT_DIR$/config/routes.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/404error.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/scripts.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/scripts_register.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/scripts_snapchat.php" />
-        <option value="$PROJECT_DIR$/app/lib/Dev.php" />
-        <option value="$PROJECT_DIR$/app/controllers/logout.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/welcome.php" />
-        <option value="$PROJECT_DIR$/app/controllers/register.php" />
-        <option value="$PROJECT_DIR$/app/model/auth.php" />
-        <option value="$PROJECT_DIR$/app/model/activation.php" />
-        <option value="$PROJECT_DIR$/app/controllers/sendpassword.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/recovery.php" />
         <option value="$PROJECT_DIR$/app/controllers/changePassword.php" />
-        <option value="$PROJECT_DIR$/app/model/newpassword.php" />
-        <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/app/components/Controller.class.php" />
-        <option value="$PROJECT_DIR$/app/components/View.class.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/main.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/header.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/create_usr.php" />
         <option value="$PROJECT_DIR$/../../conf/php7.2.7/php.ini" />
-        <option value="$PROJECT_DIR$/app/view/templates/forgetpassword.php" />
-        <option value="$PROJECT_DIR$/app/model/addUser.php" />
-        <option value="$PROJECT_DIR$/app/model/checkEmail.php" />
         <option value="$PROJECT_DIR$/public/js/check_password.js" />
-        <option value="$PROJECT_DIR$/app/view/templates/admin.php" />
-        <option value="$PROJECT_DIR$/app/model/deletedb.php" />
-        <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
-        <option value="$PROJECT_DIR$/app/components/Router.class.php" />
-        <option value="$PROJECT_DIR$/app/controllers/AccountController.php" />
-        <option value="$PROJECT_DIR$/app/model/deletephoto.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/app/config/database.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/scripts_gallery.php" />
-        <option value="$PROJECT_DIR$/app/config/routes.php" />
         <option value="$PROJECT_DIR$/app/view/templates/snapchat.php" />
         <option value="$PROJECT_DIR$/app/lib/ResizeImage.php" />
         <option value="$PROJECT_DIR$/public/js/camera.js" />
-        <option value="$PROJECT_DIR$/app/controllers/SnapchatController.php" />
-        <option value="$PROJECT_DIR$/app/model/showUserPhoto.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/app/lib/Pagination.php" />
-        <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
-        <option value="$PROJECT_DIR$/app/model/gallery.php" />
         <option value="$PROJECT_DIR$/public/js/pagination.js" />
+        <option value="$PROJECT_DIR$/.htpasswd" />
+        <option value="$PROJECT_DIR$/app/config/setup.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/app/components/Controller.class.php" />
+        <option value="$PROJECT_DIR$/app/components/Model.class.php" />
+        <option value="$PROJECT_DIR$/app/components/Router.class.php" />
+        <option value="$PROJECT_DIR$/app/components/View.class.php" />
+        <option value="$PROJECT_DIR$/app/config/database.php" />
+        <option value="$PROJECT_DIR$/app/config/routes.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AccountController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/SnapchatController.php" />
+        <option value="$PROJECT_DIR$/app/lib/Dev.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pagination.php" />
+        <option value="$PROJECT_DIR$/app/model/activation.php" />
+        <option value="$PROJECT_DIR$/app/model/addUser.php" />
+        <option value="$PROJECT_DIR$/app/model/auth.php" />
+        <option value="$PROJECT_DIR$/app/model/checkEmail.php" />
+        <option value="$PROJECT_DIR$/app/model/clearSession.php" />
+        <option value="$PROJECT_DIR$/app/model/deletedb.php" />
+        <option value="$PROJECT_DIR$/app/model/deletephoto.php" />
+        <option value="$PROJECT_DIR$/app/model/newpassword.php" />
+        <option value="$PROJECT_DIR$/app/model/rewritedb.php" />
+        <option value="$PROJECT_DIR$/app/model/savedata.php" />
+        <option value="$PROJECT_DIR$/app/model/savePhoto.php" />
+        <option value="$PROJECT_DIR$/app/model/showUserPhoto.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/404error.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/admin.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/changedata.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/create_usr.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/footer.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/forgetpassword.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/header.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/main.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/scripts.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/scripts_changedata.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/scripts_gallery.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/scripts_register.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/scripts_snapchat.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/welcome.php" />
+        <option value="$PROJECT_DIR$/app/model/gallery.php" />
       </list>
     </option>
   </component>
@@ -240,8 +271,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1008" />
-    <option name="y" value="32" />
+    <option name="x" value="553" />
+    <option name="y" value="41" />
     <option name="width" value="1322" />
     <option name="height" value="1155" />
   </component>
@@ -261,6 +292,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -325,6 +358,12 @@
               <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
               <item name="camagru" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="camagru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camagru" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -337,8 +376,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -398,33 +435,34 @@
       <workItem from="1514765297256" duration="10711000" />
       <workItem from="1559459180275" duration="7306000" />
       <workItem from="1559652667737" duration="10790000" />
-      <workItem from="1559812987385" duration="15949000" />
+      <workItem from="1559812987385" duration="19059000" />
+      <workItem from="1559840798312" duration="3477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176301000" />
+    <option name="totallyTimeSpent" value="182888000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1008" y="32" width="1322" height="1155" extended-state="0" />
+    <frame x="553" y="41" width="1322" height="1155" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.228125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22264151" sideWeight="0.50625" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22264151" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22264151" sideWeight="0.49375" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22264151" sideWeight="0.49375" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -440,7 +478,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/js/camera.js</url>
           <line>100</line>
-          <properties />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -448,152 +485,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/camera.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="8" lean-forward="true" selection-start-line="84" selection-start-column="7" selection-end-line="96" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4800">
-          <caret line="320" column="0" lean-forward="false" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="87" lean-forward="false" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/clearSession.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/addUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/deletedb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/deletephoto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Project_pagination/pagination/class/pagination.php" />
-    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="86" column="17" lean-forward="false" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ResizeImage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/download/ebee3ccdf3d45f0b2c2fc103552fd05d1559823025.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/download/ebee3ccdf3d45f0b2c2fc103552fd05d1559823844.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/download/ebee3ccdf3d45f0b2c2fc103552fd05d1559823792.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="21" column="69" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/download/ebee3ccdf3d45f0b2c2fc103552fd05d1559823792.jpg" />
     <entry file="file://$PROJECT_DIR$/public/images/tmp/test12.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -604,55 +496,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/showUserPhoto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding>
-            <marker date="1559826005000" expanded="true" signature="183:232" ph="SELECT email... users" />
-            <marker date="1559826005000" expanded="true" signature="440:521" ph="SELECT filen... " />
-            <marker date="1559826005000" expanded="true" signature="705:4230" ph="..." />
-            <marker date="1559826005000" expanded="true" signature="871:4203" ph="..." />
-            <marker date="1559826005000" expanded="false" signature="883:2285" ph="data:" />
-            <marker date="1559826005000" expanded="false" signature="2320:3198" ph="data:" />
-            <marker date="1559826005000" expanded="true" signature="3386:4108" ph="..." />
-            <marker date="1559826005000" expanded="false" signature="3423:4081" ph="data:" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="59" lean-forward="false" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/setup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/camera.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
@@ -661,110 +504,432 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="158" column="18" lean-forward="false" selection-start-line="158" selection-start-column="18" selection-end-line="158" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htpasswd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" lean-forward="true" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pagination.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/main.php">
+    <entry file="file://$PROJECT_DIR$/app/components/Controller.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="2" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
+    <entry file="file://$PROJECT_DIR$/app/components/Model.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="106" column="28" lean-forward="true" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
-          <folding>
-            <marker date="1559833119000" expanded="true" signature="376:425" ph="SELECT email... users" />
-            <marker date="1559833119000" expanded="true" signature="439:499" ph="SELECT filen... " />
-            <marker date="1559833119000" expanded="true" signature="439:505" ph="SELECT filen... " />
-            <marker date="1559833119000" expanded="true" signature="439:519" ph="SELECT filen... " />
-            <marker date="1559833119000" expanded="true" signature="439:531" ph="SELECT filen... " />
-            <marker date="1559833119000" expanded="true" signature="560:599" ph="SELECT * FRO... photos" />
-            <marker date="1559833119000" expanded="true" signature="676:3193" ph="..." />
-            <marker date="1559833119000" expanded="true" signature="802:3182" ph="..." />
-            <marker date="1559833119000" expanded="false" signature="819:2221" ph="data:" />
-            <marker date="1559833119000" expanded="false" signature="2240:3118" ph="data:" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/View.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/Router.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
+    <entry file="file://$PROJECT_DIR$/app/components/View.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843792000" expanded="true" signature="251:647" ph="CREATE TABLE... IF" />
+            <marker date="1559843792000" expanded="true" signature="662:1085" ph="CREATE TABLE... IF" />
+            <marker date="1559843792000" expanded="true" signature="1102:1474" ph="CREATE TABLE... IF" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/setup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="127" column="54" lean-forward="false" selection-start-line="127" selection-start-column="54" selection-end-line="127" selection-end-column="54" />
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/activation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843792000" expanded="true" signature="236:276" ph="SELECT id, e... users" />
+            <marker date="1559843792000" expanded="true" signature="574:620" ph="UPDATE users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/addUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843792000" expanded="true" signature="204:227" ph="SELECT email... users" />
+            <marker date="1559843792000" expanded="true" signature="398:481" ph="INSERT INTO users... " />
+            <marker date="1559843792000" expanded="true" signature="749:785" ph="SELECT id FR... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843792000" expanded="true" signature="195:250" ph="SELECT email... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/checkEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843792000" expanded="true" signature="190:272" ph="SELECT id, e... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/clearSession.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/deletedb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/deletephoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843792000" expanded="true" signature="191:231" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/newpassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843792000" expanded="true" signature="212:262" ph="SELECT id, p... users" />
+            <marker date="1559843792000" expanded="true" signature="515:572" ph="UPDATE users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/rewritedb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843792000" expanded="true" signature="847:1416" ph="INSERT INTO users... " />
+            <marker date="1559843792000" expanded="true" signature="1469:2450" ph="INSERT INTO photos... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/savedata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843901000" expanded="true" signature="257:339" ph="SELECT id, e... users" />
+            <marker date="1559843901000" expanded="true" signature="636:691" ph="UPDATE users... " />
+            <marker date="1559843901000" expanded="true" signature="938:996" ph="UPDATE users... " />
+            <marker date="1559843901000" expanded="true" signature="1373:1430" ph="UPDATE users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/savePhoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843901000" expanded="true" signature="989:1038" ph="SELECT email... users" />
+            <marker date="1559843901000" expanded="true" signature="1205:1314" ph="INSERT INTO photos... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/showUserPhoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding>
+            <marker date="1559843901000" expanded="true" signature="242:291" ph="SELECT email... users" />
+            <marker date="1559843901000" expanded="true" signature="499:580" ph="SELECT filen... " />
+            <marker date="1559843901000" expanded="true" signature="764:4289" ph="..." />
+            <marker date="1559843901000" expanded="true" signature="930:4262" ph="..." />
+            <marker date="1559843901000" expanded="false" signature="942:2344" ph="data:" />
+            <marker date="1559843901000" expanded="false" signature="2379:3257" ph="data:" />
+            <marker date="1559843901000" expanded="true" signature="3445:4167" ph="..." />
+            <marker date="1559843901000" expanded="false" signature="3482:4140" ph="data:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/404error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/changedata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/create_usr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/forgetpassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/recovery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_changedata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_snapchat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/pagination.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/Pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <marker date="1559845409000" expanded="true" signature="470:519" ph="SELECT email... users" />
+            <marker date="1559845409000" expanded="true" signature="533:593" ph="SELECT filen... " />
+            <marker date="1559845409000" expanded="true" signature="533:599" ph="SELECT filen... " />
+            <marker date="1559845409000" expanded="true" signature="533:613" ph="SELECT filen... " />
+            <marker date="1559845409000" expanded="true" signature="533:625" ph="SELECT filen... " />
+            <marker date="1559845409000" expanded="true" signature="654:693" ph="SELECT * FRO... photos" />
+            <marker date="1559845409000" expanded="true" signature="770:3287" ph="..." />
+            <marker date="1559845409000" expanded="true" signature="896:3276" ph="..." />
+            <marker date="1559845409000" expanded="false" signature="913:2315" ph="data:" />
+            <marker date="1559845409000" expanded="false" signature="2334:3212" ph="data:" />
+            <marker date="1559845409000" expanded="true" signature="3360:3457" ph="..." />
+            <marker date="1559845409000" expanded="true" signature="3500:3507" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

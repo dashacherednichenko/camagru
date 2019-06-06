@@ -155,7 +155,24 @@ footer {
     font-size: 0.5vw;
     color: #e6e6e6;
 }
+.pagination {
+    padding: 20px;
+    text-align: center;
+}
+.pagination button {
+    font-size: 2vw;
+    width: 25px;
+    border: none;
+    color: rgba(68, 79, 87, 0.8);
+}
+.pagination button:hover {
+    cursor: pointer;
+    background-color:rgb(41, 45, 57, 0.2);
 
+}
+.pagination .active {
+    background-color:rgb(41, 45, 57, 0.4);
+}
 
 /*register*/
 #form_register, #form_login {

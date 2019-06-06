@@ -1,4 +1,5 @@
 <?php
+defined('SECRET_KEY') or die('No direct access allowed.');
 function checkEmail($user_mail)
 {
     require_once "app/config/setup.php";

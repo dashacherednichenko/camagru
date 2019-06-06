@@ -1,4 +1,5 @@
 <?php
+defined('SECRET_KEY') or die('No direct access allowed.');
 ?>
 <div id="container">
     <div id="main_container">
