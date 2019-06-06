@@ -2,14 +2,14 @@ load_gallery();
 
 function load_gallery(_page) {
 	let _url = "?page=" + _page;
-	let xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function () {
+	let ajaxify = new XMLHttpRequest();
+	ajaxify.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200){
 			// console.log(xhttp.responseText);
-			document.body.innerHTML = xhttp.responseText;
+			document.body.innerHTML = ajaxify.responseText;
 		}
 
 	};
-	xhttp.open('GET', _url, true);
-	xhttp.send();
+	ajaxify.open('GET', _url, true);
+	ajaxify.send();
 }

@@ -2,48 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7789444-2961-4585-abd3-d64933ad0e69" name="Default Changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Controller.class.php" afterPath="$PROJECT_DIR$/app/components/Controller.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Model.class.php" afterPath="$PROJECT_DIR$/app/components/Model.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Router.class.php" afterPath="$PROJECT_DIR$/app/components/Router.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/View.class.php" afterPath="$PROJECT_DIR$/app/components/View.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routes.php" afterPath="$PROJECT_DIR$/app/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/setup.php" afterPath="$PROJECT_DIR$/app/config/setup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AccountController.php" afterPath="$PROJECT_DIR$/app/controllers/AccountController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/controllers/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/MainController.php" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SnapchatController.php" afterPath="$PROJECT_DIR$/app/controllers/SnapchatController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Dev.php" afterPath="$PROJECT_DIR$/app/lib/Dev.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/Pagination.php" afterPath="$PROJECT_DIR$/app/lib/Pagination.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/activation.php" afterPath="$PROJECT_DIR$/app/model/activation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/addUser.php" afterPath="$PROJECT_DIR$/app/model/addUser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/auth.php" afterPath="$PROJECT_DIR$/app/model/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/checkEmail.php" afterPath="$PROJECT_DIR$/app/model/checkEmail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/clearSession.php" afterPath="$PROJECT_DIR$/app/model/clearSession.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/deletedb.php" afterPath="$PROJECT_DIR$/app/model/deletedb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/deletephoto.php" afterPath="$PROJECT_DIR$/app/model/deletephoto.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/gallery.php" afterPath="$PROJECT_DIR$/app/model/gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/newpassword.php" afterPath="$PROJECT_DIR$/app/model/newpassword.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/rewritedb.php" afterPath="$PROJECT_DIR$/app/model/rewritedb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/savePhoto.php" afterPath="$PROJECT_DIR$/app/model/savePhoto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/savedata.php" afterPath="$PROJECT_DIR$/app/model/savedata.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/showUserPhoto.php" afterPath="$PROJECT_DIR$/app/model/showUserPhoto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/admin.php" afterPath="$PROJECT_DIR$/app/view/templates/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/changedata.php" afterPath="$PROJECT_DIR$/app/view/templates/changedata.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/create_usr.php" afterPath="$PROJECT_DIR$/app/view/templates/create_usr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/footer.php" afterPath="$PROJECT_DIR$/app/view/templates/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/forgetpassword.php" afterPath="$PROJECT_DIR$/app/view/templates/forgetpassword.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/header.php" afterPath="$PROJECT_DIR$/app/view/templates/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/main.php" afterPath="$PROJECT_DIR$/app/view/templates/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts_changedata.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts_changedata.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts_gallery.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts_gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts_register.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts_register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/scripts_snapchat.php" afterPath="$PROJECT_DIR$/app/view/templates/scripts_snapchat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/templates/welcome.php" afterPath="$PROJECT_DIR$/app/view/templates/welcome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pagination.js" afterPath="$PROJECT_DIR$/public/js/pagination.js" />
     </list>
@@ -56,24 +16,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gallery.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gallery.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="330">
+              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding>
-                <marker date="1559845409000" expanded="true" signature="470:519" ph="SELECT email... users" />
-                <marker date="1559845409000" expanded="true" signature="533:593" ph="SELECT filen... " />
-                <marker date="1559845409000" expanded="true" signature="533:599" ph="SELECT filen... " />
-                <marker date="1559845409000" expanded="true" signature="533:613" ph="SELECT filen... " />
-                <marker date="1559845409000" expanded="true" signature="533:625" ph="SELECT filen... " />
-                <marker date="1559845409000" expanded="true" signature="654:693" ph="SELECT * FRO... photos" />
-                <marker date="1559845409000" expanded="true" signature="770:3287" ph="..." />
-                <marker date="1559845409000" expanded="true" signature="896:3276" ph="..." />
-                <marker date="1559845409000" expanded="false" signature="913:2315" ph="data:" />
-                <marker date="1559845409000" expanded="false" signature="2334:3212" ph="data:" />
-                <marker date="1559845409000" expanded="true" signature="3360:3457" ph="..." />
-                <marker date="1559845409000" expanded="true" signature="3500:3507" ph="..." />
+                <marker date="1559846157000" expanded="true" signature="441:490" ph="SELECT email... users" />
+                <marker date="1559846157000" expanded="true" signature="504:564" ph="SELECT filen... " />
+                <marker date="1559846157000" expanded="true" signature="504:570" ph="SELECT filen... " />
+                <marker date="1559846157000" expanded="true" signature="504:584" ph="SELECT filen... " />
+                <marker date="1559846157000" expanded="true" signature="504:596" ph="SELECT filen... " />
+                <marker date="1559846157000" expanded="true" signature="625:664" ph="SELECT * FRO... photos" />
+                <marker date="1559846157000" expanded="true" signature="741:3258" ph="..." />
+                <marker date="1559846157000" expanded="true" signature="867:3247" ph="..." />
+                <marker date="1559846157000" expanded="false" signature="884:2286" ph="data:" />
+                <marker date="1559846157000" expanded="false" signature="2305:3183" ph="data:" />
+                <marker date="1559846157000" expanded="true" signature="3331:3428" ph="..." />
+                <marker date="1559846157000" expanded="true" signature="3462:3469" ph="..." />
               </folding>
             </state>
           </provider>
@@ -82,8 +42,8 @@
       <file leaf-file-name="Pagination.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/Pagination.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+            <state relative-caret-position="180">
+              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -94,6 +54,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="503" column="81" lean-forward="false" selection-start-line="503" selection-start-column="81" selection-end-line="503" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -132,8 +102,8 @@
       <file leaf-file-name="pagination.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/pagination.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+            <state relative-caret-position="210">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -212,8 +182,6 @@
         <option value="$PROJECT_DIR$/app/view/templates/snapchat.php" />
         <option value="$PROJECT_DIR$/app/lib/ResizeImage.php" />
         <option value="$PROJECT_DIR$/public/js/camera.js" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/js/pagination.js" />
         <option value="$PROJECT_DIR$/.htpasswd" />
         <option value="$PROJECT_DIR$/app/config/setup.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -229,7 +197,6 @@
         <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
         <option value="$PROJECT_DIR$/app/controllers/SnapchatController.php" />
         <option value="$PROJECT_DIR$/app/lib/Dev.php" />
-        <option value="$PROJECT_DIR$/app/lib/Pagination.php" />
         <option value="$PROJECT_DIR$/app/model/activation.php" />
         <option value="$PROJECT_DIR$/app/model/addUser.php" />
         <option value="$PROJECT_DIR$/app/model/auth.php" />
@@ -256,7 +223,10 @@
         <option value="$PROJECT_DIR$/app/view/templates/scripts_register.php" />
         <option value="$PROJECT_DIR$/app/view/templates/scripts_snapchat.php" />
         <option value="$PROJECT_DIR$/app/view/templates/welcome.php" />
+        <option value="$PROJECT_DIR$/app/lib/Pagination.php" />
+        <option value="$PROJECT_DIR$/public/js/pagination.js" />
         <option value="$PROJECT_DIR$/app/model/gallery.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -436,12 +406,12 @@
       <workItem from="1559459180275" duration="7306000" />
       <workItem from="1559652667737" duration="10790000" />
       <workItem from="1559812987385" duration="19059000" />
-      <workItem from="1559840798312" duration="3477000" />
+      <workItem from="1559840798312" duration="4893000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182888000" />
+    <option name="totallyTimeSpent" value="184304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="553" y="41" width="1322" height="1155" extended-state="0" />
@@ -500,14 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="90" column="56" lean-forward="true" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="158" column="18" lean-forward="false" selection-start-line="158" selection-start-column="18" selection-end-line="158" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -848,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_changedata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -896,40 +850,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/pagination.js">
+    <entry file="file://$PROJECT_DIR$/app/lib/Pagination.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/Pagination.php">
+    <entry file="file://$PROJECT_DIR$/public/js/pagination.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/scripts_changedata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="330">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
-            <marker date="1559845409000" expanded="true" signature="470:519" ph="SELECT email... users" />
-            <marker date="1559845409000" expanded="true" signature="533:593" ph="SELECT filen... " />
-            <marker date="1559845409000" expanded="true" signature="533:599" ph="SELECT filen... " />
-            <marker date="1559845409000" expanded="true" signature="533:613" ph="SELECT filen... " />
-            <marker date="1559845409000" expanded="true" signature="533:625" ph="SELECT filen... " />
-            <marker date="1559845409000" expanded="true" signature="654:693" ph="SELECT * FRO... photos" />
-            <marker date="1559845409000" expanded="true" signature="770:3287" ph="..." />
-            <marker date="1559845409000" expanded="true" signature="896:3276" ph="..." />
-            <marker date="1559845409000" expanded="false" signature="913:2315" ph="data:" />
-            <marker date="1559845409000" expanded="false" signature="2334:3212" ph="data:" />
-            <marker date="1559845409000" expanded="true" signature="3360:3457" ph="..." />
-            <marker date="1559845409000" expanded="true" signature="3500:3507" ph="..." />
+            <marker date="1559846157000" expanded="true" signature="441:490" ph="SELECT email... users" />
+            <marker date="1559846157000" expanded="true" signature="504:564" ph="SELECT filen... " />
+            <marker date="1559846157000" expanded="true" signature="504:570" ph="SELECT filen... " />
+            <marker date="1559846157000" expanded="true" signature="504:584" ph="SELECT filen... " />
+            <marker date="1559846157000" expanded="true" signature="504:596" ph="SELECT filen... " />
+            <marker date="1559846157000" expanded="true" signature="625:664" ph="SELECT * FRO... photos" />
+            <marker date="1559846157000" expanded="true" signature="741:3258" ph="..." />
+            <marker date="1559846157000" expanded="true" signature="867:3247" ph="..." />
+            <marker date="1559846157000" expanded="false" signature="884:2286" ph="data:" />
+            <marker date="1559846157000" expanded="false" signature="2305:3183" ph="data:" />
+            <marker date="1559846157000" expanded="true" signature="3331:3428" ph="..." />
+            <marker date="1559846157000" expanded="true" signature="3462:3469" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="503" column="81" lean-forward="false" selection-start-line="503" selection-start-column="81" selection-end-line="503" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>

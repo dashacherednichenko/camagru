@@ -8,14 +8,9 @@ class Pagination
 			$_count_row++;
 		}
 		if ($_count_row > 0) {
-			if ($_page + 1 == 1) {
-				echo '<button class="active">1</button>';
-			} else {
-				echo '<button onclick="' . $_js_func . '(\'1\');">1</button>';
-			}
-			echo ' ';
+			echo ($_page + 1 == 1) ? '<button class="active">1</button>' : '<button onclick="' . $_js_func . '(\'1\');">1</button>';
 			if ($_page + 1 > 2) {
-				echo ' ... ';
+				echo '...';
 			}
 			$countpages = ($_count_row / $_max_item);
 			if (is_int($countpages) == true)
@@ -27,18 +22,14 @@ class Pagination
 					if ($i != 1 and $i != $_btn) {
 						?>
 						<button <?php
-						if ($i == $_page + 1) {
-							echo 'class="active"';
-						} else {
-							echo ' onclick="' . $_js_func . '(\'' . $i . '\');"';
-						}
+						echo ($i == $_page + 1) ? 'class="active"' : ' onclick="' . $_js_func . '(\'' . $i . '\');"';
 						?>><?php echo $i; ?></button>
 						<?php
 					}
 				}
 			}
 			if ($_page + 1 < $_btn - 2) {
-				echo ' ... ';
+				echo '...';
 			}
 			if ($_btn != 1) {
 				if (($_page + 1) == $_btn) {
@@ -47,7 +38,6 @@ class Pagination
 					echo '<button onclick="' . $_js_func . '(\'' . $_btn . '\');">' . $_btn . '</button>';
 				}
 			}
-			echo ' ';
 		}
 	}
 

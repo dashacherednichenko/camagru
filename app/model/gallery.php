@@ -5,17 +5,8 @@ require_once 'app/lib/Pagination.php';
 require_once 'app/view/templates/header.php';
 require_once 'app/view/templates/main.php';
 $pagination = new Pagination();
-if (!$_GET) {
-	$_page = 0;
-}
-else
-	$_page = (int)$_GET['page'];
-if ($_page > 0) {
-	$_page--;
-}
-else {
-	$_page = 0;
-}
+(!$_GET) ? $_page = 0 : $_page = (int)$_GET['page'];
+$_page > 0? $_page-- : $_page = 0;
 $_max_item = 6;
 $_offset = $_max_item * $_page;
 $pdo = createConnection ();
@@ -40,8 +31,6 @@ $_js_function = 'load_gallery';
 $pagination->btn_primary($_all_photos, $_page, $_max_item, $_js_function, $pdo);
 ?>
 </div>
-<?php
-?>
 </div>
 </div>
 <div id="side_bar">
