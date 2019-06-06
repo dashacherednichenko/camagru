@@ -18,6 +18,8 @@ let height_layout;
 var gumStream;
 
 
+console.log('r', document.getElementById('downloadphoto_img').src);
+
 photo_layout_div.style.left = '300px';
 photo_layout_div.style.top = '200px';
 
@@ -73,8 +75,34 @@ camera_on.addEventListener("click", function(e){
 
 take_photo_btn.addEventListener("click", async function(e){
     e.preventDefault();
-    let my_photo = await takeSnapshot();
-    let img = await inputPhoto.setAttribute('value', my_photo);
+    let downphoto = document.getElementById('downloadphoto_img').src.split('/camagru/')
+    // console.log("test", host);
+    if (downphoto[1] != '')
+    {
+        let my_photo = document.getElementById('downloadphoto_img').src;
+        let img = await inputPhoto.setAttribute('value', my_photo);
+
+        // let hidden_canvas = document.querySelector('canvas');
+        // let context = hidden_canvas.getContext('2d');
+        // let width = video.videoWidth;
+        // let height = video.videoHeight;
+        // width_layout = photo_layout_div.offsetWidth;
+        // height_layout = photo_layout_div.offsetHeight;
+        // if (width && height) {
+        //     hidden_canvas.width = width;
+        //     hidden_canvas.height = height;
+        //     context.drawImage(video, 0, 0, width, height);
+        //     return hidden_canvas.toDataURL('image/png');
+        //
+        //
+
+
+    }
+    else
+    {
+        let my_photo = await takeSnapshot();
+        let img = await inputPhoto.setAttribute('value', my_photo);
+    }
     await document.getElementById('maskWidth').setAttribute('value',  width_layout);
     await document.getElementById('maskHeight').setAttribute('value',  height_layout);
     let video_crd = getCoords(photo_layout_div);

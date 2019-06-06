@@ -45,11 +45,11 @@ else {
                     <div id='camera-stream-div-photo' onclick="startVideo()" class="camera-stream-div-photo">
                         <video id="camera-stream"></video>
                         <div id='downloadphoto_img_div'>
-                            <img src="" id="downloadphoto_img">
+                            <img src='' id="downloadphoto_img">
                         </div>
                     </div>
                     <div id="layout">
-                        <img src="" id="layout_img">
+                        <img src='' id="layout_img">
                     </div>
                 </div>
                 <p id="error-msg"></p>
