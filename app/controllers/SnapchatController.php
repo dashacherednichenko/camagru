@@ -17,7 +17,7 @@ class SnapchatController extends Controller
     {
 //        print_r($_POST);
         $img = $_POST['userPhoto'];
-        $imagemy = explode('data:image/png;base64,', $img)[1];
+        $imagemy = explode('base64,', $img)[1];
         $funMask = imagecreatefrompng($_POST['superposable']);
         $name = md5($_POST['userEmail']).time();
         $maskwidth = imagesx($funMask);
@@ -34,7 +34,7 @@ class SnapchatController extends Controller
 //        imagepng($im);
         $save = "public/images/tmp/". strtolower($name) .".png";
 //        echo $save;
-        chmod($save,0755);
+        chmod("public/images/tmp/",0755);
         imagepng($im, $save, 0, NULL);
         imagedestroy($im);
         imagedestroy($funMask);
@@ -56,6 +56,24 @@ class SnapchatController extends Controller
     }
 
     public function actionDownloadphoto(){
+//    	require_once '../lib/ResizeImage.php';
+//	    function getWidth($img) {
+//		    return imagesx($img);
+//	    }
+//	    function getHeight($img) {
+//		    return imagesy($img);
+//	    }
+//	    function resizeToWidth($img, $width) {
+//		    $ratio = $width / getWidth($img);
+//		    $height = $this->getheight($img) * $ratio;
+//		    return resize($img, $width, $height);
+//	    }
+//	    function resize($img, $width, $height) {
+//		    $new_image = imagecreatetruecolor($width, $height);
+//		    imagecopyresampled($new_image, $img, 0, 0, 0, 0, $width, $height, getWidth($img), getHeight($img));
+//		    return $new_image;
+//	    }
+
 //        print_r($_FILES['downloadphoto']);
         $filePath  = $_FILES['downloadphoto']['tmp_name'];
 //        print_r($filePath);
@@ -97,14 +115,42 @@ class SnapchatController extends Controller
 
         $format = str_replace('jpeg', 'jpg', $extension);
 
-        if (!move_uploaded_file($filePath, 'public/images/download/' . $name . $format)) {
-            die('ERROR: При записи изображения на диск произошла ошибка.');
-        }
-        else {
-            echo 'public/images/download/' . $name . $format;
-//            $_SESSION['downloadphoto'] = 'public/images/download/' . $name . $format;
-//            header("Location: /camagru/snapchat");
-        }
+	    if ($_FILES['downloadphoto']['type'] == 'image/jpeg')
+		    $src = imagecreatefromjpeg ($filePath);
+	    else if ($_FILES['downloadphoto']['type'] == 'image/png')
+		    $src = imagecreatefrompng ($filePath);
+	    else if ($_FILES['downloadphoto']['type'] == 'image/gif')
+		    $src = imagecreatefromgif ($filePath);
+	    else if ($_FILES['downloadphoto']['type'] == 'image/jpg');
+	    $w_src = imagesx($src);
+	    $h_src = imagesy($src);
+	    $w = 640;
+
+//	    echo $w_src;
+		if ($w_src > $w)
+		{
+			$ratio = $w_src/$w;
+			$w_dest = round($w_src/$ratio);
+//			echo $w_dest;
+			$h_dest = round($h_src/$ratio);
+//			echo $h_dest;
+			$dest = imagecreatetruecolor($w_dest, $h_dest);
+			imagecopyresampled($dest, $src, 0, 0, 0, 0, $w_dest, $h_dest, $w_src, $h_src);
+			imagejpeg($dest, 'public/images/download/' . $name.".jpg", 75);
+			imagedestroy($dest);
+			imagedestroy($src);
+		}
+		else
+		{
+			imagejpeg($src, 'public/images/download/' . $name.".jpg", 75);
+			imagedestroy($src);
+		}
+	    $path = 'public/images/download/' . $name. ".jpg";
+	    $type = pathinfo($path, PATHINFO_EXTENSION);
+	    $data = file_get_contents($path);
+	    $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+	    echo $base64;
+	    $_SESSION['downloadphoto'] = 'public/images/download/' . $name . $format;
 
     }
 }

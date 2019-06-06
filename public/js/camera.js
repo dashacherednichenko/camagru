@@ -18,7 +18,7 @@ let height_layout;
 var gumStream;
 
 
-console.log('r', document.getElementById('downloadphoto_img').src);
+
 
 photo_layout_div.style.left = '300px';
 photo_layout_div.style.top = '200px';
@@ -28,7 +28,7 @@ navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia ||
 // console.log(photo.src);
 if (photo.src )
 {
-    var host = photo.src.split('/camagru/')
+    var host = photo.src.split('/camagru/');
     // console.log("test", host);
     if (host[1] != '')
     {
@@ -75,26 +75,26 @@ camera_on.addEventListener("click", function(e){
 
 take_photo_btn.addEventListener("click", async function(e){
     e.preventDefault();
-    let downphoto = document.getElementById('downloadphoto_img').src.split('/camagru/')
-    // console.log("test", host);
-    if (downphoto[1] != '')
+    let downphoto = document.getElementById('downloadphoto_img').src;
+    let downsubstring = "data:image/";
+
+    if (downphoto.indexOf(downsubstring) !== -1)
     {
-        let my_photo = document.getElementById('downloadphoto_img').src;
+        let my_photo = downphoto;
         let img = await inputPhoto.setAttribute('value', my_photo);
 
-        // let hidden_canvas = document.querySelector('canvas');
-        // let context = hidden_canvas.getContext('2d');
-        // let width = video.videoWidth;
-        // let height = video.videoHeight;
-        // width_layout = photo_layout_div.offsetWidth;
-        // height_layout = photo_layout_div.offsetHeight;
-        // if (width && height) {
-        //     hidden_canvas.width = width;
-        //     hidden_canvas.height = height;
-        //     context.drawImage(video, 0, 0, width, height);
-        //     return hidden_canvas.toDataURL('image/png');
-        //
-        //
+
+	    await document.getElementById('maskWidth').setAttribute('value',  width_layout);
+	    await document.getElementById('maskHeight').setAttribute('value',  height_layout);
+	    let video_crd = getCoords(photo_layout_div);
+	    let mask_crd = getCoords(document.getElementById('camera-stream-div'));
+	    let left = video_crd['left'] - mask_crd['left'];
+	    let top = video_crd['top'] - mask_crd['top'];
+	    // await document.getElementById('videoLeft').setAttribute('value',  video_crd['left']);
+	    // await document.getElementById('videoTop').setAttribute('value',  video_crd['top']);
+	    await document.getElementById('maskLeft').setAttribute('value',  left);
+	    await document.getElementById('maskTop').setAttribute('value',  top);
+	    return formSnapButton.click();
 
 
     }
@@ -102,18 +102,19 @@ take_photo_btn.addEventListener("click", async function(e){
     {
         let my_photo = await takeSnapshot();
         let img = await inputPhoto.setAttribute('value', my_photo);
+	    await document.getElementById('maskWidth').setAttribute('value',  width_layout);
+	    await document.getElementById('maskHeight').setAttribute('value',  height_layout);
+	    let video_crd = getCoords(photo_layout_div);
+	    let mask_crd = getCoords(video);
+	    let left = video_crd['left'] - mask_crd['left'];
+	    let top = video_crd['top'] - mask_crd['top'];
+	    // await document.getElementById('videoLeft').setAttribute('value',  video_crd['left']);
+	    // await document.getElementById('videoTop').setAttribute('value',  video_crd['top']);
+	    await document.getElementById('maskLeft').setAttribute('value',  left);
+	    await document.getElementById('maskTop').setAttribute('value',  top);
+	    return formSnapButton.click();
     }
-    await document.getElementById('maskWidth').setAttribute('value',  width_layout);
-    await document.getElementById('maskHeight').setAttribute('value',  height_layout);
-    let video_crd = getCoords(photo_layout_div);
-    let mask_crd = getCoords(video);
-    let left = video_crd['left'] - mask_crd['left'];
-    let top = video_crd['top'] - mask_crd['top'];
-    // await document.getElementById('videoLeft').setAttribute('value',  video_crd['left']);
-    // await document.getElementById('videoTop').setAttribute('value',  video_crd['top']);
-    await document.getElementById('maskLeft').setAttribute('value',  left);
-    await document.getElementById('maskTop').setAttribute('value',  top);
-    return formSnapButton.click();
+
 });
 
 function submitHandlerDelete(e) {
@@ -214,8 +215,8 @@ photo_layout_div.onmousedown = function(e) {
         photo_layout_div.style.top = e.pageY - height_layout/2 + 'px';
         width_layout = photo_layout_div.offsetWidth;
         height_layout = photo_layout_div.offsetHeight;
-        // console.log(e.pageY);
-        // console.log(getCoords(photo_layout_div));
+        console.log(e.pageY);
+        console.log(getCoords(photo_layout_div));
     };
 
     document.onmousemove = function(e) {
@@ -231,41 +232,43 @@ photo_layout_div.onmousedown = function(e) {
 function downloadphoto() {
 
     var file = document.getElementById("downloadphoto").files[0];
-    var formData = new FormData();
-    formData.append("downloadphoto", file);
+    if (file != undefined) {
+	    var formData = new FormData();
+	    formData.append("downloadphoto", file);
 
-    var XHR = "onload" in new XMLHttpRequest() ? XMLHttpRequest : XDomainRequest;
-    var xhr = new XHR();
+	    var XHR = "onload" in new XMLHttpRequest() ? XMLHttpRequest : XDomainRequest;
+	    var xhr = new XHR();
 
-    xhr.open('POST', 'snapchat/downloadphoto', true);
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState !== 4) {
-            return;
-        }
-        if (xhr.status === 200) {
-            console.log(xhr.responseText);
-	        var string = xhr.responseText,
-		        substring = "ERROR:";
+	    xhr.open('POST', 'snapchat/downloadphoto', true);
+	    xhr.onreadystatechange = () => {
+		    if (xhr.readyState !== 4) {
+			    return;
+		    }
+		    if (xhr.status === 200) {
+			    console.log(xhr.responseText);
+			    var string = xhr.responseText,
+				    substring = "ERROR:";
 
-	        if (string.indexOf(substring) == -1) {
-		        error_message.innerText = '';
-		        error_message.classList.remove("visible");
-		        document.getElementById('downloadphoto_img').src = xhr.responseText;
-		        document.getElementById('camera-stream-div-photo').onclick = null;
-		        document.getElementById('camera-stream-div-photo').classList.remove("camera-stream-div-photo");
-		        video.classList.remove("visible");
-		        video.classList.add("disabled");
-		        superposable.classList.add("visible");
-		        take_photo_btn.hidden = false;
-		        if (gumStream != undefined)
-			        gumStream.getTracks().forEach(track => track.stop())
-	        }
-	        else
-            {
-	            error_message.innerText = xhr.responseText;
-	            error_message.classList.add("visible");
-            }
-        }
-    };
-    xhr.send(formData);
+			    if (string.indexOf(substring) == -1) {
+				    error_message.innerText = '';
+				    error_message.classList.remove("visible");
+				    document.getElementById('downloadphoto_img').src = xhr.responseText;
+				    document.getElementById('camera-stream-div-photo').onclick = null;
+				    document.getElementById('camera-stream-div-photo').classList.remove("camera-stream-div-photo");
+				    video.classList.remove("visible");
+				    video.classList.add("disabled");
+				    superposable.classList.add("visible");
+				    take_photo_btn.hidden = false;
+				    if (gumStream != undefined)
+					    gumStream.getTracks().forEach(track => track.stop());
+				    //console.log('downloadphoto_img', document.getElementById('downloadphoto_img').clientWidth,document.getElementById('downloadphoto_img').clientHeight, document.getElementById('downloadphoto_img').naturalWidth, document.getElementById('downloadphoto_img').naturalHeight);
+			    }
+			    else {
+				    error_message.innerText = xhr.responseText;
+				    error_message.classList.add("visible");
+			    }
+		    }
+	    };
+	    xhr.send(formData);
+    }
 }
