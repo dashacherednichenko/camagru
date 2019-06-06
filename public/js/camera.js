@@ -244,15 +244,27 @@ function downloadphoto() {
         }
         if (xhr.status === 200) {
             console.log(xhr.responseText);
-            document.getElementById('downloadphoto_img').src = xhr.responseText;
-            document.getElementById('camera-stream-div-photo').onclick=null;
-            document.getElementById('camera-stream-div-photo').classList.remove("camera-stream-div-photo");
-            video.classList.remove("visible");
-            video.classList.add("disabled");
-            superposable.classList.add("visible");
-            take_photo_btn.hidden = false;
-            if (gumStream != undefined)
-                gumStream.getTracks().forEach(track => track.stop())
+	        var string = xhr.responseText,
+		        substring = "ERROR:";
+
+	        if (string.indexOf(substring) == -1) {
+		        error_message.innerText = '';
+		        error_message.classList.remove("visible");
+		        document.getElementById('downloadphoto_img').src = xhr.responseText;
+		        document.getElementById('camera-stream-div-photo').onclick = null;
+		        document.getElementById('camera-stream-div-photo').classList.remove("camera-stream-div-photo");
+		        video.classList.remove("visible");
+		        video.classList.add("disabled");
+		        superposable.classList.add("visible");
+		        take_photo_btn.hidden = false;
+		        if (gumStream != undefined)
+			        gumStream.getTracks().forEach(track => track.stop())
+	        }
+	        else
+            {
+	            error_message.innerText = xhr.responseText;
+	            error_message.classList.add("visible");
+            }
         }
     };
     xhr.send(formData);
