@@ -168,6 +168,17 @@ class AccountController extends Controller
             header("Location: /camagru/account");
         return true;
     }
+
+    public static function checknotification($pdo)
+    {
+        require_once "app/model/checkNotification.php";
+        if (checkNotification($_SESSION['email'], $pdo) == 1)
+            return true;
+        else
+            return 0;
+
+//        require_once "app/model/savedata.php";
+    }
 }
 
 //require_once "../model/auth.php";

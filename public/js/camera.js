@@ -80,6 +80,8 @@ take_photo_btn.addEventListener("click", async function(e){
     if (downphoto.indexOf(downsubstring) !== -1)
     {
         let my_photo = downphoto;
+        width_layout = photo_layout_div.offsetWidth;
+        height_layout = photo_layout_div.offsetHeight;
         let img = await inputPhoto.setAttribute('value', my_photo);
 	    await document.getElementById('maskWidth').setAttribute('value',  width_layout);
 	    await document.getElementById('maskHeight').setAttribute('value',  height_layout);

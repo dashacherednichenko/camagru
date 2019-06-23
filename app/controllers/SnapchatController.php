@@ -134,7 +134,7 @@ class SnapchatController extends Controller
 	    $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
         unlink('public/images/download/' . $name.".jpg");
 	    echo $base64;
-	    $_SESSION['downloadphoto'] = 'public/images/download/' . $name . $format;
+//	    $_SESSION['downloadphoto'] = 'public/images/download/' . $name . $format;
 
     }
 }
