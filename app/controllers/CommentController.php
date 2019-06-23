@@ -20,17 +20,10 @@ class CommentController
     public function commentmarkup()
     {
         $d = &$this->data;
-
-//        $link_open = '';
-//        $link_close = '';
-
-        // Преобразуем время в формат UNIX:
-        $d['dt'] = strtotime($d['dt']);
-        return '
-        <div class="comment">
-        <div class="name">'.$_SESSION['login'].'</div>
-        <div class="date" title="Added at '.date('H:i \o\n d M Y',$d['dt']).'">'.date('d M Y',$d['dt']).'</div>
-        <p>'.$d['comment'].'</p>
+        $d['date'] = strtotime($d['date']);
+        return '<div class="comment">
+        <div class="name">'.$_SESSION['login'].': </div><p>'.$d['comment'].'</p>
+        <div class="date" title="Added at '.date('H:i \o\n d M Y',$d['date']).'">'.date('d M Y',$d['date']).'</div>
         </div>';
     }
 
@@ -50,12 +43,15 @@ class CommentController
     {
         if(mb_strlen($str,'utf8')<1)
             return false;
-
         $str = nl2br(htmlspecialchars($str));
-
         $str = str_replace(array(chr(10),chr(13)),'',$str);
-
         return $str;
     }
+
+//    public static function find_email($id)
+//    {
+//
+//        return true;
+//    }
 
 }

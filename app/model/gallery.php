@@ -6,7 +6,7 @@ require_once 'app/view/templates/header.php';
 require_once 'app/view/templates/main.php';
 require_once 'app/model/printcomments.php';
 $pagination = new Pagination();
-(!$_GET) ? $_page = 0 : $_page = (int)$_GET['page'];
+(isset($_GET)) ? $_page = 0 : $_page = (int)$_GET['page'];
 $_page > 0? $_page-- : $_page = 0;
 $_max_item = 6;
 $_offset = $_max_item * $_page;
@@ -26,20 +26,22 @@ if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
             <img src='public/images/like.png' title='like'>
             <span class='date'>" . $row['date'] . "</span>
         </div>
-        <div class='comments_block' id='photo" . $row['id'] . "'>
+        <div class='comments_block' id='photo" . $row['id'] . "' style='display:none'>
             <button class='button_close' id='close_one_click". $row['id'] ."' onclick='close_window(". $row['id'] .")'>X</button>
             <div class='addCommentContainer'>
-                <form class='addCommentForm' id='addCommentForm' method='post' action='comment/addcomment'>
+                <form class='addCommentForm' id='addCommentForm' onsubmit='addcomments(this);return false'>
                     <div>
-                        <label for='comment'>Comment</label>
+                        <label for='comment'>Add your comment</label>
                         <textarea name='comment' id='comment' rows='5' required></textarea><br>
-                        <input type='submit' id='submit' value='Send' />
                         <input name='photo' value='". $row['id'] ."' hidden id='photo'>
                         <input name='author' value='". $_SESSION['email'] ."' hidden id='author'>
+                        <input type='submit' id='submit' value='Send' />
                     </div>
                 </form>
-            </div>".print_com($pdo)."
-        </div>
+            </div>";
+        print_com($pdo, $row['id']);
+//        echo "<span>".$i."<span>";
+        echo "</div>
     </div>";
     }
 
@@ -69,5 +71,5 @@ $pagination->btn_primary($_all_photos, $_page, $_max_item, $_js_function, $pdo);
 </div>
 <?php
 require_once 'app/view/templates/footer.php';
-require_once 'app/view/templates/scripts_gallery.php';
+require_once 'app/view/templates/scripts/scripts_gallery.php';
 ?>

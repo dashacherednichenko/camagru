@@ -80,7 +80,7 @@ input[type="checkbox"]:not(checked) + label:after {
 }
 
 input[type="checkbox"]:checked + label:before {
-    background: #292D39;
+    background: #00babc;
 }
 
 input[type="checkbox"]:checked + label:after {
@@ -214,11 +214,14 @@ footer {
 }
 
 .date {
-    font-size: 0.5vw;
+    font-size: 0.8vw;
     color: #e6e6e6;
 }
 
 .comments_block {
+    top: -250px;
+    max-height: 400px;
+    overflow-y: scroll;
     display: none;
     background-color: white;
     position: relative;
@@ -229,9 +232,30 @@ footer {
 .addCommentForm textarea {
     width: 80%;
 }
+.comment {
+    border-bottom: 1px dotted #e6e6e6;
+    margin-bottom: 5px;
+}
+.comment div, .comment p{
+    display: inline-block;
+}
+.comment .name {
+    /*font-weight: bolder;*/
+}
+.comment .date,  .comment .name{
+    width: 15%;
+}
+.comment p {
+    color:#292D39;
+    text-align: left;
+    margin-left: 10px;
+    width: 60%;
+    font-style: italic;
+}
+
 
 .pagination {
-    padding: 20px;
+    padding: 50px;
     text-align: center;
 }
 .pagination button {
@@ -573,11 +597,17 @@ input:checked ~.mini_img_filter{
 }
 
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+    body {
+        font-size: 24px;
+    }
     .gallery_photo {
         width: calc(50% - 22px);
     }
 }
 @media only screen and (max-width: 500px), only screen and (max-device-width: 350px) {
+    body {
+        font-size: 24px;
+    }
     .gallery_photo {
         width: calc(95% - 22px);
     }

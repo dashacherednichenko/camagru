@@ -13,7 +13,7 @@ class AdminController extends Controller
         require_once 'app/view/templates/header.php';
         require_once 'app/view/templates/admin.php';
         require_once 'app/view/templates/footer.php';
-        require_once 'app/view/templates/scripts.php';
+        require_once 'app/view/templates/scripts/scripts.php';
         return true;
     }
 

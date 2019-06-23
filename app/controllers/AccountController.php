@@ -9,7 +9,7 @@ class AccountController extends Controller
         require_once 'app/view/templates/header.php';
         require_once 'app/view/templates/welcome.php';
         require_once 'app/view/templates/footer.php';
-        require_once 'app/view/templates/scripts.php';
+        require_once 'app/view/templates/scripts/scripts.php';
         return true;
     }
 
@@ -144,7 +144,7 @@ class AccountController extends Controller
         require_once 'app/view/templates/header.php';
         require_once "app/view/templates/changedata.php";
         require_once 'app/view/templates/footer.php';
-        require_once 'app/view/templates/scripts_changedata.php';
+        require_once 'app/view/templates/scripts/scripts_changedata.php';
         return true;
     }
 
@@ -166,6 +166,12 @@ class AccountController extends Controller
         }
         else
             header("Location: /camagru/account");
+        return true;
+    }
+
+    public function actionChangenotice(){
+        require_once "app/model/chandenotice.php";
+        changeNotice($_SESSION['email']);
         return true;
     }
 

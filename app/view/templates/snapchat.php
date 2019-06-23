@@ -3,6 +3,8 @@ if (!$_SESSION['email'] || $_SESSION['email'] == NULL) {
     header("Location: /camagru/account");
 }
 else {
+    require_once "app/config/setup.php";
+    $pdo = createConnection ();
 ?>
 <div id="container">
     <div id="main_container">
@@ -10,7 +12,7 @@ else {
             <div id="photos_published_carusel">
                 <?php
                 require_once 'app/model/showUserPhoto.php';
-                showUserPhotos($_SESSION['email']);
+                showUserPhotos($_SESSION['email'], $pdo);
                 ?>
             </div>
         </div>
