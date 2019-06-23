@@ -15,28 +15,29 @@ else {
             </div>
         </div>
         <div id="notSavedPhotosDiv">
-            <?php
-            if (isset($_SESSION['photo']) && $_SESSION['photo'] != NULL && file_exists($_SESSION['photo'])) {
-                ?>
-                <h2 id="h_notsaved" hidden>Not saved and published photo!</h2>
-                <img id="snap" src="<?php echo $_SESSION['photo']?>" class="visible" style="display:inline-block;">
-                <div class="controls" id="saveDelete" hidden>
-                    <form method="post" action="snapchat/deletetmpphoto" id="delete-photo-form">
-                        <input type="submit"  id="delete-photo" title="Delete Photo" class="disabled" value="Delete">
-                    </form>
-                    <form method="post" action="snapchat/publishphoto" id="publish-photo-form">
-                        <input type="submit"  id="save-photo" title="Save Photo" class="disabled" value="Publish">
-                    </form>
-                    <!--                    <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Publish</a>-->
-                </div>
-                <?php
-            }
-            else {
-                ?>
-                <img id="snap" src=""/>
-                <?php
-            }
-            ?>
+            <h2 id="h_notsaved" hidden>Not saved and published photo!</h2>
+<!--            --><?php
+//            if (isset($_SESSION['photo']) && $_SESSION['photo'] != NULL && file_exists($_SESSION['photo'])) {
+//                ?>
+<!--                <h2 id="h_notsaved" hidden>Not saved and published photo!</h2>-->
+<!--                <img id="snap" src="--><?php //echo $_SESSION['photo']?><!--" class="visible" style="display:inline-block;">-->
+<!--                <div class="controls" id="saveDelete" hidden>-->
+<!--                    <form method="post" action="snapchat/deletetmpphoto" id="delete-photo-form">-->
+<!--                        <input type="submit"  id="delete-photo" title="Delete Photo" class="disabled" value="Delete">-->
+<!--                    </form>-->
+<!--                    <form method="post" action="snapchat/publishphoto" id="publish-photo-form">-->
+<!--                        <input type="submit"  id="save-photo" title="Save Photo" class="disabled" value="Publish">-->
+<!--                    </form>-->
+<!--                    <                   <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Publish</a>-->
+<!--                </div>-->
+<!--                --><?php
+//            }
+//            else {
+//                ?>
+<!--                <img id="snap" src=""/>-->
+<!--                --><?php
+//            }
+//            ?>
         </div>
         <div id = "photo_container">
             <div class="app">
@@ -65,7 +66,7 @@ else {
             </div>
         </div>
         <div id = "superposable_img">
-            <form action="snapchat/photo" method="post" id="make-photo-form">
+            <form action="snapchat/photo" method="post" id="make-photo-form" name="photoform">
                 <?php
                 $directory = "public/images/superposable_img";
                 $allowed_types = array("jpg", "png", "gif");

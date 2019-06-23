@@ -36,45 +36,31 @@ class SnapchatController extends Controller
 //        echo $save;
         chmod("public/images/tmp/",0755);
         imagepng($im, $save, 0, NULL);
+        $data = file_get_contents($save);
+        $base64 = 'data:image/' . 'png' . ';base64,' . base64_encode($data);
+        unlink($save);
+        echo $base64;
         imagedestroy($im);
         imagedestroy($funMask);
-        $_SESSION['photo'] = $save;
-        header("Location: /camagru/snapchat");
+//        $_SESSION['photo'] = $save;
+//        header("Location: /camagru/snapchat");
     }
-    public function actionDeletetmpphoto(){
-        unlink($_SESSION['photo']);
-        $_SESSION['photo'] = '';
-        return true;
-    }
+//    public function actionDeletetmpphoto(){
+////        print_r($_POST);
+//        unlink($_SESSION['photo']);
+////        $_SESSION['photo'] = '';
+////        return true;
+//    }
 
     public function actionPublishphoto(){
+//        print_r($_POST);
         require_once "app/model/savePhoto.php";
-        savePhoto($_SESSION['email']);
-        $_SESSION['photo'] = '';
+        savePhoto($_POST['snap'], $_SESSION['email']);
         header("Location: /camagru/");
         return true;
     }
 
     public function actionDownloadphoto(){
-//    	require_once '../lib/ResizeImage.php';
-//	    function getWidth($img) {
-//		    return imagesx($img);
-//	    }
-//	    function getHeight($img) {
-//		    return imagesy($img);
-//	    }
-//	    function resizeToWidth($img, $width) {
-//		    $ratio = $width / getWidth($img);
-//		    $height = $this->getheight($img) * $ratio;
-//		    return resize($img, $width, $height);
-//	    }
-//	    function resize($img, $width, $height) {
-//		    $new_image = imagecreatetruecolor($width, $height);
-//		    imagecopyresampled($new_image, $img, 0, 0, 0, 0, $width, $height, getWidth($img), getHeight($img));
-//		    return $new_image;
-//	    }
-
-//        print_r($_FILES['downloadphoto']);
         $filePath  = $_FILES['downloadphoto']['tmp_name'];
 //        print_r($filePath);
         $errorCode = $_FILES['downloadphoto']['error'];
@@ -89,11 +75,8 @@ class SnapchatController extends Controller
                 UPLOAD_ERR_CANT_WRITE => 'ERROR: Не удалось записать файл на диск.',
                 UPLOAD_ERR_EXTENSION  => 'ERROR: PHP-расширение остановило загрузку файла.',
             ];
-
             $unknownMessage = 'ERROR: При загрузке файла произошла неизвестная ошибка.';
-
             $outputMessage = isset($errorMessages[$errorCode]) ? $errorMessages[$errorCode] : $unknownMessage;
-
             die($outputMessage);
         }
 
@@ -149,6 +132,7 @@ class SnapchatController extends Controller
 	    $type = pathinfo($path, PATHINFO_EXTENSION);
 	    $data = file_get_contents($path);
 	    $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+        unlink('public/images/download/' . $name.".jpg");
 	    echo $base64;
 	    $_SESSION['downloadphoto'] = 'public/images/download/' . $name . $format;
 

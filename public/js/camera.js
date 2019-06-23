@@ -13,11 +13,11 @@ let take_photo_btn = document.getElementById('take-photo');
 let delete_photo_btn = document.getElementById('delete-photo');
 let save_photo_btn = document.getElementById('save-photo');
 let error_message = document.getElementById('error-msg');
+let notSavedPhotosDiv = document.getElementById('notSavedPhotosDiv');
 let width_layout;
 let height_layout;
-var gumStream;
-
-
+let gumStream;
+let photocount = 1;
 
 
 photo_layout_div.style.left = '300px';
@@ -26,19 +26,18 @@ photo_layout_div.style.top = '200px';
 navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
 // console.log(photo.src);
-if (photo.src )
-{
-    var host = photo.src.split('/camagru/');
-    // console.log("test", host);
-    if (host[1] != '')
-    {
+function showNotSave() {
+    // var host = photo.src.split('/camagru/');
+    // // console.log("test", host);
+    // if (host[1] != '')
+    // {
         document.getElementById('h_notsaved').hidden = false;
-        document.getElementById('saveDelete').hidden = false;
-        photo.style.zIndex = '1000';
-        delete_photo_btn.classList.remove("disabled");
-        save_photo_btn.classList.remove("disabled");
-        saveDel.classList.remove("disabled");
-    }
+        // document.getElementById('saveDelete').hidden = false;
+        // photo.style.zIndex = '1000';
+        // delete_photo_btn.classList.remove("disabled");
+        // save_photo_btn.classList.remove("disabled");
+        // saveDel.classList.remove("disabled");
+    // }
 }
 
 function startVideo() {
@@ -82,21 +81,14 @@ take_photo_btn.addEventListener("click", async function(e){
     {
         let my_photo = downphoto;
         let img = await inputPhoto.setAttribute('value', my_photo);
-
-
 	    await document.getElementById('maskWidth').setAttribute('value',  width_layout);
 	    await document.getElementById('maskHeight').setAttribute('value',  height_layout);
 	    let video_crd = getCoords(photo_layout_div);
 	    let mask_crd = getCoords(document.getElementById('camera-stream-div'));
 	    let left = video_crd['left'] - mask_crd['left'];
 	    let top = video_crd['top'] - mask_crd['top'];
-	    // await document.getElementById('videoLeft').setAttribute('value',  video_crd['left']);
-	    // await document.getElementById('videoTop').setAttribute('value',  video_crd['top']);
 	    await document.getElementById('maskLeft').setAttribute('value',  left);
 	    await document.getElementById('maskTop').setAttribute('value',  top);
-	    return formSnapButton.click();
-
-
     }
     else
     {
@@ -108,40 +100,94 @@ take_photo_btn.addEventListener("click", async function(e){
 	    let mask_crd = getCoords(video);
 	    let left = video_crd['left'] - mask_crd['left'];
 	    let top = video_crd['top'] - mask_crd['top'];
-	    // await document.getElementById('videoLeft').setAttribute('value',  video_crd['left']);
-	    // await document.getElementById('videoTop').setAttribute('value',  video_crd['top']);
 	    await document.getElementById('maskLeft').setAttribute('value',  left);
 	    await document.getElementById('maskTop').setAttribute('value',  top);
-	    return formSnapButton.click();
+    }
+    var formPhotoData = new FormData(document.forms.photoform);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "snapchat/photo");
+    xhr.send(formPhotoData);
+    xhr.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            let snapdiv = document.createElement("div");
+            notSavedPhotosDiv.appendChild(snapdiv);
+            let snap = document.createElement("img");
+            snap.setAttribute('class', 'snap');
+            snap.id = 'snap' + photocount;
+            snapdiv.appendChild(snap);
+            snap.src = xhr.responseText;
+            let divcontrols = document.createElement("div");
+            divcontrols.className = "controls saveDelete";
+            divcontrols.id = "saveDelete" + photocount;
+            snapdiv.appendChild(divcontrols);
+            let formtmppublish = document.createElement("form");
+            formtmppublish.method = 'POST';
+            formtmppublish.action = 'snapchat/publishphoto';
+            let delbtn = document.createElement("button");
+            delbtn.innerHTML = "Delete";
+            delbtn.id = "delete-photo" + photocount;
+            delbtn.className = 'deletephoto';
+            divcontrols.appendChild(delbtn);
+            // let id = delbtn.id.split('delete-photo')[1];
+            delbtn.addEventListener("click", function () {
+                snap.src = '';
+                divcontrols.hidden = true;
+                snapdiv.hidden = true;
+            });
+            let srctmpimg = document.createElement("input");
+            srctmpimg.hidden = true;
+            srctmpimg.value = snap.src;
+            srctmpimg.name = 'snap';
+            let savebtn = document.createElement("input");
+            savebtn.value = "Publish";
+            savebtn.className = "save-photo";
+            savebtn.type = 'submit';
+            savebtn.id = "save-photo" + photocount;
+            divcontrols.appendChild(formtmppublish);
+            formtmppublish.appendChild(srctmpimg);
+            formtmppublish.appendChild(savebtn);
+            // savebtn.addEventListener("submit", submitHandlerPublish);
+            photocount++;
+
+            showNotSave();
+            // console.log('ajax',xhr.responseText);
+        }
     }
 
 });
+// function submitHandlerPublish(formtmppublish) {
+//
+// }
 
-function submitHandlerDelete(e) {
-    e.preventDefault();
-    let request = new XMLHttpRequest();
-    request.onreadystatechange = function() {
-        // console.log("readyState=", this.readyState, "statis=", this.status);
-        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-            photo.setAttribute('src', "");
-            photo.classList.remove("visible");
-            delete_photo_btn.classList.add("disabled");
-            save_photo_btn.classList.add("disabled");
-            document.getElementById('h_notsaved').hidden = true;
-            document.getElementById('saveDelete').hidden = true;
-            // console.log("SUCCESS", this);
-            // console.log("SUCCESS", request.responseText);
-        }
-    }
-    request.open(this.method, this.action, true);
-    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    let data = new FormData(this);
-    // for (let key of data.keys())
-    //     console.log('test', key, data.get(key));
-    request.send(data);
-}
-if (document.getElementById('delete-photo-form') != null)
-    document.getElementById('delete-photo-form').addEventListener("submit", submitHandlerDelete);
+// function submitHandlerDelete(formtmpdel) {
+//     // e.preventDefault();
+//     var formDelData = new FormData(formtmpdel);
+//     let request = new XMLHttpRequest();
+//     request.open("POST", "snapchat/deletetmpphoto");
+//     request.send(formDelData);
+//     request.onreadystatechange = function() {
+//         // console.log("readyState=", this.readyState, "statis=", this.status);
+//         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+//             // console.log(xhr.req)
+//             // photo.setAttribute('src', "");
+//             photo.classList.remove("visible");
+//             delete_photo_btn.classList.add("disabled");
+//             save_photo_btn.classList.add("disabled");
+//             document.getElementById('h_notsaved').hidden = true;
+//             document.getElementById('saveDelete').hidden = true;
+//             // console.log("SUCCESS", this);
+//             // console.log("SUCCESS", request.responseText);
+//         }
+//     }
+//     // request.open(this.method, this.action, true);
+//     // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//     // let data = new FormData(this);
+//     // for (let key of data.keys())
+//     //     console.log('test', key, data.get(key));
+//     // request.send(data);
+// }
+// if (document.getElementById('delete-photo-form') != null)
+//     document.getElementById('delete-photo-form').addEventListener("submit", submitHandlerDelete);
 
 function showVideo(){
     cleanSnapPage();
@@ -177,7 +223,7 @@ function cleanSnapPage(){
     superposable.classList.remove("visible");
     camera_on.classList.remove("visible");
     video.classList.remove("visible");
-    photo.classList.remove("visible");
+    // photo.classList.remove("visible");
     error_message.classList.remove("visible");
 }
 
@@ -215,8 +261,8 @@ photo_layout_div.onmousedown = function(e) {
         photo_layout_div.style.top = e.pageY - height_layout/2 + 'px';
         width_layout = photo_layout_div.offsetWidth;
         height_layout = photo_layout_div.offsetHeight;
-        console.log(e.pageY);
-        console.log(getCoords(photo_layout_div));
+        // console.log(e.pageY);
+        // console.log(getCoords(photo_layout_div));
     };
 
     document.onmousemove = function(e) {

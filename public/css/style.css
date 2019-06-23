@@ -7,9 +7,6 @@ body {
     color: rgba(68, 79, 87, 0.8);
     font-family: "Futura PT", "Futura", "Helvetica", "Sans serif";
     height: 100%;
-    /*background-image: url(../images/back_var1.jpg);*/
-    /*background-repeat: repeat;*/
-    /*background-color: #292D39;*/
 }
 a {
     text-decoration:none;
@@ -27,6 +24,9 @@ a:hover {
 }
 [type='submit']:hover {
     background-color: #008889;
+}
+button {
+    cursor: pointer;
 }
 
 /*header*/
@@ -417,24 +417,25 @@ footer {
     display: inline-block;
 }
 
-.app .controls a, #delete-photo, #save-photo
+.app .controls a, .deletephoto, .save-photo
 {
     border-radius: 50%;
     color: #fff;
-    background-color: #292D39;
+    background-color: #555;
+    opacity: 0.5;
     text-decoration: none;
     padding: 15px;
     line-height: 0;
-    opacity: 0.7;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
 
-.app .controls a:hover, .app .controls #delete-photo:hover, .app .controls #save-photo:hover{
+.app .controls a:hover, .controls .deletephoto:hover, .controls .save-photo:hover{
+    background-color: #555;
     opacity: 1;
 }
 
-.app .controls a.disabled, .app .controls #delete-photo.disabled, .app .controls #save-photo.disabled{
+.app .controls a.disabled, .app .controls .save-photo.disabled{
     background-color: #555;
     opacity: 0.5;
     cursor: default;
@@ -492,7 +493,7 @@ input:checked ~.mini_img_filter{
 #h_notsaved {
     /*display: none;*/
 }
-#saveDelete form {
+.saveDelete form {
     display: inline-block;
 }
 
@@ -507,39 +508,4 @@ input:checked ~.mini_img_filter{
     }
 }
 
-
-/*@media(max-width: 1000px){*/
-/*    .container{*/
-/*        margin: 40px;*/
-/*    }*/
-
-/*    .app #start-camera.visible{*/
-/*        display: inline-block;*/
-/*    }*/
-
-/*    .app .controls a i{*/
-/*        font-size: 16px;*/
-/*    }*/
-
-/*    .app .controls #take-photo i{*/
-/*        font-size: 24px;*/
-/*    }*/
-/*}*/
-
-
-/*@media(max-width: 600px){*/
-/*    .container{*/
-/*        margin: 10px;*/
-/*    }*/
-/*    .app #error-message{*/
-/*        padding: 80px 50px;*/
-/*        font-size: 18px;*/
-/*    }*/
-/*    .app .controls a i{*/
-/*        font-size: 12px;*/
-/*    }*/
-/*    .app .controls #take-photo i{*/
-/*        font-size: 18px;*/
-/*    }*/
-/*}*/
 

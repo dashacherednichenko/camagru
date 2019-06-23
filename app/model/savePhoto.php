@@ -1,38 +1,7 @@
 <?php
 defined('SECRET_KEY') or die('No direct access allowed.');
-function calcBytes($filesize){
-    if($filesize > 1024)
-    {
-        $filesize = ($filesize/1024);
-        if($filesize > 1024)
-        {
-            $filesize = ($filesize/1024);
-            if($filesize > 1024)
-            {
-                $filesize = ($filesize/1024);
-                $filesize = round($filesize, 1);
-                return $filesize." ГБ";
-            }
-            else
-            {
-                $filesize = round($filesize, 1);
-                return $filesize." MБ";
-            }
-        }
-        else
-        {
-            $filesize = round($filesize, 1);
-            return $filesize." Кб";
-        }
-    }
-    else
-    {
-        $filesize = round($filesize, 1);
-        return $filesize." байт";
-    }
-}
 
-function savePhoto($email)
+function savePhoto($snap, $email)
 {
     require_once "app/config/setup.php";
     $pdo = createConnection();
@@ -42,11 +11,19 @@ function savePhoto($email)
     foreach ($pdo->query($login_usr) as $row) {
         if ($row['email'] == $email && $row['activation'] == 1) {
             $id = $row['id'];
-            $sql = "INSERT INTO photos (filename,filesize,filetype,date,author) VALUES (:filename,:filesize,'png',:date, :author)";
+            $sql = "INSERT INTO photos (filename,filetype,date,author) VALUES (:filename,'png',:date, :author)";
+
+            $imagemy = explode('base64,', $snap)[1];
+            $data = base64_decode($imagemy);
+            $im = imagecreatefromstring($data);
+            $name = "public/images/tmp/". strtolower(md5($email).time()).".png";
+            chmod("public/images/tmp/",0755);
+            imagepng($im, $name, 0, NULL);
+
+
+
             $user_data = $pdo->prepare($sql);
-            $user_data->bindParam(":filename", $_SESSION['photo']);
-            $filesize = calcBytes(filesize($_SESSION['photo']));
-            $user_data->bindParam(":filesize", $filesize);
+            $user_data->bindParam(":filename", $name);
             $date = date("Y-m-d G:i:s");
             $user_data->bindParam(":date", $date);
             $user_data->bindParam(":author", $id);
