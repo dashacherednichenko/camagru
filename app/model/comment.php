@@ -16,6 +16,13 @@ function publishcomment()
             $send_comment = "INSERT INTO comments(comment,photo,author,date) VALUES (:comment, :photo, :author, :date)";
             $date = date("Y-m-d G:i:s");
             $arr['date'] = $date;
+            $find_login =  $pdo->prepare('SELECT users.username, users.email, author
+                        FROM users
+                        LEFT JOIN comments ON comments.author = users.id
+                        WHERE users.email = ?;');
+            $find_login->execute([$_POST['author']]);
+            $res = $find_login->fetch(PDO::FETCH_LAZY);
+            $arr['author'] = $res['username'];
             $arr['comment'] =  $text;
             $user_data = $pdo->prepare($send_comment);
             $user_data->bindParam(":comment", $text);
@@ -25,14 +32,15 @@ function publishcomment()
             $user_data->execute();
             $arr = array_map('stripslashes', $arr);
             $insertedComment = new CommentController($arr);
-            echo $insertedComment->commentmarkup();
-
-            $find_email =  $pdo->prepare('SELECT users.email, author, notifications 
+            $find_email =  $pdo->prepare('SELECT users.username, users.email, author, notifications 
                         FROM users 
                         LEFT JOIN photos ON photos.author = users.id
                         WHERE photos.id = ?;');
             $find_email->execute([$_POST['photo']]);
             $result = $find_email->fetch(PDO::FETCH_LAZY);
+            echo $insertedComment->commentmarkup();
+
+
             if ($result['notifications'] == 1 && $result['email'] != $_POST['author']) {
 //                echo $result['email'];
                 $subject = "New comment - CAMAGRU";

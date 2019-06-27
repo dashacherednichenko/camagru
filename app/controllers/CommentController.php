@@ -22,7 +22,7 @@ class CommentController
         $d = &$this->data;
         $d['date'] = strtotime($d['date']);
         return '<div class="comment">
-        <div class="name">'.$_SESSION['login'].': </div><p>'.$d['comment'].'</p>
+        <div class="name">'.$d['author'].': </div><p>'.$d['comment'].'</p>
         <div class="date" title="Added at '.date('H:i \o\n d M Y',$d['date']).'">'.date('d M Y',$d['date']).'</div>
         </div>';
     }

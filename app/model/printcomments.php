@@ -12,11 +12,20 @@ function print_com ($pdo, $id){
     $count = 0;
     foreach($pdo->query($arr_comments) as $row)
     {
+//        print_r($row);
+        $find_login =  $pdo->prepare('SELECT users.username, author
+                FROM users
+                LEFT JOIN comments ON comments.author = users.id
+                WHERE comments.author = ?;');
+        $find_login->execute([$row['author']]);
+        $res = $find_login->fetch(PDO::FETCH_LAZY);
+        $row['author'] = $res['username'];
         $comments[] = new CommentController($row);
         $count++;
     }
-
     foreach($comments as $c){
+//        print_r($c);
+
         echo $c->commentmarkup();
     }
 //    return $count;

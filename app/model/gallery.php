@@ -6,7 +6,7 @@ require_once 'app/view/templates/header.php';
 require_once 'app/view/templates/main.php';
 require_once 'app/model/printcomments.php';
 $pagination = new Pagination();
-(!isset($_GET)) ? $_page = 0 : $_page = (int)$_GET['page'];
+(!isset($_GET['page'])) ? $_page = 0 : $_page = (int)$_GET['page'];
 $_page > 0? $_page-- : $_page = 0;
 $_max_item = 6;
 $_offset = $_max_item * $_page;
