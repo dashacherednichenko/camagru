@@ -28,25 +28,26 @@ function insertAfter(elem, refElem) {
     }
 }
 
-// document.addEventListener('DOMContentLoaded', function() {
-    let addcomments = function(e) {
-        // e.preventDefault();
-        console.log('OK', e);
-        var formCommentData = new FormData(e);
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "comment/addcomment");
-        xhr.send(formCommentData);
-        xhr.onreadystatechange = function() {
-            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                let div = e.childNodes[1];
-                div.childNodes[3].value='';
-                console.log('rrrr',div.childNodes[3].value='');
-                insertAfter(xhr.responseText, e);
+let addcomments = function(e) {
+    // e.preventDefault();
+    console.log('OK', e);
+    var formCommentData = new FormData(e);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "comment/addcomment");
+    xhr.send(formCommentData);
+    xhr.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            let div = e.childNodes[1];
+            div.childNodes[3].value='';
+            console.log('rrrr',div.childNodes[3].value='');
+            insertAfter(xhr.responseText, e);
                 // document.getElementById('comment').
 
-            }
         }
-        return false;
-    };
+    }
+    return false;
+};
 
-
+let like = function (e) {
+    console.log("like", e);
+}

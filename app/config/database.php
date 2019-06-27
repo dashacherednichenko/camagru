@@ -27,4 +27,9 @@ $COMMENTS = "CREATE TABLE IF NOT EXISTS `db_camagru`.`comments`(
                       `author` VARCHAR(15) NOT NULL ,
                       `date` DATETIME NOT NULL,
                       PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+$LIKES = "CREATE TABLE IF NOT EXISTS `db_camagru`.`likes`(
+                      `id` INT NOT NULL AUTO_INCREMENT ,
+                      `photo` CHAR(15) NOT NULL,
+                      `author` VARCHAR(15) NOT NULL ,
+                      PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 ?>
