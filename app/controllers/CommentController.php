@@ -17,6 +17,23 @@ class CommentController
         publishcomment();
     }
 
+    public function actionLike()
+    {
+        require_once "app/model/like.php";
+        addlike($_POST['photo'], $_POST['author']);
+        return true;
+//        print_r($_POST);
+    }
+
+    public static function countLike($id, $pdo)
+    {
+        require_once "app/model/like.php";
+//        require_once "app/config/setup.php";
+//        $pdo = createConnection();
+        countLikes($id, $pdo);
+        return true;
+    }
+
     public function commentmarkup()
     {
         $d = &$this->data;

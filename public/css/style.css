@@ -252,7 +252,33 @@ footer {
     width: 60%;
     font-style: italic;
 }
+.likes_miniblock {
+    margin: 10px;
+    display: inline-block;
+}
+.likes_miniblock img{
+    padding-right: 0px;
+    display: inline-block;
+}
+.likesspan {
+    display: inline-block;
+    margin-top: -10px;
+    height: 100%;
+    /*margin-left: -5px;*/
+    font-size: 10px;
+}
 
+.likes_miniblock img {
+    width: 26px;
+    filter: grayscale(100%);
+}
+
+.likes_miniblock img.active {
+    opacity: 1;
+    filter: grayscale(0%);
+    /*-webkit-filter: invert(75%);*/
+    /*filter: invert(75%);*/
+}
 
 .pagination {
     padding: 50px;

@@ -8,7 +8,7 @@ function firstfillingDB()
     try {
         $pdo = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->exec($DB . $USERS . $PHOTOS . $COMMENTS);
+        $pdo->exec($DB . $USERS . $PHOTOS . $COMMENTS . $LIKES);
     } catch (PDOException $e) {
         echo 'Подключение не удалось: ' . $e->getMessage();
     }
@@ -19,7 +19,7 @@ function firstfillingDB()
     $_SESSION['admin'] = 1;
     $pdo = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->exec($DB . $USERS . $PHOTOS . $COMMENTS);
+    $pdo->exec($DB . $USERS . $PHOTOS . $COMMENTS . $LIKES);
     $users = "INSERT INTO users (email, username, password, activation) VALUES
         ('dasha.cherednichenko@gmail.com', 'Dasha','".password_hash('Dasha1111', PASSWORD_DEFAULT)."','1'),
         ('info@climagroup.com.ua', 'Test','".password_hash('Test1111', PASSWORD_DEFAULT)."','1'),
@@ -58,5 +58,23 @@ function firstfillingDB()
         ('LIKE!', '9', '4', '2019-06-10 10:37:22')
         ;";
     $pdo->query($comments);
+    $likes = "INSERT INTO likes (photo, author) VALUES
+            ('1', '1'),
+            ('2', '1'),
+            ('3', '1'),
+            ('4', '1'),
+            ('5', '1'),
+            ('1', '2'),
+            ('2', '2'),
+            ('3', '2'),
+            ('9', '2'),
+            ('8', '2'),
+            ('1', '3'),
+            ('2', '3'),
+            ('3', '3'),
+            ('4', '3'),
+            ('7', '3')
+    ;";
+    $pdo->query($likes);
 }
 ?>

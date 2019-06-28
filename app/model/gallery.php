@@ -5,6 +5,7 @@ require_once 'app/lib/Pagination.php';
 require_once 'app/view/templates/header.php';
 require_once 'app/view/templates/main.php';
 require_once 'app/model/printcomments.php';
+require_once 'app/model/like.php';
 $pagination = new Pagination();
 (!isset($_GET['page'])) ? $_page = 0 : $_page = (int)$_GET['page'];
 $_page > 0? $_page-- : $_page = 0;
@@ -17,19 +18,23 @@ $_all_photos = 'SELECT * FROM photos ORDER BY date DESC';
 $comments = 'SELECT * FROM comments ORDER BY id ASC';
 if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
     foreach ($pdo->query($photos) as $row) {
+        $id = $row['id'];
         echo "<div class='gallery_photo'>
         <div class='gallery_photo_frame'>
         <img src=" . $row['filename'] . " class='gallery_photos'>
         </div>
         <div class='likes_block'>
             <img src='public/images/comment.png' title='comment' onclick='show_comments(" . $row['id'] . ")'>
-            <img src='public/images/like.png' title='like' onclick='like(this)'>
-            <form class='addLikeForm' id='addLikeForm".$row['id']."' onsubmit='like(this);return false' style='display: none'>
+            <div class='likes_miniblock'><img src='public/images/like_red.png' title='like' class='".activelike($row['id'], $pdo)."' id='likeimg".$row['id']."' onclick='submitLikeForm(".$row['id'].")'>
+            <form class='addLikeForm' id='addLikeForm".$row['id']."' onsubmit='like(this, ".$id.");return false' style='display: none'>
                         <input name='photo' value='". $row['id'] ."' hidden id='photo'>
                         <input name='author' value='". $_SESSION['email'] ."' hidden id='author'>
-                        <input type='submit' id='submit'  hidden value='Send' />
+                        <input type='submit' id='submit". $row['id'] ."'  hidden value='Send' />
             </form>
-            <span class='date'>" . $row['date'] . "</span>
+            <span class='likesspan' id='span". $row['id'] ."'>";
+            CommentController::countLike($row['id'], $pdo);
+            echo "</span></div>
+        <span class='date'>" . $row['date'] . "</span>
         </div>
         <div class='comments_block' id='photo" . $row['id'] . "' style='display:none'>
             <button class='button_close' id='close_one_click". $row['id'] ."' onclick='close_window(". $row['id'] .")'>X</button>

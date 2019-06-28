@@ -9,6 +9,7 @@ return array(
     'account/deletephoto' => 'account/deletephoto',
     'account' => 'account/login',
     'comment/addcomment' => 'comment/addcomment',
+    'comment/like' => 'comment/like',
     'save' => 'account/savenewdata',
     'change-data' => 'account/changedata',
     'logout' => 'account/logout',

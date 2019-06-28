@@ -48,6 +48,37 @@ let addcomments = function(e) {
     return false;
 };
 
-let like = function (e) {
-    console.log("like", e);
+let submitLikeForm = function(id) {
+    let form = document.getElementById('addLikeForm' + id);
+    document.getElementById('submit'+ id).click();
+    // e.classList.add("active");
+    // console.log('e', e);
+}
+
+let like = function (e, id) {
+    let likespan = document.getElementById('span' + id);
+    let i = likespan.innerHTML;
+    let img = document.getElementById('likeimg' + id);
+    console.log("like", likespan.innerHTML);
+    var formLikeData = new FormData(e);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "comment/like");
+    xhr.send(formLikeData);
+    xhr.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            likespan.innerHTML = xhr.responseText;
+            let res = xhr.responseText - i;
+            console.log('res', res);
+            if (res == 1)
+            {
+                img.classList.add("active");
+            }
+            else {
+                img.classList = '';
+            }
+            // console.log('like!!!!', xhr.responseText);
+
+        }
+    }
+    return false;
 }
