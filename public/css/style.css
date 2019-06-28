@@ -429,23 +429,27 @@ footer {
     display: inline-block;
     /*float: left;*/
     /*height: calc(100vh - 180px);*/
-    width: calc(100% - 520px);
+    /*width: calc(100% - 40%);*/
 }
 #superposable_img {
+    float:right;
     display: none;
-    margin: 20px;
+    /*margin: 20px;*/
     height: calc(100vh - 300px);
     overflow-y: scroll;
     vertical-align: top;
 }
 #superposable_img.visible{
+    /*position: absolute;*/
+    width: 10%;
     display: inline-block;
+    margin-top: 10px;
     margin-right: 20px;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 200px);
     overflow-y: scroll;
 }
 .block_mini_img_filter {
-    width: 150px;
+
 }
 .mini_img_filter {
     width: calc(100% - 10px);
@@ -456,6 +460,7 @@ footer {
     /*opacity: 0.2;*/
     background-color: #e6e6e6;
     background-image: url('../images/white-camera.png');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 999;
@@ -547,11 +552,13 @@ footer {
 .app .controls a, .deletephoto, .save-photo
 {
     border-radius: 50%;
+    width: auto;
     color: #fff;
     background-color: #555;
+    font-size:12px;
     opacity: 0.5;
     text-decoration: none;
-    padding: 15px;
+    padding: 10px;
     line-height: 0;
     outline: none;
     -webkit-tap-highlight-color: transparent;
@@ -579,6 +586,11 @@ footer {
 
 .app .controls #take-photo {
     font-size: 32px;
+}
+
+.app .controls #take-photo img{
+    vertical-align: middle;
+    width: 50%;
 }
 
 .app canvas{
@@ -610,34 +622,107 @@ input:checked ~.mini_img_filter{
     display: none;
 }
 #notSavedPhotosDiv {
+    float: left;
+    margin-left: 20px;
     display: inline-block;
     vertical-align: top;
-    max-width: 300px;
+    max-width: calc(18% - 20px);
+    max-height:  calc(100vh - 200px);;
+    overflow-y: scroll;
 }
 #notSavedPhotosDiv img {
     width: 100%;
 }
 #h_notsaved {
-    /*display: none;*/
+    font-size: 16px;
 }
 .saveDelete form {
     display: inline-block;
 }
+.saveDelete {
+    margin-bottom: 20px;
+}
 
-@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+@media only screen and (max-width: 980px), only screen and (max-device-width: 900px) {
     body {
-        font-size: 24px;
+        font-size: 18px;
     }
     .gallery_photo {
         width: calc(50% - 22px);
     }
+    h2, #h_notsaved {
+        font-size: 12px;
+    }
+    .camera-stream-div-photo {
+        width: 320px;
+        height: 240px;
+    }
+    #camera-stream, #downloadphoto_img {
+        width: 320px;
+    }
+    app .controls a, .deletephoto, .save-photo
+    {
+        padding: 5px;
+        font-size: 0.8vw;
+    }
+    #camera {
+        width: 80px;
+    }
+    #user_login{
+        font-size: 8px;
+        /*float: right;*/
+        width: 80px;
+    }
+    #div_logout {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    /*#superposable_img {*/
+    /*    !*float:right;*!*/
+    /*    !*display: none;*!*/
+    /*    !*margin: 20px;*!*/
+    /*    !*height: calc(100vh - 300px);*!*/
+    /*    !*overflow-y: scroll;*!*/
+    /*    vertical-align: top;*/
+    /*}*/
+    /*#superposable_img.visible{*/
+    /*    !*position: absolute;*!*/
+    /*    width: 100%;*/
+    /*    display: inline-block;*/
+    /*    margin-top: 10px;*/
+    /*    margin-right: 20px;*/
+    /*    height: calc(100vh - 300px);*/
+    /*    overflow-x: scroll;*/
+    /*}*/
+    /*.block_mini_img_filter {*/
+    /*    display: inline-block;*/
+    /*    width: 100px;*/
+    /*}*/
+    /*.mini_img_filter {*/
+
+    /*    width: calc(100% - 10px);*/
+    /*    !*margin-bottom: 20px;*!*/
+    /*}*/
+
+    /*canvas {*/
+    /*    width: 320px;*/
+    /*    height: 240px;*/
+    /*}*/
+
 }
 @media only screen and (max-width: 500px), only screen and (max-device-width: 350px) {
     body {
-        font-size: 24px;
+        font-size: 18px;
     }
     .gallery_photo {
         width: calc(95% - 22px);
+    }
+    .camera-stream-div-photo {
+        width: 160px;
+        height: 120px;
+    }
+    #camera-stream,  #downloadphoto_img{
+        width: 160px;
     }
 }
 

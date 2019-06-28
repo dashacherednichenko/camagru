@@ -191,13 +191,7 @@ class AccountController extends Controller
             return true;
         else
             return 0;
-
-//        require_once "app/model/savedata.php";
     }
 }
-
-//require_once "../model/auth.php";
-//session_start();
-
 
 ?>

@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7789444-2961-4585-abd3-d64933ad0e69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/take photo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/setup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/activation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/activation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/showUserPhoto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/showUserPhoto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/templates/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/templates/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/templates/recovery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/templates/recovery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/templates/scripts/scripts_register.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/templates/scripts/scripts_register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/SnapchatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/SnapchatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/addUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/addUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/templates/snapchat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/templates/snapchat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/camera.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,19 +20,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
+        <entry file="file://$PROJECT_DIR$/app/view/templates/recovery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-310">
-              <caret line="126" column="9" lean-forward="true" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+            <state relative-caret-position="495">
+              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/activation.php">
+        <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="255">
+              <caret line="17" column="18" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="17" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="686">
+              <caret line="101" column="33" lean-forward="true" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/camera.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="255" column="97" lean-forward="true" selection-start-line="255" selection-start-column="97" selection-end-line="255" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="614" column="18" lean-forward="true" selection-start-line="614" selection-start-column="18" selection-end-line="614" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/showUserPhoto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/checkEmail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="103" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -47,51 +94,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/addUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="11" selection-start-line="23" selection-start-column="10" selection-end-line="28" selection-end-column="11" />
+            <state relative-caret-position="600">
+              <caret line="40" column="2" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/auth.php">
+        <entry file="file://$PROJECT_DIR$/app/view/templates/forgetpassword.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/chandenotice.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/checkEmail.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/checkNotification.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/templates/admin.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/view/templates/create_usr.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/newpassword.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -107,36 +120,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>super</find>
-      <find>height_layout</find>
-      <find>notSa</find>
-      <find>width_layout</find>
-      <find>strea</find>
-      <find>submitHandlerDelete</find>
-      <find>XMLHttpRequest</find>
-      <find>logo_main</find>
-      <find>cop</find>
-      <find>camer</find>
-      <find>makePhotoButtonActiv</find>
-      <find>take_photo_btn</find>
-      <find>superposable</find>
-      <find>startVideo</find>
-      <find>sream</find>
-      <find>camera-stream-div</find>
-      <find>nav</find>
-      <find>down</find>
-      <find>canv</find>
-      <find>notSavedPhotosDiv</find>
-      <find>dele</find>
-      <find>delete-photo</find>
-      <find>saveDelete</find>
-      <find>delet</find>
-      <find>button</find>
-      <find>elete-photo</find>
-      <find>deletetmpphoto</find>
       <find>display.none</find>
       <find>xml</find>
       <find>comm</find>
+      <find>h2</find>
+      <find>take-photo</find>
+      <find>saveDelete</find>
+      <find>640px</find>
+      <find>100% -</find>
+      <find>camer</find>
+      <find>camera-stre</find>
+      <find>lef</find>
+      <find>640</find>
+      <find>photo</find>
+      <find>notsa</find>
+      <find>#notSavedPhotosDiv</find>
+      <find>1vw</find>
+      <find>notsav</find>
+      <find>superposable_img</find>
+      <find>app .controls a, .deletephoto, .save-photo</find>
+      <find>deletephoto</find>
+      <find>su</find>
+      <find>super</find>
+      <find>#header_links</find>
+      <find>superpo</find>
+      <find>calc(100vh</find>
+      <find>can</find>
+      <find>vi</find>
+      <find>visi</find>
+      <find>.controls</find>
+      <find>videoLeft</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,7 +172,6 @@
         <option value="$PROJECT_DIR$/app/view/templates/create_usr.php" />
         <option value="$PROJECT_DIR$/../../conf/php7.2.7/php.ini" />
         <option value="$PROJECT_DIR$/app/view/templates/forgetpassword.php" />
-        <option value="$PROJECT_DIR$/app/model/addUser.php" />
         <option value="$PROJECT_DIR$/app/model/checkEmail.php" />
         <option value="$PROJECT_DIR$/public/js/check_password.js" />
         <option value="$PROJECT_DIR$/app/view/templates/admin.php" />
@@ -171,10 +183,7 @@
         <option value="$PROJECT_DIR$/app/view/templates/scripts_gallery.php" />
         <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
         <option value="$USER_HOME$/Downloads/demo/load.php" />
-        <option value="$PROJECT_DIR$/app/view/templates/snapchat.php" />
-        <option value="$PROJECT_DIR$/public/js/camera.js" />
         <option value="$PROJECT_DIR$/app/model/savePhoto.php" />
-        <option value="$PROJECT_DIR$/app/controllers/SnapchatController.php" />
         <option value="$PROJECT_DIR$/app/model/printcomments.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/app/components/Controller.class.php" />
@@ -187,7 +196,6 @@
         <option value="$PROJECT_DIR$/app/model/comment.php" />
         <option value="$PROJECT_DIR$/public/js/comment.js" />
         <option value="$PROJECT_DIR$/app/model/showUserPhoto.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/model/activation.php" />
         <option value="$PROJECT_DIR$/app/config/setup.php" />
         <option value="$PROJECT_DIR$/app/config/database.php" />
@@ -196,6 +204,11 @@
         <option value="$PROJECT_DIR$/app/view/templates/recovery.php" />
         <option value="$PROJECT_DIR$/app/view/templates/scripts/scripts_register.php" />
         <option value="$PROJECT_DIR$/app/controllers/AccountController.php" />
+        <option value="$PROJECT_DIR$/app/model/addUser.php" />
+        <option value="$PROJECT_DIR$/app/view/templates/snapchat.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/controllers/SnapchatController.php" />
+        <option value="$PROJECT_DIR$/public/js/camera.js" />
       </list>
     </option>
   </component>
@@ -360,12 +373,12 @@
       <workItem from="1559652667737" duration="23710000" />
       <workItem from="1560326137793" duration="5305000" />
       <workItem from="1560622964987" duration="10757000" />
-      <workItem from="1561705256671" duration="18779000" />
+      <workItem from="1561705256671" duration="32695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208113000" />
+    <option name="totallyTimeSpent" value="222029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="770" y="23" width="1660" height="1337" extended-state="0" />
@@ -425,12 +438,6 @@
     <entry file="file://$PROJECT_DIR$/public/images/tmp/test2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/welcome.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/main.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/Model.class.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -475,27 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/camera.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="600" selection-start-line="600" selection-end-line="600" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -514,20 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -552,44 +524,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="117" column="43" lean-forward="true" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/clearSession.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/deletedb.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/deletephoto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/like.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
@@ -607,20 +545,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/savedata.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/savePhoto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/showUserPhoto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -631,44 +559,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/recovery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/forgetpassword.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/templates/changedata.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/newpassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-310">
-          <caret line="126" column="9" lean-forward="true" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/activation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/addUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="11" selection-start-line="23" selection-start-column="10" selection-end-line="28" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -682,17 +576,150 @@
     <entry file="file://$PROJECT_DIR$/app/model/chandenotice.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/checkEmail.php">
+    <entry file="file://$PROJECT_DIR$/app/model/checkNotification.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/checkNotification.php">
+    <entry file="file://$PROJECT_DIR$/app/model/clearSession.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/deletedb.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/like.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/newpassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/savedata.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/templates/admin.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/changedata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/templates/create_usr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/main.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/recovery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/welcome.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/forgetpassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/checkEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="103" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/addUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="2" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="614" column="18" lean-forward="true" selection-start-line="614" selection-start-column="18" selection-end-line="614" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/showUserPhoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="101" column="33" lean-forward="true" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/camera.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="255" column="97" lean-forward="true" selection-start-line="255" selection-start-column="97" selection-end-line="255" selection-end-column="97" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

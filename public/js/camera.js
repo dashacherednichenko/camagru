@@ -20,8 +20,8 @@ let gumStream;
 let photocount = 1;
 
 
-photo_layout_div.style.left = '300px';
-photo_layout_div.style.top = '200px';
+photo_layout_div.style.left = '30%';
+photo_layout_div.style.top = '30%';
 
 navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
@@ -80,6 +80,9 @@ take_photo_btn.addEventListener("click", async function(e){
     if (downphoto.indexOf(downsubstring) !== -1)
     {
         let my_photo = downphoto;
+        // let download_width = document.getElementById('downloadphoto_img').offsetWidth;
+        // console.log('my_photo', document.getElementById('downloadphoto_img').offsetWidth);
+        // return ;
         width_layout = photo_layout_div.offsetWidth;
         height_layout = photo_layout_div.offsetHeight;
         let img = await inputPhoto.setAttribute('value', my_photo);
@@ -157,39 +160,6 @@ take_photo_btn.addEventListener("click", async function(e){
     }
 
 });
-// function submitHandlerPublish(formtmppublish) {
-//
-// }
-
-// function submitHandlerDelete(formtmpdel) {
-//     // e.preventDefault();
-//     var formDelData = new FormData(formtmpdel);
-//     let request = new XMLHttpRequest();
-//     request.open("POST", "snapchat/deletetmpphoto");
-//     request.send(formDelData);
-//     request.onreadystatechange = function() {
-//         // console.log("readyState=", this.readyState, "statis=", this.status);
-//         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-//             // console.log(xhr.req)
-//             // photo.setAttribute('src', "");
-//             photo.classList.remove("visible");
-//             delete_photo_btn.classList.add("disabled");
-//             save_photo_btn.classList.add("disabled");
-//             document.getElementById('h_notsaved').hidden = true;
-//             document.getElementById('saveDelete').hidden = true;
-//             // console.log("SUCCESS", this);
-//             // console.log("SUCCESS", request.responseText);
-//         }
-//     }
-//     // request.open(this.method, this.action, true);
-//     // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-//     // let data = new FormData(this);
-//     // for (let key of data.keys())
-//     //     console.log('test', key, data.get(key));
-//     // request.send(data);
-// }
-// if (document.getElementById('delete-photo-form') != null)
-//     document.getElementById('delete-photo-form').addEventListener("submit", submitHandlerDelete);
 
 function showVideo(){
     cleanSnapPage();
@@ -202,8 +172,8 @@ function showVideo(){
 function takeSnapshot(){
     let hidden_canvas = document.querySelector('canvas');
     let context = hidden_canvas.getContext('2d');
-    let width = video.videoWidth;
-    let height = video.videoHeight;
+    let width = video.offsetWidth;
+    let height = video.offsetHeight;
     width_layout = photo_layout_div.offsetWidth;
     height_layout = photo_layout_div.offsetHeight;
     if (width && height) {
@@ -237,7 +207,7 @@ function makePhotoButtonActiv(img) {
     photo_layout.setAttribute('src', img.value);
     width_layout = photo_layout_div.offsetWidth;
     height_layout = photo_layout_div.offsetHeight;
-    console.log('height_layout',height_layout);
+    // console.log('height_layout',height_layout);
 }
 
 photo_layout_div.ondragstart = function() {
@@ -283,6 +253,7 @@ function downloadphoto() {
     if (file != undefined) {
 	    var formData = new FormData();
 	    formData.append("downloadphoto", file);
+        formData.append("width", document.getElementById('camera-stream-div-photo').offsetWidth);
 
 	    var XHR = "onload" in new XMLHttpRequest() ? XMLHttpRequest : XDomainRequest;
 	    var xhr = new XHR();
@@ -306,6 +277,7 @@ function downloadphoto() {
 				    video.classList.remove("visible");
 				    video.classList.add("disabled");
 				    superposable.classList.add("visible");
+                    controlsButtons.classList.add("visible");
 				    take_photo_btn.hidden = false;
 				    if (gumStream != undefined)
 					    gumStream.getTracks().forEach(track => track.stop());

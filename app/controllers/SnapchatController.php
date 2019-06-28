@@ -62,7 +62,7 @@ class SnapchatController extends Controller
 
     public function actionDownloadphoto(){
         $filePath  = $_FILES['downloadphoto']['tmp_name'];
-//        print_r($filePath);
+//        print_r($_POST);
         $errorCode = $_FILES['downloadphoto']['error'];
         if ($errorCode !== UPLOAD_ERR_OK || !is_uploaded_file($filePath)) {
 
@@ -107,7 +107,7 @@ class SnapchatController extends Controller
 	    else if ($_FILES['downloadphoto']['type'] == 'image/jpg');
 	    $w_src = imagesx($src);
 	    $h_src = imagesy($src);
-	    $w = 640;
+	    $w = $_POST['width'];
 
 //	    echo $w_src;
 		if ($w_src > $w)

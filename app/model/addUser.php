@@ -31,10 +31,9 @@ function addUser($email, $username, $password){
         $activation = md5($result['id']).md5($email);
 //        echo $activation . "\n";
         $subject = "Confirm your registration";
-        $message = "Hello! Thanks for your registration.\nYour login:    ".$username."\n
+        $message = "Hello! Thanks for your registration.\nYour login:    ".$username.".\n
         Click next link  ".HOST."/camagru/app/model/activation.php?id=".$result['id'] ."&login=".$username."&code=".$activation ."\n to activate your account.\n";
-        mail($email, $subject, $message, "Content-type:text/plain;    Charset=windows-1251\r\n");
-
+        mail($email, $subject, $message, "Content-Transfer-Encoding: 7bit; Content-Type: text/html; charset=utf-8\r\n");
         return (1);
     }
     else

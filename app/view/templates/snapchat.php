@@ -8,38 +8,16 @@ else {
 ?>
 <div id="container">
     <div id="main_container">
-        <div id="photos_published">
-            <div id="photos_published_carusel">
-                <?php
-                require_once 'app/model/showUserPhoto.php';
-                showUserPhotos($_SESSION['email'], $pdo);
-                ?>
-            </div>
-        </div>
+<!--        <div id="photos_published">-->
+<!--            <div id="photos_published_carusel">-->
+<!--                --><?php
+//                require_once 'app/model/showUserPhoto.php';
+//                showUserPhotos($_SESSION['email'], $pdo);
+//                ?>
+<!--            </div>-->
+<!--        </div>-->
         <div id="notSavedPhotosDiv">
-            <h2 id="h_notsaved" hidden>Not saved and published photo!</h2>
-<!--            --><?php
-//            if (isset($_SESSION['photo']) && $_SESSION['photo'] != NULL && file_exists($_SESSION['photo'])) {
-//                ?>
-<!--                <h2 id="h_notsaved" hidden>Not saved and published photo!</h2>-->
-<!--                <img id="snap" src="--><?php //echo $_SESSION['photo']?><!--" class="visible" style="display:inline-block;">-->
-<!--                <div class="controls" id="saveDelete" hidden>-->
-<!--                    <form method="post" action="snapchat/deletetmpphoto" id="delete-photo-form">-->
-<!--                        <input type="submit"  id="delete-photo" title="Delete Photo" class="disabled" value="Delete">-->
-<!--                    </form>-->
-<!--                    <form method="post" action="snapchat/publishphoto" id="publish-photo-form">-->
-<!--                        <input type="submit"  id="save-photo" title="Save Photo" class="disabled" value="Publish">-->
-<!--                    </form>-->
-<!--                    <                   <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Publish</a>-->
-<!--                </div>-->
-<!--                --><?php
-//            }
-//            else {
-//                ?>
-<!--                <img id="snap" src=""/>-->
-<!--                --><?php
-//            }
-//            ?>
+            <h2 id="h_notsaved" hidden>Not saved photo</h2>
         </div>
         <div id = "photo_container">
             <div class="app">
@@ -57,7 +35,7 @@ else {
                 </div>
                 <p id="error-msg"></p>
                 <div class="controls" id="take-photo-div">
-                    <a href="#" id="take-photo" title="Take Photo" class="disabled" hidden>Take Photo</a>
+                    <a href="#" id="take-photo" title="Take Photo" class="disabled" hidden><img src="public/images/take photo.png" title="take photo"></a>
                     <!--                    <a href="#" id="save-photo" download="my-photo.png" title="Save Photo" class="disabled">Publish</a>-->
                 </div>
                 <div id="downloadphoto_div">
