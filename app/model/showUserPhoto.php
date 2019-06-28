@@ -1,5 +1,6 @@
 <?php
 defined('SECRET_KEY') or die('No direct access allowed.');
+require_once 'app/controllers/CommentController.php';
 function showUserPhotos($email, $pdo)
 {
 //        require_once "app/model/newpassword.php";
@@ -16,8 +17,11 @@ function showUserPhotos($email, $pdo)
             foreach ($photos as $rowphoto) {
                 $count++;
                 echo "<div class='gallery_photo'><div class='gallery_photo_frame'><img src=".$rowphoto['filename']." class='gallery_photos' id=".$rowphoto['id']."></div>
-                    <div class='likes_block'> <img src='public/images/comment.png' title='comment'>
-                    <img src='public/images/like.png' title='like'>
+                    <div class='likes_block'>
+                   <div class='likes_miniblock'><img src='public/images/like_red.png' title='like' >
+                    <span class='likesspan' id='span". $rowphoto['id'] ."'>";
+                            CommentController::countLike($rowphoto['id'], $pdo);
+                            echo "</span></div>
                     <a href='account/deletephoto?id=$rowphoto[id]&email=$_SESSION[email]' title='delete photo' onclick='return confirm(\"Are you sure you want to delete this photo?\")'>
                         <img src='public/images/remove.png' title='remove'>
                     </a>

@@ -33,5 +33,5 @@ if (isset($_GET['code']) && isset($_GET['id'])) {
     <?php
 }
 require_once "footer.php";
-require_once "scripts_register.php";
+require_once "scripts/scripts_register.php";
 ?>

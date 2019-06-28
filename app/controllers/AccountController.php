@@ -55,7 +55,7 @@ class AccountController extends Controller
         require_once 'app/view/templates/header.php';
         require_once "app/view/templates/create_usr.php";
         require_once 'app/view/templates/footer.php';
-        require_once 'app/view/templates/scripts_register.php';
+        require_once 'app/view/templates/scripts/scripts_register.php';
         return true;
     }
 
@@ -88,7 +88,10 @@ class AccountController extends Controller
         if (isset($errors) && count($errors) == 0) {
             $hash_pass = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
             if (addUser($_POST['email'], $_POST['username'], $hash_pass) == 1) {
-                echo    "An e-mail with a link has been sent to your e-mail to confirm the registration. <a href='/camagru/'>Main page</a>";
+                require_once "app/view/templates/header.php";
+                echo    "<div id='container'><div id='main_container'>An e-mail with a link has been sent to your e-mail to confirm the registration. 
+                        <a href='/camagru/'>Main page</a></div></div>";
+                require_once "app/view/templates/footer.php";
                 $_SESSION['error_login'] = NULL;
             }
             else {
@@ -106,7 +109,7 @@ class AccountController extends Controller
         require_once 'app/view/templates/header.php';
         require_once "app/view/templates/forgetpassword.php";
         require_once 'app/view/templates/footer.php';
-        require_once 'app/view/templates/scripts.php';
+        require_once 'app/view/templates/scripts/scripts.php';
         return true;
     }
 
@@ -115,10 +118,16 @@ class AccountController extends Controller
         require_once "app/model/clearSession.php";
         require_once "app/model/checkEmail.php";
         clearSession();
-        if (checkEmail($_POST['email']) == 1)
-            echo    "A link has been sent to your e-mail. <a href='/camagru/'>Main page</a>";
-        else
-            echo    "incorrect e-mail or no active user. <a href='/camagru/'>Main page</a>";
+        if (checkEmail($_POST['email']) == 1) {
+            require_once "app/view/templates/header.php";
+            echo "<div id='container'><div id='main_container'>A link has been sent to your e-mail. <a href='/camagru/'>Main page</a></div></div>";
+            require_once "app/view/templates/footer.php";
+        }
+        else {
+            require_once "app/view/templates/header.php";
+            echo "<div id='container'><div id='main_container'>incorrect e-mail or no active user. <a href='/camagru/'>Main page</a></div></div>";
+            require_once "app/view/templates/footer.php";
+        }
         return true;
     }
 

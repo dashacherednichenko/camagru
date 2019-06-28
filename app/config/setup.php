@@ -1,5 +1,5 @@
 <?php
-defined('SECRET_KEY') or die('No direct access allowed.');
+//defined('SECRET_KEY') or die('No direct access allowed-set.');
 function createConnection ()
 {
     require_once 'database.php';

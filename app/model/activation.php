@@ -1,5 +1,5 @@
 <?php
-defined('SECRET_KEY') or die('No direct access allowed.');
+//defined('SECRET_KEY') or die('No direct access allowed-act.');
 function activation($id, $code)
 {
 //    echo "TEST";

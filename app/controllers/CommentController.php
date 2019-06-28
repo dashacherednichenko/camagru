@@ -60,6 +60,8 @@ class CommentController
     {
         if(mb_strlen($str,'utf8')<1)
             return false;
+        if(mb_strlen($str,'utf8') > 300)
+            return false;
         $str = nl2br(htmlspecialchars($str));
         $str = str_replace(array(chr(10),chr(13)),'',$str);
         return $str;

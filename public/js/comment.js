@@ -29,6 +29,12 @@ function insertAfter(elem, refElem) {
 }
 
 let addcomments = function(e) {
+    let error = document.getElementsByClassName('comment_error');
+    console.log('error', error);
+    for (var i = 0; i < error.length; i++)
+    {
+        error[i].innerHTML = '';
+    }
     // e.preventDefault();
     console.log('OK', e);
     var formCommentData = new FormData(e);

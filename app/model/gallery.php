@@ -23,7 +23,7 @@ if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
         <div class='gallery_photo_frame'>
         <img src=" . $row['filename'] . " class='gallery_photos'>
         </div>
-        <div class='likes_block'>
+        <div class='likes_block active'>
             <img src='public/images/comment.png' title='comment' onclick='show_comments(" . $row['id'] . ")'>
             <div class='likes_miniblock'><img src='public/images/like_red.png' title='like' class='".activelike($row['id'], $pdo)."' id='likeimg".$row['id']."' onclick='submitLikeForm(".$row['id'].")'>
             <form class='addLikeForm' id='addLikeForm".$row['id']."' onsubmit='like(this, ".$id.");return false' style='display: none'>
@@ -42,7 +42,7 @@ if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
                 <form class='addCommentForm' id='addCommentForm' onsubmit='addcomments(this);return false'>
                     <div>
                         <label for='comment'>Add your comment</label>
-                        <textarea name='comment' id='comment' rows='5' required></textarea><br>
+                        <textarea name='comment' id='comment' rows='5' required placeholder='max 300 characters'></textarea><br>
                         <input name='photo' value='". $row['id'] ."' hidden id='photo'>
                         <input name='author' value='". $_SESSION['email'] ."' hidden id='author'>
                         <input type='submit' id='submit' value='Send' />
@@ -59,7 +59,11 @@ if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
 else {
     foreach ($pdo->query($photos) as $row) {
         echo "<div class='gallery_photo'><div class='gallery_photo_frame'><img src=" . $row['filename'] . " class='gallery_photos'></div>
-    <div class='likes_block'>
+    <div class='likes_block nonactive'>
+    <div class='likes_miniblock'><img src='public/images/like_red.png' title='like' >
+    <span class='likesspan' id='span". $row['id'] ."'>";
+            CommentController::countLike($row['id'], $pdo);
+            echo "</span></div>
     <span class='date'>" . $row['date'] . "</span>
     </div>
     </div>";

@@ -9,6 +9,10 @@ function publishcomment()
 //    print_r($_POST);
     $arr = array();
     $text = CommentController::validate_comment($_POST['comment']);
+    if ($text == false) {
+        echo "<span class='comment_error'>your comment not validate!<span>";
+        return false;
+    }
     $login_usr = 'SELECT email, username, activation, id FROM users';
     foreach ($pdo->query($login_usr) as $row) {
         if ($row['email'] == $_POST['author'] && $row['activation'] == 1) {
