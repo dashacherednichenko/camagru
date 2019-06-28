@@ -24,9 +24,10 @@ if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
         <div class='likes_block'>
             <img src='public/images/comment.png' title='comment' onclick='show_comments(" . $row['id'] . ")'>
             <img src='public/images/like.png' title='like' onclick='like(this)'>
-            <form class='addLikeForm' id='addLikeForm' style='display: none'>
+            <form class='addLikeForm' id='addLikeForm".$row['id']."' onsubmit='like(this);return false' style='display: none'>
                         <input name='photo' value='". $row['id'] ."' hidden id='photo'>
                         <input name='author' value='". $_SESSION['email'] ."' hidden id='author'>
+                        <input type='submit' id='submit'  hidden value='Send' />
             </form>
             <span class='date'>" . $row['date'] . "</span>
         </div>
