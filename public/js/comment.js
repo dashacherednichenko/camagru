@@ -4,7 +4,6 @@ let show_comments = function (photo_id) {
         divcomment.style.display = "block";
     else
         divcomment.style.display = "none";
-    console.log('test', photo_id);
 };
 
 let close_window = function (photo_id) {
@@ -28,12 +27,10 @@ function insertAfter(elem, refElem) {
 
 let addcomments = function(e) {
     let error = document.getElementsByClassName('comment_error');
-    console.log('error', error);
     for (var i = 0; i < error.length; i++)
     {
         error[i].innerHTML = '';
     }
-    console.log('OK', e);
     var formCommentData = new FormData(e);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "comment/addcomment");
@@ -42,7 +39,6 @@ let addcomments = function(e) {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
             let div = e.childNodes[1];
             div.childNodes[3].value='';
-            console.log('rrrr',div.childNodes[3].value='');
             insertAfter(xhr.responseText, e);
         }
     }
@@ -58,7 +54,6 @@ let like = function (e, id) {
     let likespan = document.getElementById('span' + id);
     let i = likespan.innerHTML;
     let img = document.getElementById('likeimg' + id);
-    console.log("like", likespan.innerHTML);
     var formLikeData = new FormData(e);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "comment/like");
@@ -67,7 +62,6 @@ let like = function (e, id) {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
             likespan.innerHTML = xhr.responseText;
             let res = xhr.responseText - i;
-            console.log('res', res);
             if (res == 1)
             {
                 img.classList.add("active");

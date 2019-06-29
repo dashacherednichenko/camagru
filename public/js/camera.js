@@ -74,7 +74,6 @@ take_photo_btn.addEventListener("click", async function(e){
         coef= 0.5;
     else if (client_width == 160)
         coef = 0.25;
-    console.log('coef', coef);
     await document.getElementById('coeficient').setAttribute('value',  coef);
     width_layout = photo_layout_div.offsetWidth;
     height_layout = photo_layout_div.offsetHeight;
@@ -256,7 +255,6 @@ function downloadphoto() {
 			    return;
 		    }
 		    if (xhr.status === 200) {
-			    console.log(xhr.responseText);
 			    var string = xhr.responseText,
 				    substring = "ERROR:";
 
@@ -302,7 +300,6 @@ function grow(elem, handler) {
 grow(photo_layout, function(e) {
     let firstwidth = photo_layout.offsetWidth;
     let firstheight = photo_layout.offsetHeight;
-    console.log('1', firstwidth, firstheight);
     let delta = e.deltaY || e.detail || e.wheelDelta;
 
     if (delta > 0) {
@@ -319,6 +316,5 @@ grow(photo_layout, function(e) {
     if (firstwidth > 500)
         firstwidth = 500;
     photo_layout.style.width = firstwidth + 'px';
-    console.log(photo_layout.width, scale);
     e.preventDefault();
 });
