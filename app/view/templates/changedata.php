@@ -4,7 +4,6 @@ defined('SECRET_KEY') or die('No direct access allowed.');
 <div id="container">
     <div id="main_container">
     <?php
-    //session_start();
     if (!(isset($_SESSION['email'])) || $_SESSION['email'] == NULL) {
         ?>
         <div id="error_user">

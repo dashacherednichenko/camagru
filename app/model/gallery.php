@@ -50,7 +50,6 @@ if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
                 </form>
             </div>";
         print_com($pdo, $row['id']);
-//        echo "<span>".$i."<span>";
         echo "</div>
     </div>";
     }

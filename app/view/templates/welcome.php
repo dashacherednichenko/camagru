@@ -41,17 +41,11 @@ $pdo = createConnection ();
             <p>Username: <?php echo $_SESSION['login']?>
                 <br>
             </p>
-<!--            <p>-->
-<!--                <b>Notifications about new comments!!!!!!: YES!!!!</b><br>-->
-<!--            </p>-->
             <div class="notifications">
                 &#9998; Notifications about new comments
                 <input type="checkbox" onchange="changeNotification()"
                        <?php
                        $test = AccountController::checknotification($pdo);
-//                       require_once 'app/model/.php';
-//                       showUserPhotos($_SESSION['email']);
-//                       echo 'checked'
                         ?>
                        id="notifications" name="notifications" value="" />
                 <label for="notifications" id="notifications_label">
@@ -65,6 +59,7 @@ $pdo = createConnection ();
             </div>
             <p>E-mail: <?php echo $_SESSION['email']?></p>
             <p class="regtext"><a href = "change-data">&#9998; Do you want to change your data?</a></p>
+            <p class="regtext"><a href = "delete-account"  onclick='return confirm("do you  REALLY want to DELETE your account??? =(")'>&#9760; &#9940;Do you want to delete your account? &#9940; &#9760;</a></p>
             <h2>My photos</h2>
             <?php
                 require_once 'app/model/showUserPhoto.php';

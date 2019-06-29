@@ -8,14 +8,6 @@ else {
 ?>
 <div id="container">
     <div id="main_container">
-<!--        <div id="photos_published">-->
-<!--            <div id="photos_published_carusel">-->
-<!--                --><?php
-//                require_once 'app/model/showUserPhoto.php';
-//                showUserPhotos($_SESSION['email'], $pdo);
-//                ?>
-<!--            </div>-->
-<!--        </div>-->
         <div id="notSavedPhotosDiv">
             <h2 id="h_notsaved" hidden>Not saved photo</h2>
         </div>
@@ -68,6 +60,8 @@ else {
                 }
                 closedir($dir);
                 ?>
+                <input name="coeficient" value="" hidden id="coeficient">
+                <input name="scale" value="" hidden id="scale">
                 <input name="maskLeft" value="" hidden id="maskLeft">
                 <input name="maskTop" value="" hidden id="maskTop">
                 <input name="videoLeft" value="" hidden id="videoLeft">

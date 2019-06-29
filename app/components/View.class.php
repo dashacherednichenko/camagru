@@ -8,6 +8,5 @@ class View
     public function __construct($route)
     {
         $this->route = $route;
-//        echo $this->route;
     }
 }

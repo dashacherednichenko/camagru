@@ -6,7 +6,6 @@ function auth($user_mail, $password)
     $pdo = createConnection ();
     $login_usr = 'SELECT email, password, username, activation FROM users';
     foreach ($pdo->query($login_usr) as $row) {
-//        print_r($row);
         if ($row['email'] == $user_mail && password_verify($password, $row['password']) && $row['activation'] == 1) {
             return ($row['username']);
         }

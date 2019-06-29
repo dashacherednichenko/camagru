@@ -13,12 +13,10 @@ let close_window = function (photo_id) {
 };
 
 function insertAfter(elem, refElem) {
-    console.log(elem, refElem.parentNode);
     let comment = document.createElement("div");
 
     var parent = refElem.parentNode;
     comment.innerHTML = elem;
-    // return parent.appendChild(comment);
 
     var next = refElem.nextSibling;
     if (next) {
@@ -35,7 +33,6 @@ let addcomments = function(e) {
     {
         error[i].innerHTML = '';
     }
-    // e.preventDefault();
     console.log('OK', e);
     var formCommentData = new FormData(e);
     var xhr = new XMLHttpRequest();
@@ -47,8 +44,6 @@ let addcomments = function(e) {
             div.childNodes[3].value='';
             console.log('rrrr',div.childNodes[3].value='');
             insertAfter(xhr.responseText, e);
-                // document.getElementById('comment').
-
         }
     }
     return false;
@@ -57,8 +52,6 @@ let addcomments = function(e) {
 let submitLikeForm = function(id) {
     let form = document.getElementById('addLikeForm' + id);
     document.getElementById('submit'+ id).click();
-    // e.classList.add("active");
-    // console.log('e', e);
 }
 
 let like = function (e, id) {
@@ -82,8 +75,6 @@ let like = function (e, id) {
             else {
                 img.classList = '';
             }
-            // console.log('like!!!!', xhr.responseText);
-
         }
     }
     return false;

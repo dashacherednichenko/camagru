@@ -1,6 +1,5 @@
 <?php
 require_once "header.php";
-//print_r($_GET);
 if (isset($_GET['code']))
     $code = $_GET['code'];
 else

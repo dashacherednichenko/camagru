@@ -5,8 +5,6 @@ function publishcomment()
 {
     require_once "app/config/setup.php";
     $pdo = createConnection();
-//    print_r($_SESSION);
-//    print_r($_POST);
     $arr = array();
     $text = CommentController::validate_comment($_POST['comment']);
     if ($text == false) {
@@ -44,18 +42,11 @@ function publishcomment()
             $result = $find_email->fetch(PDO::FETCH_LAZY);
             echo $insertedComment->commentmarkup();
 
-
             if ($result['notifications'] == 1 && $result['email'] != $_POST['author']) {
-//                echo $result['email'];
                 $subject = "New comment - CAMAGRU";
                 $message = "Hello, you have a new comment from user: ". $_POST['author']." \n";
                 mail($result['email'], $subject, $message, "Content-type:text/plain;    Charset=windows-1251\r\n");
             }
-
-//    } else {
-//        /* Вывод сообщений об ошибке */
-//        echo '{"status":0,"errors":' . json_encode($arr) . '}';
-//    }
         }
     }
 }

@@ -21,15 +21,7 @@ function addUser($email, $username, $password){
         $stmt = $pdo->prepare('SELECT id FROM users WHERE email = ?');
         $stmt->execute([$email]);
         $result = $stmt->fetch(PDO::FETCH_LAZY);
-//        while ($row1 = $stmt->fetch(PDO::FETCH_LAZY))
-//        {
-////            echo $row1[0] . "\n";
-////            echo $row1['id'] . "\n";
-////            echo $row1->id . "\n";
-//        }
-
         $activation = md5($result['id']).md5($email);
-//        echo $activation . "\n";
         $subject = "Confirm your registration";
         $message = "Hello! Thanks for your registration.\nYour login:    ".$username.".\n
         Click next link  ".HOST."/camagru/app/model/activation.php?id=".$result['id'] ."&login=".$username."&code=".$activation ."\n to activate your account.\n";

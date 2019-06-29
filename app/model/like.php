@@ -13,10 +13,8 @@ function addlike($photo, $email){
     $sql_users = "SELECT id, author from likes WHERE photo = ?";
     $users = $pdo->prepare($sql_users);
     $users->execute([$photo]);
-//    $result_usr = $users->fetch(PDO::FETCH_LAZY);
 
     while ($row = $users->fetch(PDO::FETCH_LAZY)) {
-//            print_r($row);
         if ($row['author'] == $author) {
             $delsql = $pdo->prepare("DELETE FROM likes WHERE id = ?");
             $delsql->execute([$row['id']]);
@@ -25,15 +23,11 @@ function addlike($photo, $email){
         }
     }
 
-
     $like = "INSERT INTO likes (photo, author) VALUES (:photo, :author)";
     $user_data = $pdo->prepare($like);
-
-//    print_r($res);
     $user_data->bindParam(":photo", $photo);
     $user_data->bindParam(":author", $author);
     $user_data->execute();
-//    activelike($photo, $pdo);
     countLikes($photo, $pdo);
     return true;
 }
@@ -47,10 +41,8 @@ function activelike($photo, $pdo){
     $sql_users = "SELECT id, author from likes WHERE photo = ?";
     $users = $pdo->prepare($sql_users);
     $users->execute([$photo]);
-//    $result_usr = $users->fetch(PDO::FETCH_LAZY);
 
     while ($row = $users->fetch(PDO::FETCH_LAZY)) {
-//            print_r($row);
         if ($row['author'] == $author) {
             return 'active';
         }
@@ -66,5 +58,4 @@ function countLikes($photo, $pdo){
     $res = $count->fetch(PDO::FETCH_LAZY);
     $i = $res['COUNT(*)'];
     echo $i != '0' ? $i : '';
-//    return -3;
 }

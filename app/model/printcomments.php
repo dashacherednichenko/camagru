@@ -2,9 +2,7 @@
 defined('SECRET_KEY') or die('No direct access allowed.');
 require_once 'app/controllers/CommentController.php';
 
-//require_once "app/config/setup.php";
 function print_com ($pdo, $id){
-//    $pdo = createConnection ();
     $comments = array();
     $arr_comments = 'SELECT * FROM comments WHERE photo = '.$id.' ORDER BY id DESC';
     $result = $pdo->query($arr_comments);
@@ -12,7 +10,6 @@ function print_com ($pdo, $id){
     $count = 0;
     foreach($pdo->query($arr_comments) as $row)
     {
-//        print_r($row);
         $find_login =  $pdo->prepare('SELECT users.username, author
                 FROM users
                 LEFT JOIN comments ON comments.author = users.id
@@ -24,9 +21,6 @@ function print_com ($pdo, $id){
         $count++;
     }
     foreach($comments as $c){
-//        print_r($c);
-
         echo $c->commentmarkup();
     }
-//    return $count;
 };

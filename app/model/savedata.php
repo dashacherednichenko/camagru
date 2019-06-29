@@ -3,7 +3,6 @@ defined('SECRET_KEY') or die('No direct access allowed.');
 function saveData($email, $password, $newemail, $newlogin, $newpass){
     echo
     require_once "app/config/setup.php";
-//    echo $password;
     $pdo = createConnection ();
     $login_usr = 'SELECT id, email, password, username, activation FROM users WHERE activation = "1"';
     foreach ($pdo->query($login_usr) as $row) {
@@ -35,16 +34,8 @@ function saveData($email, $password, $newemail, $newlogin, $newpass){
                 return (1);
             }
             else {
-//                echo "wrong password";
                 return (-1);
             }
-//            $code = md5($row['id']).md5($user_mail);
-//            $subject = "Do U forger your password?";
-//            $message = "Hello! Your login:    ".$row['username']."\n
-//            To recover your password on the CAMAGRU, please click on the link below:
-//            ".HOST."/camagru/app/view/templates/recovery.php?id=".$row['id']."&code=".$code."\n";
-//            mail($user_mail, $subject, $message, "Content-type:text/plain;    Charset=windows-1251\r\n");
-//            return (1);
         }
     }
 }

@@ -1,7 +1,6 @@
 let register_button = document.getElementById('register_button');
 let hidden_div = document.getElementsByClassName('hidden_div')[0];
 let edit_img = document.getElementById('edit');
-console.log('2', hidden_div.hidden);
 
 function editInput(id)
 {

@@ -3,14 +3,10 @@ defined('SECRET_KEY') or die('No direct access allowed.');
 require_once 'app/controllers/CommentController.php';
 function showUserPhotos($email, $pdo)
 {
-//        require_once "app/model/newpassword.php";
-//    require_once "app/config/setup.php";
-//    $pdo = createConnection ();
     $login_usr = 'SELECT email, username, activation, id FROM users';
     foreach ($pdo->query($login_usr) as $row) {
         if ($row['email'] == $email && $row['activation'] == 1) {
             $id = $row['id'];
-//            echo $id;
             $photos = $pdo->prepare('SELECT filename, author, id, date FROM photos WHERE author = ? ORDER BY date DESC');
             $photos->execute([$id]);
             $count = 0;
@@ -34,8 +30,6 @@ function showUserPhotos($email, $pdo)
         }
     }
 
-
-//echo $email;
 return true;
 }
 ?>

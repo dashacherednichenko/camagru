@@ -10,12 +10,10 @@ function saveNewPass($id, $postcode, $pass){
     if ($code == $postcode) {
         $newPass = password_hash(trim($pass), PASSWORD_DEFAULT);
         $change_pass = "UPDATE users SET password = '".$newPass."' WHERE id='$id'";
-//    print_r($change_pass);
         $pdo->query($change_pass);
         return ("<div id='container'><div id='main_container'><p>Your password changed! Now you can enter the site with new password!</p><br> <a href='/camagru/account'>Login</a></div></div>");
     }
     else {
         return ("Error!!! <a href='/camagru/'>Main page</a>");
     }
-//    return $code;
 }

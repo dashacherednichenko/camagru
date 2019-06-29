@@ -15,25 +15,21 @@ class SnapchatController extends Controller
 
     public function actionPhoto()
     {
-//        print_r($_POST);
         $img = $_POST['userPhoto'];
+        $coef = $_POST['coeficient'];
         $imagemy = explode('base64,', $img)[1];
         $funMask = imagecreatefrompng($_POST['superposable']);
         $name = md5($_POST['userEmail']).time();
         $maskwidth = imagesx($funMask);
-        $maskusrwidth = $_POST['maskWidth'];
+        $maskusrwidth = $_POST['maskWidth'] / $coef;
         $maskheight = imagesy($funMask);
-        $maskusrheight = $_POST['maskHeight'];
+        $maskusrheight = $_POST['maskHeight'] / $coef;
         $data = base64_decode($imagemy);
         $im = imagecreatefromstring($data);
-        $left = explode('px', $_POST['maskLeft'])[0];
-        $top = explode('px', $_POST['maskTop'])[0];
+        $left = ((explode('px', $_POST['maskLeft'])[0]) / $coef) ;
+        $top = ((explode('px', $_POST['maskTop'])[0]) / $coef) ;
         imagecopyresampled ($im, $funMask, $left, $top, 0, 0, $maskusrwidth, $maskusrheight, $maskwidth, $maskheight);
-
-//        header('Content-Type: image/png');
-//        imagepng($im);
         $save = "public/images/tmp/". strtolower($name) .".png";
-//        echo $save;
         chmod("public/images/tmp/",0755);
         imagepng($im, $save, 0, NULL);
         $data = file_get_contents($save);
@@ -42,18 +38,11 @@ class SnapchatController extends Controller
         echo $base64;
         imagedestroy($im);
         imagedestroy($funMask);
-//        $_SESSION['photo'] = $save;
-//        header("Location: /camagru/snapchat");
+
     }
-//    public function actionDeletetmpphoto(){
-////        print_r($_POST);
-//        unlink($_SESSION['photo']);
-////        $_SESSION['photo'] = '';
-////        return true;
-//    }
+
 
     public function actionPublishphoto(){
-//        print_r($_POST);
         require_once "app/model/savePhoto.php";
         savePhoto($_POST['snap'], $_SESSION['email']);
         header("Location: /camagru/");
@@ -62,7 +51,6 @@ class SnapchatController extends Controller
 
     public function actionDownloadphoto(){
         $filePath  = $_FILES['downloadphoto']['tmp_name'];
-//        print_r($_POST);
         $errorCode = $_FILES['downloadphoto']['error'];
         if ($errorCode !== UPLOAD_ERR_OK || !is_uploaded_file($filePath)) {
 
@@ -107,25 +95,17 @@ class SnapchatController extends Controller
 	    else if ($_FILES['downloadphoto']['type'] == 'image/jpg');
 	    $w_src = imagesx($src);
 	    $h_src = imagesy($src);
-	    $w = $_POST['width'];
+	    $w = 640;
 
-//	    echo $w_src;
-		if ($w_src > $w)
+		if ($w_src != $w)
 		{
 			$ratio = $w_src/$w;
 			$w_dest = round($w_src/$ratio);
-//			echo $w_dest;
 			$h_dest = round($h_src/$ratio);
-//			echo $h_dest;
 			$dest = imagecreatetruecolor($w_dest, $h_dest);
 			imagecopyresampled($dest, $src, 0, 0, 0, 0, $w_dest, $h_dest, $w_src, $h_src);
 			imagejpeg($dest, 'public/images/download/' . $name.".jpg", 75);
 			imagedestroy($dest);
-			imagedestroy($src);
-		}
-		else
-		{
-			imagejpeg($src, 'public/images/download/' . $name.".jpg", 75);
 			imagedestroy($src);
 		}
 	    $path = 'public/images/download/' . $name. ".jpg";
@@ -134,8 +114,6 @@ class SnapchatController extends Controller
 	    $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
         unlink('public/images/download/' . $name.".jpg");
 	    echo $base64;
-//	    $_SESSION['downloadphoto'] = 'public/images/download/' . $name . $format;
-
     }
 }
 ?>

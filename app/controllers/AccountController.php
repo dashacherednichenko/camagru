@@ -161,9 +161,7 @@ class AccountController extends Controller
     {
         require_once "app/model/savedata.php";
         if (isset($_POST['submit']) && $_POST['submit'] == 'Change') {
-//            print_r($_POST);
             $password = trim($_POST['oldpassword']);
-                //password_hash(trim($_POST['oldpassword']), PASSWORD_DEFAULT);
             if (isset($_POST['email']) && $_POST['email'] != NULL) {
                 if (saveData($_SESSION['email'], $password, $_POST['email'], $_POST['username'], $_POST['password']) == -1) {
                     echo "WRONG PASSWORD";
@@ -191,6 +189,14 @@ class AccountController extends Controller
             return true;
         else
             return 0;
+    }
+
+    public function actionDeleteaccount()
+    {
+        require_once "app/model/deleteaccount.php";
+        deleteacc($_SESSION['email']);
+        header("Location: /camagru/");
+        return true;
     }
 }
 

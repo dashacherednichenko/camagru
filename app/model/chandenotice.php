@@ -14,9 +14,5 @@ function changeNotice($email){
      $result = $id_usr->fetch(PDO::FETCH_LAZY);
      $notice_user = "UPDATE users SET notifications='".$_GET['notice']."' WHERE id='$id'";
      $pdo->query( $notice_user);
-//
-//
-//    print_r($_GET);
-//    echo $email;
 
 }

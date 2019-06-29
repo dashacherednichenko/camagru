@@ -5,7 +5,6 @@ function savePhoto($snap, $email)
 {
     require_once "app/config/setup.php";
     $pdo = createConnection();
-//    echo $email;
     date_default_timezone_set('Europe/Kiev');
     $login_usr = 'SELECT email, username, activation, id FROM users';
     foreach ($pdo->query($login_usr) as $row) {
@@ -20,8 +19,6 @@ function savePhoto($snap, $email)
             chmod("public/images/tmp/",0755);
             imagepng($im, $name, 0, NULL);
 
-
-
             $user_data = $pdo->prepare($sql);
             $user_data->bindParam(":filename", $name);
             $date = date("Y-m-d G:i:s");
@@ -30,7 +27,6 @@ function savePhoto($snap, $email)
             $user_data->execute();
         }
     }
-//    echo $id;
 }
 ?>
 

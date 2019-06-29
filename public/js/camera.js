@@ -18,6 +18,7 @@ let width_layout;
 let height_layout;
 let gumStream;
 let photocount = 1;
+let scale = 1;
 
 
 photo_layout_div.style.left = '30%';
@@ -25,19 +26,8 @@ photo_layout_div.style.top = '30%';
 
 navigator.getMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
-// console.log(photo.src);
 function showNotSave() {
-    // var host = photo.src.split('/camagru/');
-    // // console.log("test", host);
-    // if (host[1] != '')
-    // {
         document.getElementById('h_notsaved').hidden = false;
-        // document.getElementById('saveDelete').hidden = false;
-        // photo.style.zIndex = '1000';
-        // delete_photo_btn.classList.remove("disabled");
-        // save_photo_btn.classList.remove("disabled");
-        // saveDel.classList.remove("disabled");
-    // }
 }
 
 function startVideo() {
@@ -76,15 +66,21 @@ take_photo_btn.addEventListener("click", async function(e){
     e.preventDefault();
     let downphoto = document.getElementById('downloadphoto_img').src;
     let downsubstring = "data:image/";
-
+    let client_width = document.getElementById('camera-stream-div-photo').offsetWidth;
+    let coef;
+    if (client_width == 640)
+        coef = 1;
+    else if (client_width == 320)
+        coef= 0.5;
+    else if (client_width == 160)
+        coef = 0.25;
+    console.log('coef', coef);
+    await document.getElementById('coeficient').setAttribute('value',  coef);
+    width_layout = photo_layout_div.offsetWidth;
+    height_layout = photo_layout_div.offsetHeight;
     if (downphoto.indexOf(downsubstring) !== -1)
     {
         let my_photo = downphoto;
-        // let download_width = document.getElementById('downloadphoto_img').offsetWidth;
-        // console.log('my_photo', document.getElementById('downloadphoto_img').offsetWidth);
-        // return ;
-        width_layout = photo_layout_div.offsetWidth;
-        height_layout = photo_layout_div.offsetHeight;
         let img = await inputPhoto.setAttribute('value', my_photo);
 	    await document.getElementById('maskWidth').setAttribute('value',  width_layout);
 	    await document.getElementById('maskHeight').setAttribute('value',  height_layout);
@@ -133,7 +129,6 @@ take_photo_btn.addEventListener("click", async function(e){
             delbtn.id = "delete-photo" + photocount;
             delbtn.className = 'deletephoto';
             divcontrols.appendChild(delbtn);
-            // let id = delbtn.id.split('delete-photo')[1];
             delbtn.addEventListener("click", function () {
                 snap.src = '';
                 divcontrols.hidden = true;
@@ -151,11 +146,8 @@ take_photo_btn.addEventListener("click", async function(e){
             divcontrols.appendChild(formtmppublish);
             formtmppublish.appendChild(srctmpimg);
             formtmppublish.appendChild(savebtn);
-            // savebtn.addEventListener("submit", submitHandlerPublish);
             photocount++;
-
             showNotSave();
-            // console.log('ajax',xhr.responseText);
         }
     }
 
@@ -163,6 +155,7 @@ take_photo_btn.addEventListener("click", async function(e){
 
 function showVideo(){
     cleanSnapPage();
+    document.getElementById('downloadphoto_img').src='';
     video.classList.add("visible");
     superposable.classList.add("visible");
     controlsButtons.classList.add("visible");
@@ -172,15 +165,19 @@ function showVideo(){
 function takeSnapshot(){
     let hidden_canvas = document.querySelector('canvas');
     let context = hidden_canvas.getContext('2d');
-    let width = video.offsetWidth;
-    let height = video.offsetHeight;
+    let width = video.videoWidth;
+    let height = video.videoHeight;
     width_layout = photo_layout_div.offsetWidth;
     height_layout = photo_layout_div.offsetHeight;
     if (width && height) {
         hidden_canvas.width = width;
         hidden_canvas.height = height;
+        context.translate(hidden_canvas.width, 0);
+        context.scale(-1, 1);
         context.drawImage(video, 0, 0, width, height);
-        return hidden_canvas.toDataURL('image/png');
+        let res = hidden_canvas.toDataURL('image/png');
+        context.setTransform(1, 0, 0, 1, 0, 0);
+        return res;
     }
 }
 
@@ -195,7 +192,6 @@ function cleanSnapPage(){
     superposable.classList.remove("visible");
     camera_on.classList.remove("visible");
     video.classList.remove("visible");
-    // photo.classList.remove("visible");
     error_message.classList.remove("visible");
 }
 
@@ -207,7 +203,6 @@ function makePhotoButtonActiv(img) {
     photo_layout.setAttribute('src', img.value);
     width_layout = photo_layout_div.offsetWidth;
     height_layout = photo_layout_div.offsetHeight;
-    // console.log('height_layout',height_layout);
 }
 
 photo_layout_div.ondragstart = function() {
@@ -217,7 +212,7 @@ photo_layout_div.ondragstart = function() {
 function getCoords(elem) {
     var box = elem.getBoundingClientRect();
     return {
-        top: box.top + pageYOffset,
+        top: box.top  + pageYOffset,
         left: box.left + pageXOffset
     };
 }
@@ -228,13 +223,10 @@ photo_layout_div.onmousedown = function(e) {
     document.body.appendChild(photo_layout_div);
     photo_layout_div.style.zIndex = '90';
     function moveAt(e) {
-        photo_layout_div.style.left = e.pageX - width_layout/2 + 'px';
-        // console.log(e.pageX);
-        photo_layout_div.style.top = e.pageY - height_layout/2 + 'px';
-        width_layout = photo_layout_div.offsetWidth;
+        photo_layout_div.style.left = e.pageX - (width_layout)/2 + 'px';
+        photo_layout_div.style.top = e.pageY - (height_layout)/2 + 'px';
+        width_layout = photo_layout_div.offsetWidth ;
         height_layout = photo_layout_div.offsetHeight;
-        // console.log(e.pageY);
-        // console.log(getCoords(photo_layout_div));
     };
 
     document.onmousemove = function(e) {
@@ -281,8 +273,7 @@ function downloadphoto() {
 				    take_photo_btn.hidden = false;
 				    if (gumStream != undefined)
 					    gumStream.getTracks().forEach(track => track.stop());
-				    //console.log('downloadphoto_img', document.getElementById('downloadphoto_img').clientWidth,document.getElementById('downloadphoto_img').clientHeight, document.getElementById('downloadphoto_img').naturalWidth, document.getElementById('downloadphoto_img').naturalHeight);
-			    }
+				   			    }
 			    else {
 				    error_message.innerText = xhr.responseText;
 				    error_message.classList.add("visible");
@@ -292,3 +283,42 @@ function downloadphoto() {
 	    xhr.send(formData);
     }
 }
+
+function grow(elem, handler) {
+    if (elem.addEventListener) {
+        if ('onwheel' in document) {
+            elem.addEventListener("wheel", handler);
+        } else if ('onmousewheel' in document) {
+            elem.addEventListener("mousewheel", handler);
+        } else {
+            elem.addEventListener("MozMousePixelScroll", handler);
+        }
+    } else {
+        layout_img.attachEvent("onmousewheel", handler);
+    }
+}
+
+
+grow(photo_layout, function(e) {
+    let firstwidth = photo_layout.offsetWidth;
+    let firstheight = photo_layout.offsetHeight;
+    console.log('1', firstwidth, firstheight);
+    let delta = e.deltaY || e.detail || e.wheelDelta;
+
+    if (delta > 0) {
+        scale += 0.1;
+        firstwidth *= 1.1;
+    }
+    else {
+        scale -= 0.1;
+        firstwidth /= 1.1;
+        photo_layout.style.width = firstwidth + 'px';
+    }
+    if (firstwidth < 50)
+        firstwidth = 50;
+    if (firstwidth > 500)
+        firstwidth = 500;
+    photo_layout.style.width = firstwidth + 'px';
+    console.log(photo_layout.width, scale);
+    e.preventDefault();
+});
