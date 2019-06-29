@@ -11,7 +11,7 @@ function deleteacc($email){
     $find_id->execute([$email]);
     $res = $find_id->fetch(PDO::FETCH_LAZY);
     $id = $res['id'];
-    print_r($res['id']);
+//    print_r($res['id']);
     $delusr = "DELETE FROM users WHERE id = '$id'";
     $pdo->exec($delusr);
     $delphotos = "DELETE FROM photos WHERE author = '$id'";

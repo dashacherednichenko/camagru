@@ -1,7 +1,6 @@
 <?php
 defined('SECRET_KEY') or die('No direct access allowed.');
 function saveData($email, $password, $newemail, $newlogin, $newpass){
-    echo
     require_once "app/config/setup.php";
     $pdo = createConnection ();
     $login_usr = 'SELECT id, email, password, username, activation FROM users WHERE activation = "1"';
@@ -30,7 +29,7 @@ function saveData($email, $password, $newemail, $newlogin, $newpass){
                     $pdo->query($change_pass);
                     echo 'password change!';
                 }
-                echo 'OK';
+//                echo 'OK';
                 return (1);
             }
             else {

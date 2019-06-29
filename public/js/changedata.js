@@ -34,3 +34,18 @@ let check = function() {
         register_button.type="button";
     }
 }
+
+let change = document.getElementById('register_button');
+let form = document.getElementById('form_register');
+change.addEventListener("click", async function(e) {
+    e.preventDefault();
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "save", true);
+    xhr.send(formData);
+    xhr.onreadystatechange = function () {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            console.log('rr', xhr.responseText);
+        }
+    }
+});

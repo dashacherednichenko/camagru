@@ -12,8 +12,10 @@ $_page > 0? $_page-- : $_page = 0;
 $_max_item = 6;
 $_offset = $_max_item * $_page;
 $pdo = createConnection ();
-$login_usr = 'SELECT email, username, activation, id FROM users';
-$photos = 'SELECT id, filename, author, date FROM photos ORDER BY date DESC limit '. $_max_item . ' offset '. $_offset;
+$photos = 'SELECT photos.id, filename, author, users.username, users.id, date FROM photos 
+    LEFT JOIN users ON photos.author = users.id
+    ORDER BY date DESC limit '. $_max_item . ' offset '. $_offset;
+
 $_all_photos = 'SELECT * FROM photos ORDER BY date DESC';
 $comments = 'SELECT * FROM comments ORDER BY id ASC';
 if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
@@ -22,6 +24,7 @@ if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
         echo "<div class='gallery_photo'>
         <div class='gallery_photo_frame'>
         <img src=" . $row['filename'] . " class='gallery_photos'>
+        <span class='author'>author: ".$row['username']."</span>
         </div>
         <div class='likes_block active'>
             <img src='public/images/comment.png' title='comment' onclick='show_comments(" . $row['id'] . ")'>
@@ -57,7 +60,8 @@ if (isset($_SESSION['email']) && $_SESSION['email'] !== NULL){
 }
 else {
     foreach ($pdo->query($photos) as $row) {
-        echo "<div class='gallery_photo'><div class='gallery_photo_frame'><img src=" . $row['filename'] . " class='gallery_photos'></div>
+        echo "<div class='gallery_photo'><div class='gallery_photo_frame'><img src=" . $row['filename'] . " class='gallery_photos'>
+    <span class='author'>author: ".$row['username']."</span></div>
     <div class='likes_block nonactive'>
     <div class='likes_miniblock'><img src='public/images/like_red.png' title='like' >
     <span class='likesspan' id='span". $row['id'] ."'>";

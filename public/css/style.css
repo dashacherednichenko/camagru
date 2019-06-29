@@ -171,6 +171,12 @@ footer {
 
 
 /*gallery*/
+.author {
+    opacity: 0.8;
+    display: block;
+    text-align: right;
+    margin-right: 10px;
+}
 .gallery_photos {
     max-width: calc(100% - 20px);
     max-height: 310px;
@@ -189,7 +195,7 @@ footer {
     text-align: center;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     display: inline-block;
-    width: calc(33.3% - 22px);
+    width: calc(25% - 22px);
     height: 405px;
     margin: 10px;
 }
@@ -626,7 +632,21 @@ input:checked ~.mini_img_filter{
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 980px), only screen and (max-device-width: 900px) {
+@media only screen and (max-width: 1850px) {
+
+    .gallery_photo {
+        width: calc(33.3% - 22px);
+    }
+    .camera-stream-div-photo {
+        width: 640px;
+        height: 480px;
+    }
+    #camera-stream, #downloadphoto_img {
+        width: 640px;
+    }
+}
+
+@media only screen and (max-width: 1300px), only screen {
     body {
         font-size: 18px;
     }
@@ -637,11 +657,11 @@ input:checked ~.mini_img_filter{
         font-size: 12px;
     }
     .camera-stream-div-photo {
-        width: 320px;
-        height: 240px;
+        width: 640px;
+        height: 480px;
     }
     #camera-stream, #downloadphoto_img {
-        width: 320px;
+        width: 640px;
     }
     app .controls a, .deletephoto, .save-photo
     {
@@ -662,7 +682,16 @@ input:checked ~.mini_img_filter{
     }
 
 }
-@media only screen and (max-width: 500px), only screen and (max-device-width: 350px) {
+@media only screen and (max-width: 960px), only screen and (max-device-width: 900px) {
+    .camera-stream-div-photo {
+        width: 320px;
+        height: 240px;
+    }
+    #camera-stream, #downloadphoto_img {
+        width: 320px;
+    }
+}
+@media only screen and (max-width: 800px), only screen and (max-device-width: 350px) {
     body {
         font-size: 18px;
     }

@@ -2,7 +2,6 @@
 function activation($id, $code)
 {
     require_once "../config/setup.php";
-    echo "TEST";
     $pdo = createConnection ();
     $id_usr = $pdo->prepare('SELECT id, email FROM users WHERE id = ?');
     $id_usr->execute([$id]);
@@ -11,12 +10,15 @@ function activation($id, $code)
     if ($activation == $code) {
         $activate_user = "UPDATE users SET activation='1' WHERE id='$id'";
         $pdo->query($activate_user);
-        echo "Your e-mail confirmed! Now you can enter the site! <a href='/camagru/'>Main page</a>";
-        echo $result['email'];
+        require_once "../view/templates/header.php";
+        echo "<div id='container'><div id='main_container'>Your e-mail confirmed! Now you can enter the site! <a href='/camagru/account'>LOGIN</a></div></div>";
+        require_once "../view/templates/footer.php";
         return ($result['email']);
     }
     else {
-        echo "Error! Your e-mail NOT confirmed! <a href='/camagru/'>Main page</a>";
+        require_once "../view/templates/header.php";
+        echo "<div id='container'><div id='main_container'>Error! Your e-mail NOT confirmed! <a href='/camagru/'>Main page</a></div></div>";
+        require_once "../view/templates/footer.php";
         return (NULL);
     }
 
@@ -42,9 +44,6 @@ if (($email = activation($id, $code)) != NULL) {
             $_SESSION['error_activation'] = NULL;
             $_SESSION['error_user'] = NULL;
             $_SESSION['error_login'] = NULL;
-            $_SESSION['email'] = $email;
-            $_SESSION['login'] = $login;
-            header("Location: /camagru/");
 }
 else {
     header("Location: /camagru/");

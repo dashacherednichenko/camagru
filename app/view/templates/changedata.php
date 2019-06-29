@@ -44,7 +44,6 @@ defined('SECRET_KEY') or die('No direct access allowed.');
                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" onkeyup='check();'><br>
                 </div>
                 <span id='message_error'></span><br>
-<!--                <p class="regtext">*If you will change your email, you should confirm your new address. We will send you a new link</p>-->
                 <input type="submit" name="submit" value="Change" id="register_button"/>
             </form>
             <a href="account" id="cancel_change">&#8617; Cancel</a>
