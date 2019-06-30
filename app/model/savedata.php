@@ -14,22 +14,21 @@ function saveData($email, $password, $newemail, $newlogin, $newpass){
                     $change_mail = "UPDATE users SET email = '".$newemail."' WHERE id='$id'";
                     $pdo->query($change_mail);
                     $_SESSION['email'] = $newemail;
-                    echo 'new email';
+                    echo 'new email - ';
                 }
                 if ($row['username'] != $newlogin){
                     $change_login = "UPDATE users SET username = '".$newlogin."' WHERE id='$id'";
                     $pdo->query($change_login);
                     $_SESSION['login'] = $newlogin;
-                    echo 'new login';
+                    echo 'new login - ';
                 }
                 if ($newpass != '' && !password_verify($newpass, $row['password']))
                 {
                     $newPass = password_hash(trim($newpass), PASSWORD_DEFAULT);
                     $change_pass = "UPDATE users SET password = '".$newPass."' WHERE id='$id'";
                     $pdo->query($change_pass);
-                    echo 'password change!';
+                    echo 'password change! - ';
                 }
-//                echo 'OK';
                 return (1);
             }
             else {

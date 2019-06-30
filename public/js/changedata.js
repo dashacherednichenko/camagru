@@ -45,7 +45,10 @@ change.addEventListener("click", async function(e) {
     xhr.send(formData);
     xhr.onreadystatechange = function () {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-            console.log('rr', xhr.responseText);
+            document.getElementById('change_message').innerHTML = xhr.responseText;
+            if (xhr.responseText.indexOf("SUCCESS") != -1) {
+                setInterval(function() {window.location.href = '/camagru/account'}, 1500);
+            }
         }
     }
 });

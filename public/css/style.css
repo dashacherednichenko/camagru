@@ -358,6 +358,11 @@ footer {
 #cancel_change:hover {
     background-color: gray;
 }
+#change_message {
+    position: absolute;
+    margin-top: 5%;
+    color: darkred;
+}
 
 #photos_published {
     width: calc(100% - 20px);

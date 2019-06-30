@@ -14,6 +14,7 @@ defined('SECRET_KEY') or die('No direct access allowed.');
     }
     else {
         ?>
+            <span id="change_message"></span>
             <form action="save" method="post" id="form_register">
                 <label for="email">E-mail: </label>
                 <input type="email" name="email" id="email" required value="<?php echo $_SESSION['email']?>">

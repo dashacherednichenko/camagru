@@ -160,22 +160,14 @@ class AccountController extends Controller
     public function actionSavenewdata()
     {
         require_once "app/model/savedata.php";
-//        print_r($_POST);
-//        if (isset($_POST['submit']) && $_POST['submit'] == 'Change') {
-            $password = trim($_POST['oldpassword']);
-            if (isset($_POST['email']) && $_POST['email'] != NULL) {
-                if (saveData($_SESSION['email'], $password, $_POST['email'], $_POST['username'], $_POST['password']) == -1) {
-                    echo "WRONG PASSWORD";
-//                    header("Location: /camagru/change-data");
-                }
-                else
-                    echo "SUCCESS";
-//                    header("Location: /camagru/account");
+        $password = trim($_POST['oldpassword']);
+        if (isset($_POST['email']) && $_POST['email'] != NULL) {
+            if (saveData($_SESSION['email'], $password, $_POST['email'], $_POST['username'], $_POST['password']) == -1) {
+                echo "WRONG PASSWORD";
             }
-//        }
-//        else
-//        {
-//            echo "smtf";
+            else
+                echo "SUCCESS";
+        }
 //        }
 //            header("Location: /camagru/account");
         return true;
