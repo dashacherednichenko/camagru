@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7789444-2961-4585-abd3-d64933ad0e69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/model/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/templates/snapchat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/templates/snapchat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/camera.js" afterDir="false" />
     </list>
@@ -27,17 +26,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/camera.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="256" column="39" lean-forward="true" selection-start-line="256" selection-start-column="39" selection-end-line="256" selection-end-column="39" />
+            <state relative-caret-position="367">
+              <caret line="311" column="5" lean-forward="true" selection-start-line="311" selection-start-column="5" selection-end-line="311" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="168" column="29" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="29" />
+            <state relative-caret-position="460">
+              <caret line="81" column="73" lean-forward="true" selection-start-line="81" selection-start-column="73" selection-end-line="81" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -75,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="433" column="24" selection-start-line="433" selection-start-column="24" selection-end-line="433" selection-end-column="24" />
+            <state relative-caret-position="342">
+              <caret line="176" column="39" lean-forward="true" selection-start-line="176" selection-start-column="39" selection-end-line="176" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -93,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="105" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="290">
+              <caret line="92" column="61" lean-forward="true" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -119,9 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>calc(100vh</find>
-      <find>can</find>
-      <find>vi</find>
       <find>visi</find>
       <find>.controls</find>
       <find>videoLeft</find>
@@ -149,6 +145,9 @@
       <find>chang</find>
       <find>console</find>
       <find>snap</find>
+      <find>take</find>
+      <find>take_photo_btn</find>
+      <find>galle</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -207,10 +206,10 @@
         <option value="$PROJECT_DIR$/app/model/savedata.php" />
         <option value="$PROJECT_DIR$/app/controllers/AccountController.php" />
         <option value="$PROJECT_DIR$/public/js/changedata.js" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/view/templates/snapchat.php" />
         <option value="$PROJECT_DIR$/public/js/camera.js" />
         <option value="$PROJECT_DIR$/app/model/gallery.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -384,12 +383,12 @@
       <workItem from="1560622964987" duration="10757000" />
       <workItem from="1561705256671" duration="32964000" />
       <workItem from="1561806227647" duration="20549000" />
-      <workItem from="1561881981774" duration="3701000" />
+      <workItem from="1561881981774" duration="6034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246548000" />
+    <option name="totallyTimeSpent" value="248881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="770" y="23" width="1660" height="1337" extended-state="0" />
@@ -687,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="168" column="29" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/deleteaccount.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -715,20 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="433" column="24" selection-start-line="433" selection-start-column="24" selection-end-line="433" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/templates/snapchat.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -738,18 +716,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/camera.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="256" column="39" lean-forward="true" selection-start-line="256" selection-start-column="39" selection-end-line="256" selection-end-column="39" />
+        <state relative-caret-position="367">
+          <caret line="311" column="5" lean-forward="true" selection-start-line="311" selection-start-column="5" selection-end-line="311" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="176" column="39" lean-forward="true" selection-start-line="176" selection-start-column="39" selection-end-line="176" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SnapchatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="92" column="61" lean-forward="true" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="81" column="73" lean-forward="true" selection-start-line="81" selection-start-column="73" selection-end-line="81" selection-end-column="73" />
         </state>
       </provider>
     </entry>

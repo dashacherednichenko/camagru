@@ -322,3 +322,18 @@ grow(photo_layout, function(e) {
     photo_layout.style.width = firstwidth + 'px';
     e.preventDefault();
 });
+
+function clean_mask() {
+    photo_layout_div.style.left = '30%';
+    photo_layout_div.style.top = '30%';
+    photo_layout.src = '';
+    var obj = document.getElementsByName('superposable');
+    for(var i = 0; i < obj.length; i++)
+        obj[i].checked = false;
+
+}
+window.onresize = function(event) {
+    clean_mask();
+    take_photo_btn.classList.remove("visible");
+    take_photo_btn.classList.add("disabled");
+}

@@ -171,6 +171,15 @@ footer {
 
 
 /*gallery*/
+.gallery_photos:hover {
+    -webkit-transform: scale(1.1,1.1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: scale(1.35,1.35);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+    cursor: zoom-in
+}
 .author {
     opacity: 0.8;
     display: block;
@@ -690,7 +699,6 @@ input:checked ~.mini_img_filter{
     }
     #user_login{
         font-size: 8px;
-        /*float: right;*/
         width: 80px;
     }
     #div_logout {
@@ -708,7 +716,7 @@ input:checked ~.mini_img_filter{
         width: 320px;
     }
 }
-@media only screen and (max-width: 800px), only screen and (max-device-width: 350px) {
+@media only screen and (max-width: 800px), only screen and (max-device-width: 310px) {
     body {
         font-size: 18px;
     }
