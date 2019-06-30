@@ -83,6 +83,10 @@ class SnapchatController extends Controller
 
         $name = md5($_SESSION['email']).time();
         $extension = image_type_to_extension($image[2]);
+        if ($extension == '.jp2'){
+            echo "ERROR: ERROR IMAGE, NOT VALID FORMAT - jp2";
+            return;
+        }
 
         $format = str_replace('jpeg', 'jpg', $extension);
 
@@ -92,7 +96,10 @@ class SnapchatController extends Controller
 		    $src = imagecreatefrompng ($filePath);
 	    else if ($_FILES['downloadphoto']['type'] == 'image/gif')
 		    $src = imagecreatefromgif ($filePath);
-	    else if ($_FILES['downloadphoto']['type'] == 'image/jpg');
+	    else {
+            echo "ERROR: ERROR IMAGE, NOT VALID FORMAT";
+            return;
+        }
 	    $w_src = imagesx($src);
 	    $h_src = imagesy($src);
 	    $w = 640;
