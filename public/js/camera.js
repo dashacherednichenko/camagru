@@ -10,6 +10,7 @@ let camera_on = document.getElementById('start-camera');
 let controlsButtons = document.getElementById('take-photo-div');
 let saveDel = document.getElementById('saveDelete');
 let take_photo_btn = document.getElementById('take-photo');
+let back_btn = document.getElementById('back_camera');
 let delete_photo_btn = document.getElementById('delete-photo');
 let save_photo_btn = document.getElementById('save-photo');
 let error_message = document.getElementById('error-msg');
@@ -154,11 +155,13 @@ take_photo_btn.addEventListener("click", async function(e){
 
 function showVideo(){
     cleanSnapPage();
+    document.getElementById("downloadphoto").value = "";
     document.getElementById('downloadphoto_img').src='';
     video.classList.add("visible");
     superposable.classList.add("visible");
     controlsButtons.classList.add("visible");
     take_photo_btn.hidden = false;
+    back_btn.hidden = true;
 }
 
 function takeSnapshot(){
@@ -269,6 +272,7 @@ function downloadphoto() {
 				    superposable.classList.add("visible");
                     controlsButtons.classList.add("visible");
 				    take_photo_btn.hidden = false;
+                    back_btn.hidden = false;
 				    if (gumStream != undefined)
 					    gumStream.getTracks().forEach(track => track.stop());
 				   			    }

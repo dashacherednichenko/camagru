@@ -34,6 +34,7 @@ else {
                     <h2>or download your own photo</h2>
                     <input name="downloadphoto" id="downloadphoto" type="file" onchange='downloadphoto()'>
                 </div>
+                <a onclick="startVideo()" id="back_camera" hidden>&#8617; Back to camera</a>
                 <canvas></canvas>
             </div>
         </div>

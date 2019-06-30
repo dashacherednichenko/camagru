@@ -355,7 +355,7 @@ footer {
     height: 30px;
     margin-bottom: 10px;
 }
-#cancel_change:hover {
+#cancel_change:hover{
     background-color: gray;
 }
 #change_message {
@@ -424,6 +424,18 @@ footer {
 }
 
 /*snapchat*/
+#back_camera{
+    text-align: center;
+    background-color: #BEBEC8;
+    color:white;
+    border: none;
+    width: 180px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+#back_camera:hover {
+    background-color: gray;
+}
 #photo_container {
     display: inline-block;
 }

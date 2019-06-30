@@ -12,7 +12,7 @@ $_page > 0? $_page-- : $_page = 0;
 $_max_item = 6;
 $_offset = $_max_item * $_page;
 $pdo = createConnection ();
-$photos = 'SELECT photos.id, filename, author, users.username, users.id, date FROM photos 
+$photos = 'SELECT photos.id as id, filename, author, users.username, users.id as userid, date FROM photos 
     LEFT JOIN users ON photos.author = users.id
     ORDER BY date DESC limit '. $_max_item . ' offset '. $_offset;
 
